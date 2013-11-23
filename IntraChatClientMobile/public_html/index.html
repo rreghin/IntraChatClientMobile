@@ -12,12 +12,15 @@ and open the template in the editor.
     </head>
     <body>
         <script>
-            var connection = new WebSocket('ws://localhost:55000');
+            var connection = new WebSocket('wss://localhost:55000', ['intrachat']);
 
             // When the connection is open, send some data to the server
             connection.onopen = function () {
+              console.log('WebSocket CONNECTED');
               connection.send('OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n');
+              console.log('CICHeader SENT');
               //connection.send('{ "Header.Command":"1", "UserID":"administrador", "Password":"abc123" }');
+              //console.log('CICAuth SENT');
             };
 
             // Log errors
