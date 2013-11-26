@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -32,3 +33,42 @@ and open the template in the editor.
         </script>
     </body>
 </html>
+=======
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <script>
+            var connection = new WebSocket('ws://localhost:55000', ['intrachat']);
+
+            // When the connection is open, send some data to the server
+            connection.onopen = function () {
+              console.log('WebSocket CONNECTED');
+              connection.send('OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n');
+              console.log('CICHeader SENT');
+              connection.send('{ "Header.Command": "1", "UserID": "administrador", "Password": "abc123", "VersionNumber": "396" }');
+              console.log('CICAuth SENT');
+            };
+
+            // Log errors
+            connection.onerror = function (error) {
+              console.log('WebSocket Error ' + error);
+            };
+
+            // Log messages from the server
+            connection.onmessage = function (e) {
+              console.log('Server: ' + e.data);
+            };
+        </script>
+    </body>
+</html>
+>>>>>>> 96341771679493dc5b96a4fa93a5a785ac49bb3d
