@@ -12,12 +12,12 @@ and open the template in the editor.
     </head>
     <body>
         <script>
-            var connection = new WebSocket('wss://localhost:55000', ['soap']);
+            var connection = new WebSocket('ws://localhost:55000', ['intrachat']);
 
             // When the connection is open, send some data to the server
             connection.onopen = function () {
               connection.send('OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n');
-              //connection.send('{ "Header.Command":"1", "UserID":"administrador", "Password":"abc123" }');
+              connection.send('{ "Header.Command":"1", "UserID":"administrador", "Password":"abc123" }');
             };
 
             // Log errors
