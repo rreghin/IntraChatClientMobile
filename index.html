@@ -229,7 +229,10 @@ _utf8_decode : function (utftext) {
                         }
                         // quando o contador chegar a zero, fecha a conexao
                         TargetCount--;
-                        if (TargetCount <= 0) connection.close();
+                        if (TargetCount <= 0) {
+                            connection.close();
+                            console.log('Connection closed.');
+                        }
                     }
                 }
             };
