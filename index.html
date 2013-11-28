@@ -10,90 +10,11 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <script type="text/javascript" src="base64.js"></script>
+        <script type="text/javascript" src="CICProtocol.js"></script>
     </head>
     <body>
-        <script>
-            var CMD_AUTHENTICATE   = '001';
-            var CMD_AUTHENTICATION = '101';
-            var CMD_KEEPALIVE      = '111';
-            var CMD_KEEPALIVE_BACK = '008';
-            var CMD_TEXTMESSAGE    = '010';
-            var HEADER_MAGIC_STRING = 'OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n';
-            
-            var isAuthenticated = false;
-            
-            var Targets = ['administrador'];
-            var TargetCount = Targets.length;
-            
-            // precisa ter estabelecido uma conexao HTTPS com o endereco abaixo
-            // para que o usuario tenha a chance de aceitar o certificado
-            // auto-assinado do servidor intrachat
-            var connection = new WebSocket('wss://localhost:55000/', ['intrachat']);
-
-            // When the connection is open, send some data to the server
-            connection.onopen = function () {
-                console.log('WebSocket CONNECTED');
-                connection.send(HEADER_MAGIC_STRING);
-                console.log('CICHeader SENT');
-              
-                // prepara o objeto JSON a ser enviado com o pedido de autenticacao
-                var AuthPacket = {};
-                AuthPacket.Command = CMD_AUTHENTICATE;
-                AuthPacket.UserID = 'administrador';
-                AuthPacket.Password = 'abc123';
-                AuthPacket.VersionNumber = '396';
-                connection.send(JSON.stringify(AuthPacket));
-                console.log('CICAuth SENT:' + JSON.stringify(AuthPacket));
-            };
-
-            // Log errors
-            connection.onerror = function (error) {
-                console.log('WebSocket Error ' + error);
-            };
-
-            // Log messages from the server
-            connection.onmessage = function (e) {
-                console.log('Server: ' + e.data);
-                
-                var message = JSON.parse(e.data);
-                //console.log('Server: ' + JSON.stringify(message));
-
-                // verifica qual foi o comando enviado pelo servidor
-                if (!isAuthenticated) {
-                    if (message.Command === CMD_AUTHENTICATION) {
-                        if (message.Granted === 'True') {
-                            console.log('Authenticated to server: ' + message.ServerName);
-                            isAuthenticated = true;
-                            // envia a mensagem
-                            var MsgPacket = {};
-                            MsgPacket.Command = CMD_TEXTMESSAGE;
-                            MsgPacket.ToUserID = Targets;
-                            MsgPacket.TextMessage = Base64.encode('Usando WebSockets do Chrome...');
-                            connection.send(JSON.stringify(MsgPacket));
-                            console.log('CICMessage SENT:' + JSON.stringify(MsgPacket));
-                        }
-                        else {
-                            console.log('AuthError: ' + Base64.decode(message.ErrorMessage));
-                        }
-                    }
-                }
-                else {
-                    if (message.Command === CMD_TEXTMESSAGE) {
-                        if (message.MessageID !== '0') {
-                            console.log('Message to ' + message.ToUserID + ' SENT. ID: ' + message.MessageID);
-                        }
-                        else {
-                            console.log('Message to ' + message.ToUserID + ' FAILED: ' + Base64.decode(message.ErrorMessage));
-                        }
-                        // quando o contador chegar a zero, fecha a conexao
-                        TargetCount--;
-                        if (TargetCount <= 0) {
-                            connection.close();
-                            console.log('Connection closed.');
-                        }
-                    }
-                }
-            };
+        <script type="text/javascript">
+            new CICMessageProtocol('localhost', 55000, 'administrador', 'abc123', ['administrador'], 'Teste de envio de mensagem...');
         </script>
     </body>
 </html>
