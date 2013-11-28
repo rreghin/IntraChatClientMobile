@@ -60,8 +60,8 @@ and open the template in the editor.
 
                 // verifica qual foi o comando enviado pelo servidor
                 if (!isAuthenticated) {
-                    if (message.Command == CMD_AUTHENTICATION) {
-                        if (message.Granted == 'True') {
+                    if (message.Command === CMD_AUTHENTICATION) {
+                        if (message.Granted === 'True') {
                             console.log('Authenticated to server: ' + message.ServerName);
                             isAuthenticated = true;
                             // envia a mensagem
@@ -78,8 +78,8 @@ and open the template in the editor.
                     }
                 }
                 else {
-                    if (message.Command == CMD_TEXTMESSAGE) {
-                        if (message.MessageID != '0') {
+                    if (message.Command === CMD_TEXTMESSAGE) {
+                        if (message.MessageID !== '0') {
                             console.log('Message to ' + message.ToUserID + ' SENT. ID: ' + message.MessageID);
                         }
                         else {
