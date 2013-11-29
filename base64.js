@@ -1,11 +1,12 @@
-/**
-*
-*  Base64 encode / decode
-*  http://www.webtoolkit.info/
-*
-**/
 var Base64 = {
 
+    /**
+    *
+    *  Base64 encode / decode
+    *  http://www.webtoolkit.info/
+    *
+    **/
+   
     // private property
     _keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
 
