@@ -213,6 +213,7 @@ function CICBaseProtocol() {
                     _Protocol.onAuthenticationOk();
                 }
                 else {
+                    packet.ErrorMessage = Base64.decode(packet.ErrorMessage);
                     console.log('Authentication ERROR ' + packet.ErrorNumber + ': ' + packet.ErrorMessage);
                     _IsAuthenticated = false;
                     _Protocol.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
@@ -305,10 +306,6 @@ function CICMessageProtocol(ServerID, ServerPort, UserID, UserPassword, Targets,
         //console.log('CICMessage SENT:' + JSON.stringify(MsgPacket));
     };
     
-    this.prototype.onAuthenticationFailed = function(errornumber, errormessage) {
-        console.log('Authentication ERROR ' + errornumber + ': ' + errormessage);
-    };
-
     // sobrescreve o metodo que eh executado toda vez que um pacote (nao de autenticacao) � executado
     this.prototype.onPacket = function(packet) {
         if (packet.Command === CIC_COMMAND_TEXTMESSAGE) {
