@@ -158,8 +158,8 @@ var Base64 = {
 };
 
 function CICBaseProtocol() {
-
-    var _Protocol = this; // pra poder usar em todos os lugares 
+    // pra poder usar em todos os lugares 
+    var self = this; 
 
     // propriedades privadas
     var _ServerID = '';
@@ -176,7 +176,7 @@ function CICBaseProtocol() {
     // metodos privados
     var _onWSOpen = function() {
         console.log('WebSocket CONNECTED');
-        _Protocol.onConnect();
+        self.onConnect();
         _Connection.send(_MagicString);
         // prepara o objeto JSON a ser enviado com o pedido de autenticacao
         var AuthPacket = {
@@ -185,17 +185,17 @@ function CICBaseProtocol() {
             Password: _UserPassword,
             VersionNumber: '396'
         };
-        _Protocol.sendPacket(AuthPacket);
+        self.sendPacket(AuthPacket);
     };
 
     var _onWSClose = function() {
         console.log('WebSocket DISCONNECTED');
-        _Protocol.onDisconnect();
+        self.onDisconnect();
     };
 
     var _onWSError = function(error) {
-        console.log('WebSocket ERROR: ' + error);
-        _Protocol.onError(error);
+        console.log('WebSocket ERROR: ' + JSON.stringify(error));
+        self.onError(error);
     };
 
     var _onWSMessage = function(event) {
@@ -206,23 +206,23 @@ function CICBaseProtocol() {
             if (packet.Command === CIC_COMMAND_AUTHENTICATION) {
                 _ServerID = packet.ServerID;
                 _ServerName = packet.ServerName;
-                _ServerVersion = packet.ServerVersion;
+                _ServerVersion = packet.VersionInfo;
                 if (packet.Granted === 'True') {
-                    console.log('Authenticated to server: ' + _Protocol.getServerName());
+                    console.log('Authenticated to server: ' + self.getServerName() + ':' + self.getServerID() + ' (' + self.getServerVersion() + ')');
                     _IsAuthenticated = true;
-                    _Protocol.onAuthenticationOk();
+                    self.onAuthenticationOk();
                 }
                 else {
                     packet.ErrorMessage = Base64.decode(packet.ErrorMessage);
                     console.log('Authentication ERROR ' + packet.ErrorNumber + ': ' + packet.ErrorMessage);
                     _IsAuthenticated = false;
-                    _Protocol.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
+                    self.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
                 }
             }
         }
         else {
             //console.log('Protocol PACKET: ' + JSON.stringify(packet));
-            _Protocol.onPacket(packet);
+            self.onPacket(packet);
         }
     };
 
@@ -238,7 +238,6 @@ function CICBaseProtocol() {
         _MagicString = MagicString;
         _UserID = UserID;
         _UserPassword = UserPassword;
-
         // precisa ter estabelecido uma conexao HTTPS com o endereco abaixo
         // para que o usuario tenha a chance de aceitar o certificado
         // auto-assinado do servidor intrachat
@@ -266,7 +265,7 @@ function CICBaseProtocol() {
     };
     
     this.onError = function(error) {
-        // nao faz nada por padrao
+        //console.log('Protocol ERROR: ' + JSON.stringify(error));
     };
     
     this.onAuthenticationOk = function() {
@@ -284,18 +283,18 @@ function CICBaseProtocol() {
 };
 
 function CICMessageProtocol(ServerID, ServerPort, UserID, UserPassword, Targets, TextMessage) {
-    // heranca no JavaScript
-    this.prototype = new CICBaseProtocol();
+    //var self = this;
+    this.super = new CICBaseProtocol();
     
     var _Targets = Targets;
     var _Message = TextMessage;
     var _Count = Targets.length;
     
     // faz a conexao e envia a mensagem
-    this.prototype.connect(ServerID, ServerPort, CIC_MESSAGE_MAGIC_STRING, UserID, UserPassword);
+    this.super.connect(ServerID, ServerPort, CIC_MESSAGE_MAGIC_STRING, UserID, UserPassword);
     
     // sobrescreve o metodo que eh executado quando a autenticacao foi bem sucedida
-    this.prototype.onAuthenticationOk = function() {
+    this.super.onAuthenticationOk = function() {
         // envia a mensagem
         var MsgPacket = {
             Command: CIC_COMMAND_TEXTMESSAGE,
@@ -307,7 +306,7 @@ function CICMessageProtocol(ServerID, ServerPort, UserID, UserPassword, Targets,
     };
     
     // sobrescreve o metodo que eh executado toda vez que um pacote (nao de autenticacao) � executado
-    this.prototype.onPacket = function(packet) {
+    this.super.onPacket = function(packet) {
         if (packet.Command === CIC_COMMAND_TEXTMESSAGE) {
             if (packet.MessageID !== '0') {
                 console.log('Message to ' + packet.ToUserID + ' SENT. ID: ' + packet.MessageID);
@@ -326,20 +325,20 @@ function CICMessageProtocol(ServerID, ServerPort, UserID, UserPassword, Targets,
 };
 
 function CICClientProtocol(ServerID, ServerPort, UserID, UserPassword) {
-    // heranca no JavaScript
-    this.prototype = new CICBaseProtocol();
+    //var self = this;
+    this.super = new CICBaseProtocol();
+        
+    this.super.connect(ServerID, ServerPort, CIC_CLIENT_MAGIC_STRING, UserID, UserPassword);
     
-    this.prototype.connect(ServerID, ServerPort, CIC_CLIENT_MAGIC_STRING, UserID, UserPassword);
-    
-    this.prototype.onAuthenticationOk = function() {
-        console.log('CICClient AUTHENTICATED');
+    this.super.onAuthenticationOk = function() {
+        //console.log('CICClient AUTHENTICATED');
     };
     
-    this.prototype.onAuthenticationFailed = function(errornumber, errormessage) {
-        console.log('Authentication ERROR ' + errornumber + ': ' + errormessage);
+    this.super.onAuthenticationFailed = function(errornumber, errormessage) {
+        //console.log('Authentication ERROR ' + errornumber + ': ' + errormessage);
     };
 
-    this.prototype.onPacket = function(packet) {
+    this.super.onPacket = function(packet) {
         if (packet.Command === CIC_COMMAND_KEEPALIVE) {
             // simplesmente devolve o mesmo pacote 
             packet.Command = CIC_COMMAND_KEEPALIVE_BACK;
