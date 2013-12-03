@@ -160,6 +160,9 @@ var Base64 = {
 function CICBaseProtocol() {
     // pra poder usar em todos os lugares 
     var self = this; 
+    
+    // sequencial de pacotes enviados
+    var _PacketID = 0;
 
     // propriedades privadas
     var _ServerID = '';
@@ -253,6 +256,9 @@ function CICBaseProtocol() {
     };
 
     this.sendPacket = function(packet) {
+        if (packet.PacketID === undefined) {
+            packet.PacketID = ++_PacketID;
+        }
         _Connection.send(JSON.stringify(packet));
     };
     
@@ -333,6 +339,7 @@ function CICClientProtocol(ServerID, ServerPort, UserID, UserPassword) {
     };
 
     this.super.onPacket = function(packet) {
+        //console.log(JSON.stringify(packet));
         if (packet.Command === CIC_COMMAND_KEEPALIVE) {
             // simplesmente devolve o mesmo pacote 
             packet.Command = CIC_COMMAND_KEEPALIVE_BACK;
