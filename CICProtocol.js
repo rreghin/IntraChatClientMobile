@@ -288,7 +288,6 @@ function CICMessageProtocol(ServerID, ServerPort, UserID, UserPassword, Targets,
     
     var _Targets = Targets;
     var _Message = TextMessage;
-    var _Count = Targets.length;
     
     // faz a conexao e envia a mensagem
     this.super.connect(ServerID, ServerPort, CIC_MESSAGE_MAGIC_STRING, UserID, UserPassword);
@@ -309,16 +308,11 @@ function CICMessageProtocol(ServerID, ServerPort, UserID, UserPassword, Targets,
     this.super.onPacket = function(packet) {
         if (packet.Command === CIC_COMMAND_TEXTMESSAGE) {
             if (packet.MessageID !== '0') {
-                console.log('Message to ' + packet.ToUserID + ' SENT. ID: ' + packet.MessageID);
+                console.log('Message to ' + packet.ToUserID + (packet.Group===undefined?'':' ('+packet.Group+')') + ' SENT. ID: ' + packet.MessageID);
             }
             else {
                 console.log('Message to ' + packet.ToUserID + ' FAILED: ' + Base64.decode(packet.ErrorMessage));
             }
-        }
-        // desconecta assim que terminar de receber todas as respostas
-        // o servidor faz isso, mas pode demorar mais se esperar pelo fechamento do servidor
-        if (--_Count <= 0) {
-            this.disconnect();
         }
     };
     
