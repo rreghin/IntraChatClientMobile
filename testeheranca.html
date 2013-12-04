@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Teste de Herança em JavaScript</title>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var output;
+            
+            function init() {
+                output = document.getElementById("output");
+                startTest();
+            }  
+
+            function startTest() {
+                
+                function inherit(proto) {
+                    function F() {}     // (1)
+                    F.prototype = proto; // (2)
+                    return new F();      // (3)
+                }
+                
+                
+        
+                function Base(valor) {
+                    this.prop = valor || 'base';
+                };
+                Base.prototype.onAlgumaCoisa = function() { writeToScreen(this.prop); };
+                
+                
+        
+                function Cliente(valor) {
+                    this.prop = valor;
+                }
+                
+                var cliente = new Cliente('cliente');
+                cliente.prototype = Base;
+                cliente.onAlgumaCoisa = function() { 
+                    writeToScreen('coisanenhuma'); 
+                    this.prototype.prototype.onAlgumaCoisa.call(this);
+                };
+                
+                writeToScreen(cliente.prop); 
+                cliente.onAlgumaCoisa();
+            }  
+
+            function writeToScreen(message) { 
+                var pre = document.createElement("p"); 
+                pre.style.wordWrap = "break-word"; 
+                pre.innerHTML = message; 
+                output.appendChild(pre); 
+            }  
+
+            window.addEventListener("load", init, false);  
+        </script>  
+
+        <h2>Teste de Herança em JavaScript</h2>  
+        <div id="output"></div>
+    </body>
+</html>
