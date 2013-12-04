@@ -14,13 +14,15 @@
             // para facilitar, é possível enviar uma mensagem para uma unidade inteira, ou um setor inteiro.
             // para isso basta adicionar 'UN:' na frente do código da unidade de destino,
             // ou 'ST:' (ou 'DP:') na frente do nome do setor.
-            var Destinos = ['administrador','UN:F08','ST:Cadastro','tralala'];
+            var Destinos = ['administrador','UN:F08','ST:Administração','tralala'];
             var Texto = 'Teste de envio de mensagem...';
             
             var Servidor = 'localhost';
             var Porta = 55000;
             var Usuario = 'administrador';
             var Senha = 'abc123';
+            
+            var Enviadas = 0;
 
             function init() {
                 output = document.getElementById("output");
@@ -35,6 +37,7 @@
                 };
                 
                 message.onDisconnect = function() {
+                    writeToScreen(Enviadas + ' MENSAGENS ENVIADAS COM SUCESSO');
                     writeToScreen('DESCONECTADO');
                 };
                 
@@ -55,6 +58,7 @@
                 };
 
                 message.onTextMessageOk = function(target, messageid) {
+                    Enviadas++;
                     writeToScreen('<span style="color: blue;">OK: ' + target + ' -&gt; ' + messageid +'</span>'); 
                 };
 

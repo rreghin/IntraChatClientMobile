@@ -28,39 +28,8 @@
             }  
 
             function sendCICMessage() {
-                var message = new CICMessageProtocol(Servidor, Porta, Usuario, Senha, Destinos, Texto);
-                
-                message.onConnect = function() {
-                    writeToScreen('CONECTADO');
-                };
-                
-                message.onDisconnect = function() {
-                    writeToScreen('DESCONECTADO');
-                };
-                
-                message.onError = function(error) {
-                    writeToScreen('<span style="color: red;">ERRO:</span> ' + error.data); 
-                };
-                
-                message.onAuthenticationOk = function() {
-                    writeToScreen('AUTENTICADO: ' + message.getServerName() + ':' + message.getServerID() + ' (' + message.getServerVersion() + ')');
-                };
-                
-                message.onAuthenticationFailed = function(errornumber, errormessage) {
-                    writeToScreen('<span style="color: red;">FALHA DE AUTENTICAÇÃO:</span> (' + errornumber + ') ' + errormessage); 
-                };
-                
-                message.onTextMessageSent = function(packet) {
-                    writeToScreen('MENSAGEM ENVIADA. AGUARDANDO RESPOSTA...'); 
-                };
-
-                message.onTextMessageOk = function(target, messageid) {
-                    writeToScreen('<span style="color: blue;">OK: ' + target + ' -&gt; ' + messageid +'</span>'); 
-                };
-
-                message.onTextMessageFailed = function(target, errormessage) {
-                    writeToScreen('<span style="color: red;">FALHA: ' + target + ' -&gt; ' + errormessage + '</span>'); 
-                };
+                new CICMessageProtocol(Servidor, Porta, Usuario, Senha, Destinos, Texto);
+                writeToScreen('MENSAGEM ENVIADA'); 
             }  
 
             function writeToScreen(message) { 

@@ -431,7 +431,7 @@ function CICMessageProtocol(ServerAddress, ServerPort, UserID, UserPassword, Tar
     
 };
 
-function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword) {
+function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword, doConnect) {
     var _ClientProtocol = this;
     this.super = new CICBaseProtocol();
     
@@ -508,6 +508,11 @@ function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword) {
     this.onPacket = function(packet) {
         // nao faz nada por padrao
     };
+    
+    // faz a conexao caso tenham sido passados os destinatarios e o texto da mensagem
+    if ((doConnect === undefined) || (doConnect)) {
+        _ClientProtocol.connect();
+    }
     
 };
 

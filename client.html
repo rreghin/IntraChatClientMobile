@@ -14,6 +14,8 @@
             var Porta = 55000;
             var Usuario = 'administrador';
             var Senha = 'abc123';
+            
+            var AutoConnect = true;
 
             function init() {
                 output = document.getElementById("output");
@@ -21,7 +23,7 @@
             }  
 
             function connectClient() {
-                var client = new CICClientProtocol(Servidor, Porta, Usuario, Senha);
+                var client = new CICClientProtocol(Servidor, Porta, Usuario, Senha, AutoConnect);
                 
                 client.onConnect = function() {
                     writeToScreen('CONECTADO');
@@ -43,7 +45,7 @@
                     writeToScreen('<span style="color: red;">FALHA DE AUTENTICAÇÃO:</span> (' + errornumber + ') ' + errormessage); 
                 };
                 
-                client.connect();
+                if (!AutoConnect) { client.connect(); }
             }  
 
             function writeToScreen(message) { 
