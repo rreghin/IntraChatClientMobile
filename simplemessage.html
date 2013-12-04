@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>IntraChat WebSendMessage</title>
+        <title>IntraChat SIMPLE WebSendMessage</title>
         <meta name="viewport" content="width=device-width">
         <script type="text/javascript" src="CICProtocol.js"></script>
     </head>
@@ -28,7 +28,7 @@
             }  
 
             function sendCICMessage() {
-                var message = new CICMessageProtocol(Servidor, Porta, Usuario, Senha);
+                var message = new CICMessageProtocol(Servidor, Porta, Usuario, Senha, Destinos, Texto);
                 
                 message.onConnect = function() {
                     writeToScreen('CONECTADO');
@@ -61,8 +61,6 @@
                 message.onTextMessageFailed = function(target, errormessage) {
                     writeToScreen('<span style="color: red;">FALHA: ' + target + ' -&gt; ' + errormessage + '</span>'); 
                 };
-
-                message.send(Destinos, Texto);
             }  
 
             function writeToScreen(message) { 
@@ -75,7 +73,7 @@
             window.addEventListener("load", init, false);  
         </script>  
 
-        <h2>IntraChat WebSendMessage</h2>  
+        <h2>IntraChat SIMPLE WebSendMessage</h2>  
         <div id="output"></div>
     </body>
 </html>

@@ -1,19 +1,62 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>IntraChat WebSendMessage</title>
         <meta charset="UTF-8">
+        <title>IntraChat WebClient</title>
         <meta name="viewport" content="width=device-width">
         <script type="text/javascript" src="CICProtocol.js"></script>
     </head>
     <body>
         <script type="text/javascript">
-            new CICClientProtocol('localhost', 55000, 'administrador', 'abc123');
-        </script>
+            var output;
+            
+            var Servidor = 'localhost';
+            var Porta = 55000;
+            var Usuario = 'administrador';
+            var Senha = 'abc123';
+
+            function init() {
+                output = document.getElementById("output");
+                connectClient();
+            }  
+
+            function connectClient() {
+                var client = new CICClientProtocol(Servidor, Porta, Usuario, Senha);
+                
+                client.onConnect = function() {
+                    writeToScreen('CONECTADO');
+                };
+                
+                client.onDisconnect = function() {
+                    writeToScreen('DESCONECTADO');
+                };
+                
+                client.onError = function(error) {
+                    writeToScreen('<span style="color: red;">ERRO:</span> ' + error.data); 
+                };
+                
+                client.onAuthenticationOk = function() {
+                    writeToScreen('AUTENTICADO: ' + client.getServerName() + ':' + client.getServerID() + ' (' + client.getServerVersion() + ')');
+                };
+                
+                client.onAuthenticationFailed = function(errornumber, errormessage) {
+                    writeToScreen('<span style="color: red;">FALHA DE AUTENTICAÇÃO:</span> (' + errornumber + ') ' + errormessage); 
+                };
+                
+                client.connect();
+            }  
+
+            function writeToScreen(message) { 
+                var pre = document.createElement("p"); 
+                pre.style.wordWrap = "break-word"; 
+                pre.innerHTML = message; 
+                output.appendChild(pre); 
+            }  
+
+            window.addEventListener("load", init, false);  
+        </script>  
+
+        <h2>IntraChat WebClient</h2>  
+        <div id="output"></div>
     </body>
 </html>
