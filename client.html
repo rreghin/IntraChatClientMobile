@@ -38,11 +38,15 @@
                 };
                 
                 client.onAuthenticationOk = function() {
-                    writeToScreen('AUTENTICADO: ' + client.getServerName() + ':' + client.getServerID() + ' (' + client.getServerVersion() + ')');
+                    writeToScreen('AUTENTICADO: ' + client.ServerName + ':' + client.ServerID + ' (' + client.ServerVersion + ')');
                 };
                 
                 client.onAuthenticationFailed = function(errornumber, errormessage) {
                     writeToScreen('<span style="color: red;">FALHA DE AUTENTICAÇÃO:</span> (' + errornumber + ') ' + errormessage); 
+                };
+                
+                client.onPacket = function(packet) {
+                    writeToScreen('<span style="color: green;">' + JSON.stringify(packet) + '</span>'); 
                 };
                 
                 if (!AutoConnect) { client.connect(); }

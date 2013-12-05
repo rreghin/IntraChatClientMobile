@@ -17,30 +17,35 @@
             function startTest() {
                 
                 function Base() {
+                    this.valor = 'base';
+                    this.metodo = function() { writeToScreen(texto || this.valor); };
+                    this.chama = function() { this.metodo(); };
                 };
-                Base.prototype.valor = 'base';
-                Base.prototype.metodo = function(texto) { writeToScreen(texto); };
-                Base.prototype.chamametodo = function() { this.metodo(this.valor); };
                 
                 function Cliente() {
+                    this.parent = Base;
+                    this.valor = 'cliente';
+                    this.metodo = function(texto) { 
+                        writeToScreen(this.valor); 
+                        this.parent.prototype.metodo.call(this);
+                    };
                 }                
                 Cliente.prototype = new Base();
-                Cliente.prototype.parent = Base;
-                Cliente.prototype.valor = 'cliente';
-                Cliente.prototype.metodo = function(texto) { 
-                    writeToScreen(this.valor); 
-                    this.parent.prototype.chamametodo();
-                };
                 
                 function Sessao() {
+                    this.parent = Cliente;
+                    this.valor = 'sessao';
                 }
                 Sessao.prototype = new Cliente();
-                Sessao.prototype.parent = Cliente;
-                Sessao.prototype.valor = 'sessao';
                 
                 var cliente = new Sessao();
                 
-                cliente.chamametodo();
+                cliente.metodo = function() {
+                    writeToScreen('blablabla');
+                };
+                
+                cliente.metodo();
+                cliente.chama();
             }  
 
             function writeToScreen(message) { 

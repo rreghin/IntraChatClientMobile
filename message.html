@@ -30,7 +30,7 @@
             }  
 
             function sendCICMessage() {
-                var message = new CICMessageProtocol(Servidor, Porta, Usuario, Senha);
+                var message = new CICMessageProtocol(Servidor, Porta, Usuario, Senha, Destinos, Texto);
                 
                 message.onConnect = function() {
                     writeToScreen('CONECTADO');
@@ -46,7 +46,7 @@
                 };
                 
                 message.onAuthenticationOk = function() {
-                    writeToScreen('AUTENTICADO: ' + message.getServerName() + ':' + message.getServerID() + ' (' + message.getServerVersion() + ')');
+                    writeToScreen('AUTENTICADO: ' + message.ServerName + ':' + message.ServerID + ' (' + message.ServerVersion + ')');
                 };
                 
                 message.onAuthenticationFailed = function(errornumber, errormessage) {
@@ -65,8 +65,6 @@
                 message.onTextMessageFailed = function(target, errormessage) {
                     writeToScreen('<span style="color: red;">FALHA: ' + target + ' -&gt; ' + errormessage + '</span>'); 
                 };
-
-                message.send(Destinos, Texto);
             }  
 
             function writeToScreen(message) { 

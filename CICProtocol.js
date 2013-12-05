@@ -162,357 +162,268 @@ var Base64 = {
 };
 
 function CICBaseProtocol() {
-    // pra poder usar em todos os lugares 
-    var _BaseProtocol = this; 
-    
-    // sequencial de pacotes enviados
-    var _PacketID = 0;
-
-    // propriedades privadas
-    var _ServerID = '';
-    var _ServerName = '';
-    var _ServerVersion = '';
-    var _ServerAddress = '';
-    var _ServerPort = '55000';
-    var _MagicString = '\r\n';
-    var _UserID = '';
-    var _UserPassword = '';
-    var _IsAuthenticated = false;
-    var _Connection = {}; // new WebSocket(...);
+            
+    this.ServerID = '';
+    this.ServerName = '';
+    this.ServerVersion = '';
+    this.ServerAddress = '';
+    this.ServerPort = '55000';
+    this.MagicString = '\r\n';
+    this.UserID = '';
+    this.UserPassword = '';
+    this.IsAuthenticated = false;
+    this.WebSocket; //  = new WebSocket(...);
+    this.LastPacketID = 0; // sequencial de pacotes enviados
 
     // metodos privados
-    var _onWSOpen = function() {
-        //console.log('WebSocket CONNECTED');
-        _BaseProtocol.onConnect();
-        _Connection.send(_MagicString);
-        // prepara o objeto JSON a ser enviado com o pedido de autenticacao
-        var AuthPacket = {
-            Command: CIC_COMMAND_AUTHENTICATE,
-            UserID: _UserID,
-            Password: _UserPassword,
-            VersionNumber: CIC_PROTOCOL_VERSION,
-            VersionRevision: CIC_PROTOCOL_REVISION,
-            VersionPlatform: CIC_PROTOCOL_PLATFORM,
-            Language: 'PT',
-            SystemInfo: ''
-        };
-        _BaseProtocol.sendPacket(AuthPacket);
+    this._onWSOpen = function() {
+        if (this.intOnConnect()) {
+            this.onConnect();
+            this.WebSocket.send(this.MagicString);
+            // prepara o objeto JSON a ser enviado com o pedido de autenticacao
+            var AuthPacket = {
+                Command: CIC_COMMAND_AUTHENTICATE,
+                UserID: this.UserID,
+                Password: this.UserPassword,
+                VersionNumber: CIC_PROTOCOL_VERSION,
+                VersionRevision: CIC_PROTOCOL_REVISION,
+                VersionPlatform: CIC_PROTOCOL_PLATFORM,
+                Language: 'PT',
+                SystemInfo: ''
+            };
+            this.sendPacket(AuthPacket);
+        }
     };
 
-    var _onWSClose = function() {
-        //console.log('WebSocket DISCONNECTED');
-        _BaseProtocol.onDisconnect();
+    this._onWSClose = function() {
+        if (this.intOnDisconnect()) {
+            this.onDisconnect();
+        }
     };
 
-    var _onWSError = function(error) {
-        //console.log('WebSocket ERROR: ' + JSON.stringify(error));
-        _BaseProtocol.onError(error);
+    this._onWSError = function(error) {
+        if (this.intOnError(error)) {
+            this.onError(error);
+        }
     };
 
-    var _onWSMessage = function(event) {
-        //console.log('WebSocket MESSAGE: ' + event.data);
+    this._onWSMessage = function(event) {
         var packet = JSON.parse(event.data);
         // verifica qual foi o comando enviado pelo servidor
-        if (!_IsAuthenticated) {
+        if (!this.IsAuthenticated) {
             if (packet.Command === CIC_COMMAND_AUTHENTICATION) {
-                _ServerID = packet.ServerID;
-                _ServerName = packet.ServerName;
-                _ServerVersion = packet.VersionInfo;
+                this.ServerID = packet.ServerID;
+                this.ServerName = packet.ServerName;
+                this.ServerVersion = packet.VersionInfo;
                 if (packet.Granted === 'True') {
-                    //console.log('Authenticated to server: ' + _BaseProtocol.getServerName() + ':' + _BaseProtocol.getServerID() + ' (' + _BaseProtocol.getServerVersion() + ')');
-                    _IsAuthenticated = true;
-                    _BaseProtocol.onAuthenticationOk();
+                    this.IsAuthenticated = true;
+                    if (this.intOnAuthenticationOk()) {
+                        this.onAuthenticationOk();
+                    }
                 }
                 else {
+                    this.IsAuthenticated = false;
                     packet.ErrorMessage = Base64.decode(packet.ErrorMessage);
-                    //console.log('Authentication ERROR ' + packet.ErrorNumber + ': ' + packet.ErrorMessage);
-                    _IsAuthenticated = false;
-                    _BaseProtocol.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
+                    if (this.intOnAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage)) {
+                        this.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
+                    }
                 }
             }
         }
         else {
-            //console.log('Protocol PACKET: ' + JSON.stringify(packet));
-            _BaseProtocol.onPacket(packet);
+            if (this.intOnPacket(packet)) {
+                this.onPacket(packet);
+            }
         }
     };
-
-    // metodos publicos
-    this.getServerID = function() { return _ServerID; };
-    this.getServerName = function() { return _ServerName; };
-    this.getServerVersion = function() { return _ServerVersion; };
-    this.getAuthenticated = function() { return _IsAuthenticated; };
-
-    this.connect = function(ServerAddress, ServerPort, MagicString, UserID, UserPassword) {
-        _ServerAddress = ServerAddress;
-        _ServerPort = ServerPort;
-        _MagicString = MagicString;
-        _UserID = UserID;
-        _UserPassword = UserPassword;
+    
+    /**
+     * metodos INTERNOS (NAO devem ser sobrescritos)
+     */
+    
+    this.intConnect = function(ServerAddress, ServerPort, MagicString, UserID, UserPassword) {
+        this.ServerAddress = ServerAddress;
+        this.ServerPort = ServerPort;
+        this.MagicString = MagicString;
+        this.UserID = UserID;
+        this.UserPassword = UserPassword;
         // precisa ter estabelecido uma conexao HTTPS com o endereco abaixo
         // para que o usuario tenha a chance de aceitar o certificado
         // auto-assinado do servidor intrachat
-        _Connection = new WebSocket('wss://'+_ServerAddress+':'+_ServerPort+'/', ['intrachat']);
-        _Connection.onopen = _onWSOpen;
-        _Connection.onclose = _onWSClose;
-        _Connection.onerror = _onWSError;
-        _Connection.onmessage = _onWSMessage;
+        var self = this;
+        this.WebSocket = new WebSocket('wss://'+this.ServerAddress+':'+this.ServerPort+'/', ['intrachat']);
+        this.WebSocket.onopen = function() { self._onWSOpen.call(self); };
+        this.WebSocket.onclose = function() { self._onWSClose.call(self); };
+        this.WebSocket.onerror = function(error) { self._onWSError.call(self, error); };
+        this.WebSocket.onmessage = function(event) { self._onWSMessage.call(self, event); };
+    };
+    
+    this.intDisconnect = function() {
+        this.WebSocket.close();
+    };
+
+    this.intSendPacket = function(packet) {
+        if (packet.PacketID === undefined) {
+            packet.PacketID = ++this.LastPacketID;
+        }
+        this.WebSocket.send(JSON.stringify(packet));
+    };
+    
+    /**
+     * metodos EXTERNOS (podem ser sobrescritos)
+     */
+    
+    this.connect = function(ServerAddress, ServerPort, MagicString, UserID, UserPassword) {
+        this.intConnect(ServerAddress, ServerPort, MagicString, UserID, UserPassword);
     };
     
     this.disconnect = function() {
-        _Connection.close();
+        this.intDisconnect();
     };
 
     this.sendPacket = function(packet) {
-        if (packet.PacketID === undefined) {
-            packet.PacketID = ++_PacketID;
-        }
-        _Connection.send(JSON.stringify(packet));
+        this.intSendPacket(packet);
     };
     
+    /**
+     * eventos INTERNOS (podem ser sobrescritos)
+     * devem retornar TRUE se os metodos e eventos EXTERNOS devem ser chamados
+     */
+    
+    this.intOnConnect = function() {
+        return true;
+    };
+    
+    this.intOnDisconnect = function() {
+        return true;
+    };
+    
+    this.intOnError = function(error) {
+        return true;
+    };
+    
+    this.intOnAuthenticationOk = function() {
+        return true;
+    };
+
+    this.intOnAuthenticationFailed = function(errornumber, errormessage) {
+        return true;
+    };
+
+    this.intOnPacket = function(packet) {
+        return true;
+    };
+
+    /**
+     * eventos EXTERNOS (podem ser sobrescritos pelo front-end)
+     */
+    
     this.onConnect = function() {
-        // nao faz nada por padrao
+        //console.log('CONNECTED');
     };
     
     this.onDisconnect = function() {
-        // nao faz nada por padrao
+        //console.log('DISCONNECTED');
     };
     
     this.onError = function(error) {
-        //console.log('Protocol ERROR: ' + JSON.stringify(error));
+        //console.log('ERROR: ' + JSON.stringify(error));
     };
     
     this.onAuthenticationOk = function() {
-        //console.log('Authenticated to server: ' + this.getServerName());
+        //console.log('Authenticated to server "' + this.getServerName() + '"');
     };
 
     this.onAuthenticationFailed = function(errornumber, errormessage) {
-        //console.log('Authentication ERROR ' + errornumber + ': ' + errormessage);
+        //console.log('Authentication ERROR: (' + errornumber + ') ' + errormessage);
     };
 
     this.onPacket = function(packet) {
-        //console.log('Protocol PACKET: ' + JSON.stringify(packet));
+        //console.log('PACKET: ' + JSON.stringify(packet));
     };
 
 };
 
 function CICMessageProtocol(ServerAddress, ServerPort, UserID, UserPassword, Targets, TextMessage) {
-    var _MessageProtocol = this;
-    this.super = new CICBaseProtocol();
-    
-    var _Targets = Targets;
-    var _Message = TextMessage;
     
     /**
-     * sobreescreve/reescreve os metodos basicos do protocolo base
-     * pra ficar mais facil de chama-los
+     * sobreescreve os eventos basicos do protocolo base
      */
     
-    this.connect = function() { this.super.connect(ServerAddress, ServerPort, CIC_MESSAGE_MAGIC_STRING, UserID, UserPassword); };    
-    this.disconnect = function() { this.super.disconnect(); };        
-    this.sendPacket = function(packet) { this.super.sendPacket(packet); };    
-    this.getServerID = function() { return this.super.getServerID(); };
-    this.getServerName = function() { return this.super.getServerName(); };
-    this.getServerVersion = function() { return this.super.getServerVersion(); };
-    this.getAuthenticated = function() { return this.super.getAuthenticated(); };
-    
-    /**
-     * sobreescreve/reescreve os eventos basicos do protocolo base
-     */
-    
-    this.super.onConnect = function() {
-        _MessageProtocol.onConnect();
-    };
-    
-    this.super.onDisconnect = function() {
-        _MessageProtocol.onDisconnect();
-    };
-    
-    this.super.onError = function(error) {
-        _MessageProtocol.onError(error);
-    };
-    
-    this.super.onAuthenticationOk = function() {
-        _MessageProtocol.onAuthenticationOk();
-        // se os destinos e a mensagem foram passados no Constructor, entao ja envia a mensagem
-        if ((_Targets !== undefined) && (_Message !== undefined)) {
-            _MessageProtocol.send(_Targets, _Message);
-        }
-        //console.log('CICMessage SENT:' + JSON.stringify(MsgPacket));
+    this.intOnAuthenticationOk = function() {
+        var MsgPacket = {
+            Command: CIC_COMMAND_TEXTMESSAGE,
+            ToUserID: Targets,
+            TextMessage: Base64.encode(TextMessage)
+        };
+        this.sendPacket(MsgPacket);
+        this.onTextMessageSent(MsgPacket);
+        return true;
     };
 
-    this.super.onAuthenticationFailed = function(errornumber, errormessage) {
-        _MessageProtocol.onAuthenticationFailed(errornumber, errormessage);
-    };
-
-    this.super.onPacket = function(packet) {
+    this.intOnPacket = function(packet) {
         if (packet.Command === CIC_COMMAND_TEXTMESSAGE) {
             var target = packet.ToUserID + (packet.Group===undefined?'':' ('+packet.Group+')');
             if (packet.MessageID !== '0') {
-                var messageid = packet.MessageID;
-                //console.log('Message to ' + target + ' SENT. ID: ' + messageid);
-                _MessageProtocol.onTextMessageOk(target, messageid);
+                this.onTextMessageOk(target, packet.MessageID);
             }
             else {
-                var errormessage = Base64.decode(packet.ErrorMessage);
-                //console.log('Message to ' + target + ' FAILED: ' + errormessage);
-                _MessageProtocol.onTextMessageFailed(target, errormessage);
+                this.onTextMessageFailed(target, Base64.decode(packet.ErrorMessage));
             }
         }
-        _MessageProtocol.onPacket(packet);
-    };
-
-    /**
-     * esses sao os metodos que a interface deve/pode sobreescrever para controlar o cliente
-     */
-    
-    this.onConnect = function() {
-        // nao faz nada por padrao
-    };
-    
-    this.onDisconnect = function() {
-        // nao faz nada por padrao
-    };
-    
-    this.onError = function(error) {
-        // nao faz nada por padrao
-    };
-    
-    this.onAuthenticationOk = function() {
-        // nao faz nada por padrao
-    };
-    
-    this.onAuthenticationFailed = function(errornumber, errormessage) {
-        // nao faz nada por padrao
-    };
-
-    this.onPacket = function(packet) {
-        // nao faz nada por padrao
-    };
-    
-    this.onTextMessageSent = function(packet) {
-        // nao faz nada por padrao
-    };
-    
-    this.onTextMessageOk = function(target, messageid) {
-        // nao faz nada por padrao
-    };
-    
-    this.onTextMessageFailed = function(target, errormessage) {
-        // nao faz nada por padrao
+        return true;
     };
 
     /**
      * esses sao os metodos publicos disponiveis para a interface
      */
     
-    this.send = function(Targets, TextMessage) {
-        if ((!this.getAuthenticated()) || (_Targets === undefined) || (_Message === undefined)) {
-            _Targets = Targets;
-            _Message = TextMessage;
-            _MessageProtocol.connect();
-        }
-        else {
-            // envia a mensagem
-            var MsgPacket = {
-                Command: CIC_COMMAND_TEXTMESSAGE,
-                ToUserID: Targets,
-                TextMessage: Base64.encode(TextMessage)
-            };
-            this.sendPacket(MsgPacket);
-            _MessageProtocol.onTextMessageSent(MsgPacket);
-        }
+    this.connect = function() {
+        this.intConnect(ServerAddress, ServerPort, CIC_MESSAGE_MAGIC_STRING, UserID, UserPassword);
     };
     
+    this.onTextMessageSent = function(packet) {
+        // nao faz nada por padrao
+    };
+
+    this.onTextMessageOk = function(target, messageid) {
+        // nao faz nada por padrao
+    };
+
+    this.onTextMessageFailed = function(target, errormessage) {
+        // nao faz nada por padrao
+    };
+
     // faz a conexao caso tenham sido passados os destinatarios e o texto da mensagem
-    if ((_Targets !== undefined) && (_Message !== undefined)) {
-        _MessageProtocol.connect();
-    }
+    this.connect();
     
 };
+CICMessageProtocol.prototype = new CICBaseProtocol();
 
 function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword, doConnect) {
-    var _ClientProtocol = this;
-    this.super = new CICBaseProtocol();
     
     /**
-     * sobreescreve/reescreve os metodos basicos do protocolo base
-     * pra ficar mais facil de chama-los
+     * esses sao os metodos publicos disponiveis para a interface
      */
     
-    this.connect = function() { this.super.connect(ServerAddress, ServerPort, CIC_CLIENT_MAGIC_STRING, UserID, UserPassword); };    
-    this.disconnect = function() { this.super.disconnect(); };        
-    this.sendPacket = function(packet) { this.super.sendPacket(packet); };    
-    this.getServerID = function() { return this.super.getServerID(); };
-    this.getServerName = function() { return this.super.getServerName(); };
-    this.getServerVersion = function() { return this.super.getServerVersion(); };
-    this.getAuthenticated = function() { return this.super.getAuthenticated(); };
-    
-    /**
-     * sobreescreve/reescreve os eventos basicos do protocolo base
-     */
-    
-    this.super.onConnect = function() {
-        _ClientProtocol.onConnect();
+    this.connect = function() {
+        this.intConnect(ServerAddress, ServerPort, CIC_CLIENT_MAGIC_STRING, UserID, UserPassword);
     };
     
-    this.super.onDisconnect = function() {
-        _ClientProtocol.onDisconnect();
-    };
-    
-    this.super.onError = function(error) {
-        _ClientProtocol.onError(error);
-    };
-    
-    this.super.onAuthenticationOk = function() {
-        _ClientProtocol.onAuthenticationOk();
-    };
-
-    this.super.onAuthenticationFailed = function(errornumber, errormessage) {
-        _ClientProtocol.onAuthenticationFailed(errornumber, errormessage);
-    };
-
-    this.super.onPacket = function(packet) {
+    this.intOnPacket = function(packet) {
         if (packet.Command === CIC_COMMAND_KEEPALIVE) {
             // simplesmente devolve o mesmo pacote 
             packet.Command = CIC_COMMAND_KEEPALIVE_BACK;
             this.sendPacket(packet);
         }
-        _ClientProtocol.onPacket(packet);
+        return true;
     };
 
-    /**
-     * esses sao os metodos que a interface deve/pode sobreescrever para controlar o cliente
-     */
-    
-    this.onConnect = function() {
-        // nao faz nada por padrao
-    };
-    
-    this.onDisconnect = function() {
-        // nao faz nada por padrao
-    };
-    
-    this.onError = function(error) {
-        // nao faz nada por padrao
-    };
-    
-    this.onAuthenticationOk = function() {
-        // nao faz nada por padrao
-    };
-    
-    this.onAuthenticationFailed = function(errornumber, errormessage) {
-        // nao faz nada por padrao
-    };
-
-    this.onPacket = function(packet) {
-        // nao faz nada por padrao
-    };
-    
-    // faz a conexao caso tenham sido passados os destinatarios e o texto da mensagem
+    // ja faz a conexao com o servidor, caso tenha dito que sim, ou nao tenha sido dito nada
     if ((doConnect === undefined) || (doConnect)) {
-        _ClientProtocol.connect();
+        this.connect();
     }
     
 };
+CICClientProtocol.prototype = new CICBaseProtocol();
 
