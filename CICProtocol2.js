@@ -13,6 +13,17 @@ var CIC_COMMAND_AUTHENTICATE   = '001';
 var CIC_COMMAND_AUTHENTICATION = '101';
 var CIC_COMMAND_KEEPALIVE      = '111';
 var CIC_COMMAND_KEEPALIVE_BACK = '008';
+var CIC_COMMAND_LIST_ALL       = '033';
+var CIC_COMMAND_LIST_UNITS     = '034';
+var CIC_COMMAND_LIST_USERS     = '035';
+var CIC_COMMAND_LIST_MESSAGES  = '036';
+var CIC_COMMAND_LIST_ROOMS     = '037';
+var CIC_COMMAND_LIST_FILES     = '038';
+var CIC_COMMAND_UNIT_COUNT     = '039';
+var CIC_COMMAND_USER_COUNT     = '040';
+var CIC_COMMAND_MESSAGE_COUNT  = '041';
+var CIC_COMMAND_ROOM_COUNT     = '042';
+var CIC_COMMAND_FILE_COUNT     = '043';
 var CIC_COMMAND_TEXTMESSAGE    = '010';
 
 var CIC_CLIENT_MAGIC_STRING = '@BOBJDCDLEIDEBNEDDODJDCDODNBJBO\r\n';
@@ -169,7 +180,7 @@ function CICBaseProtocol() {
         
 }{
     /**
-     *  METODOS PARA FUNÇÕES BÁSICAS DO PROTOCOLO
+     *  METODOS PARA FUNÇÕES B�?SICAS DO PROTOCOLO
      */
     
     CICBaseProtocol.prototype.init = function(ServerAddress, ServerPort, UserID, UserPassword, MagicString) {
@@ -254,31 +265,37 @@ function CICBaseProtocol() {
     };
     
     CICBaseProtocol.prototype._onWSMessage = function(event) {
-        var packet = JSON.parse(event.data);
-        // verifica qual foi o comando enviado pelo servidor
-        if (!this.IsAuthenticated) {
-            if (packet.Command === CIC_COMMAND_AUTHENTICATION) {
-                this.ServerID = packet.ServerID;
-                this.ServerName = packet.ServerName;
-                this.ServerVersion = packet.VersionInfo;
-                if (packet.Granted === 'True') {
-                    this.IsAuthenticated = true;
-                    if (this.intOnAuthenticationOk()) {
-                        this.onAuthenticationOk();
+        //console.log(event.data);
+        var lines = event.data.match(/^.*((\r\n|\n|\r)|$)/gm);
+        for(var index in lines) {
+            if (lines[index] !== '') {
+                var packet = JSON.parse(lines[index]);
+                // verifica qual foi o comando enviado pelo servidor
+                if (!this.IsAuthenticated) {
+                    if (packet.Command === CIC_COMMAND_AUTHENTICATION) {
+                        this.ServerID = packet.ServerID;
+                        this.ServerName = packet.ServerName;
+                        this.ServerVersion = packet.VersionInfo;
+                        if (packet.Granted === 'True') {
+                            this.IsAuthenticated = true;
+                            if (this.intOnAuthenticationOk()) {
+                                this.onAuthenticationOk();
+                            }
+                        }
+                        else {
+                            this.IsAuthenticated = false;
+                            packet.ErrorMessage = Base64.decode(packet.ErrorMessage);
+                            if (this.intOnAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage)) {
+                                this.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
+                            }
+                        }
                     }
                 }
                 else {
-                    this.IsAuthenticated = false;
-                    packet.ErrorMessage = Base64.decode(packet.ErrorMessage);
-                    if (this.intOnAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage)) {
-                        this.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
+                    if (this.intOnPacket(packet)) {
+                        this.onPacket(packet);
                     }
                 }
-            }
-        }
-        else {
-            if (this.intOnPacket(packet)) {
-                this.onPacket(packet);
             }
         }
     };
@@ -467,6 +484,16 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         return this.parent.prototype.intDisconnect.call(this);
     };
 
+    CICClientSession.prototype.intOnAuthenticationOk = function() {
+        // pede as listas assim que estiver autenticado
+        var Packet = {
+            Command: CIC_COMMAND_LIST_ALL,
+            LastChange: ''
+        };
+        this.sendPacket(Packet);
+        return this.parent.prototype.intOnAuthenticationOk.call(this);
+    };
+    
     CICClientSession.prototype.intOnPacket = function(packet) {
         // primeiro processa o pacote pela "classe" mãe.
         // se ela retornar TRUE é porque o pacote nao foi processado ainda, e precisa ser processado aqui dentro desse metodo
