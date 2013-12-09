@@ -9,22 +9,31 @@ var CIC_PROTOCOL_VERSION  = '396';
 var CIC_PROTOCOL_REVISION = 'aWS';
 var CIC_PROTOCOL_PLATFORM = 'M';
 
-var CIC_COMMAND_AUTHENTICATE   = '001';
-var CIC_COMMAND_AUTHENTICATION = '101';
-var CIC_COMMAND_KEEPALIVE      = '111';
-var CIC_COMMAND_KEEPALIVE_BACK = '008';
-var CIC_COMMAND_LIST_ALL       = '033';
-var CIC_COMMAND_LIST_UNITS     = '034';
-var CIC_COMMAND_LIST_USERS     = '035';
-var CIC_COMMAND_LIST_MESSAGES  = '036';
-var CIC_COMMAND_LIST_ROOMS     = '037';
-var CIC_COMMAND_LIST_FILES     = '038';
-var CIC_COMMAND_UNIT_COUNT     = '039';
-var CIC_COMMAND_USER_COUNT     = '040';
-var CIC_COMMAND_MESSAGE_COUNT  = '041';
-var CIC_COMMAND_ROOM_COUNT     = '042';
-var CIC_COMMAND_FILE_COUNT     = '043';
-var CIC_COMMAND_TEXTMESSAGE    = '010';
+var CIC_COMMAND_AUTHENTICATE    = '001';
+var CIC_COMMAND_AUTHENTICATION  = '101';
+
+var CIC_COMMAND_KEEPALIVE       = '111';
+var CIC_COMMAND_KEEPALIVE_BACK  = '008';
+
+var CIC_COMMAND_GET_SERVER_INFO = '032';
+var CIC_COMMAND_SERVER_INFO     = '214';
+
+var CIC_COMMAND_LIST_ALL        = '033';
+var CIC_COMMAND_LIST_UNITS      = '034';
+var CIC_COMMAND_LIST_USERS      = '035';
+var CIC_COMMAND_LIST_MESSAGES   = '036';
+var CIC_COMMAND_LIST_ROOMS      = '037';
+var CIC_COMMAND_LIST_FILES      = '038';
+var CIC_COMMAND_LIST_FOLDERS    = '039';
+
+var CIC_COMMAND_UNIT_COUNT      = '042';
+var CIC_COMMAND_USER_COUNT      = '043';
+var CIC_COMMAND_MESSAGE_COUNT   = '044';
+var CIC_COMMAND_ROOM_COUNT      = '045';
+var CIC_COMMAND_FILE_COUNT      = '046';
+var CIC_COMMAND_FOLDER_COUNT    = '047';
+
+var CIC_COMMAND_TEXTMESSAGE     = '010';
 
 var CIC_CLIENT_MAGIC_STRING = '@BOBJDCDLEIDEBNEDDODJDCDODNBJBO\r\n';
 var CIC_MESSAGE_MAGIC_STRING = 'OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n';
@@ -180,7 +189,7 @@ function CICBaseProtocol() {
         
 }{
     /**
-     *  METODOS PARA FUNÇÕES B�?SICAS DO PROTOCOLO
+     *  METODOS PARA FUNÇÕES B�?SICAS DO PROTOCOLO
      */
     
     CICBaseProtocol.prototype.init = function(ServerAddress, ServerPort, UserID, UserPassword, MagicString) {
@@ -426,7 +435,7 @@ function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword, doCo
         this.connect();
     }
 
-}{ 
+}{
     // faz a ligação entre o objeto filho com a "classe"
     CICClientProtocol.prototype = new CICBaseProtocol();
     CICClientProtocol.prototype.parent = CICBaseProtocol;
@@ -485,12 +494,10 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
     };
 
     CICClientSession.prototype.intOnAuthenticationOk = function() {
+        // pede configurações do servidor
+        this.sendPacket( { Command: CIC_COMMAND_GET_SERVER_INFO } );
         // pede as listas assim que estiver autenticado
-        var Packet = {
-            Command: CIC_COMMAND_LIST_ALL,
-            LastChange: ''
-        };
-        this.sendPacket(Packet);
+        this.sendPacket( { Command: CIC_COMMAND_LIST_ALL, LastUpdate: '2013-12-09 00:00:00.000' } );
         return this.parent.prototype.intOnAuthenticationOk.call(this);
     };
     
