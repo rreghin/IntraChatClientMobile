@@ -19,6 +19,11 @@
 
             function init() {
                 output = document.getElementById("output");
+                
+                //delete localStorage['LastUpdate']; // limpar
+                //delete localStorage['UnitList'];
+                //delete localStorage['UserList'];
+                
                 connectClient();
             }  
 
@@ -46,7 +51,15 @@
                 };
                 
                 client.onPacket = function(packet) {
-                    writeToScreen('<span style="color: green;">' + JSON.stringify(packet) + '</span>'); 
+                    //writeToScreen('<span style="color: orange;">' + JSON.stringify(packet) + '</span>'); 
+                };
+                
+                client.onUserOnLine = function(user) {
+                    writeToScreen('<span style="color: green;">' + JSON.stringify(user) + '</span>'); 
+                };
+                
+                client.onUserOffLine = function(user) {
+                    writeToScreen('<span style="color: orange;">' + JSON.stringify(user) + '</span>'); 
                 };
                 
                 if (!AutoConnect) { client.connect(); }
