@@ -9,6 +9,19 @@ var CIC_PROTOCOL_VERSION  = '396';
 var CIC_PROTOCOL_REVISION = 'aWS';
 var CIC_PROTOCOL_PLATFORM = 'M';
 
+var CIC_OPERATION_INSERT   = '0';
+var CIC_OPERATION_UPDATE   = '1';
+var CIC_OPERATION_DELETE   = '2';
+var CIC_OPERATION_SYNC     = '3';
+var CIC_OPERATION_LIST     = '4';
+var CIC_OPERATION_MODIFY   = '5';
+var CIC_OPERATION_LAG      = '6';
+var CIC_OPERATION_USERUPD  = '7';
+var CIC_OPERATION_MCP      = '9'; // codigo especial para "Meus Contatos Pessoais"
+var CIC_OPERATION_SENT     = '100';
+var CIC_OPERATION_RECEIVED = '101';
+var CIC_OPERATION_ERROR    = '255';
+
 var CIC_COMMAND_AUTHENTICATE    = '001';
 var CIC_COMMAND_AUTHENTICATION  = '101';
 
@@ -26,14 +39,20 @@ var CIC_COMMAND_LIST_ROOMS      = '037';
 var CIC_COMMAND_LIST_FILES      = '038';
 var CIC_COMMAND_LIST_FOLDERS    = '039';
 
+var CIC_COMMAND_UNIT            = '115';
+var CIC_COMMAND_USER            = '103';
+var CIC_COMMAND_MESSAGE         = '010';
+var CIC_COMMAND_ROOM            = '116';
+var CIC_COMMAND_FILE            = '138';
+var CIC_COMMAND_FOLDER          = '235';
+var CIC_COMMAND_USER_STATUS     = '071';
+
 var CIC_COMMAND_UNIT_COUNT      = '042';
 var CIC_COMMAND_USER_COUNT      = '043';
 var CIC_COMMAND_MESSAGE_COUNT   = '044';
 var CIC_COMMAND_ROOM_COUNT      = '045';
 var CIC_COMMAND_FILE_COUNT      = '046';
 var CIC_COMMAND_FOLDER_COUNT    = '047';
-
-var CIC_COMMAND_TEXTMESSAGE     = '010';
 
 var CIC_CLIENT_MAGIC_STRING = '@BOBJDCDLEIDEBNEDDODJDCDODNBJBO\r\n';
 var CIC_MESSAGE_MAGIC_STRING = 'OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n';
@@ -247,7 +266,7 @@ function CICBaseProtocol() {
             this.onConnect();
             this.WebSocket.send(this.MagicString);
             // prepara o objeto JSON a ser enviado com o pedido de autenticacao
-            var AuthPacket = {
+            this.sendPacket({
                 Command: CIC_COMMAND_AUTHENTICATE,
                 UserID: this.UserID,
                 Password: this.UserPassword,
@@ -256,8 +275,7 @@ function CICBaseProtocol() {
                 VersionPlatform: CIC_PROTOCOL_PLATFORM,
                 Language: 'PT',
                 SystemInfo: ''
-            };
-            this.sendPacket(AuthPacket);
+            });
         }
     };
     
@@ -484,7 +502,9 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         this.UnitList = {};
         this.UserList = {};
         this.RoomList = {};
+        this.FileFolderList = {};
         this.FileList = {};
+        this.MessageFolderList = {};
         this.MessageList = {};
     };
     
@@ -497,18 +517,170 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         // pede configurações do servidor
         this.sendPacket( { Command: CIC_COMMAND_GET_SERVER_INFO } );
         // pede as listas assim que estiver autenticado
-        this.sendPacket( { Command: CIC_COMMAND_LIST_ALL, LastUpdate: '2013-12-09 00:00:00.000' } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_ALL, LastUpdate: localStorage.getItem('LastUpdate') } );
         return this.parent.prototype.intOnAuthenticationOk.call(this);
     };
     
     CICClientSession.prototype.intOnPacket = function(packet) {
         // primeiro processa o pacote pela "classe" mãe.
         // se ela retornar TRUE é porque o pacote nao foi processado ainda, e precisa ser processado aqui dentro desse metodo
-        var result = this.parent.prototype.intOnPacket.call(this, packet);
-        if (result) {
-            
+        var notProcessed = this.parent.prototype.intOnPacket.call(this, packet);
+        if (notProcessed) {
+            switch (packet.command) {
+                
+                case CIC_COMMAND_UNIT:
+                case CIC_COMMAND_UNIT_COUNT:
+                    notProcessed = this.intOnUnit(packet);
+                    break;
+                    
+                case CIC_COMMAND_USER:
+                case CIC_COMMAND_USER_COUNT:
+                case CIC_COMMAND_USER_STATUS:
+                    notProcessed = this.intOnUser(packet);
+                    break;
+                    
+                case CIC_COMMAND_MESSAGE:
+                case CIC_COMMAND_MESSAGE_COUNT:
+                    notProcessed = this.intOnMessage(packet);
+                    break;
+                    
+                case CIC_COMMAND_ROOM:
+                case CIC_COMMAND_ROOM_COUNT:
+                    notProcessed = this.intOnRoom(packet);
+                    break;
+                    
+                case CIC_COMMAND_FILE:
+                case CIC_COMMAND_FILE_COUNT:
+                    notProcessed = this.intOnFile(packet);
+                    break;
+                    
+                case CIC_COMMAND_FOLDER:
+                case CIC_COMMAND_FOLDER_COUNT:
+                    notProcessed = this.intOnFolder(packet);
+                    break;
+                    
+            }
         }
-        return result;
+        return notProcessed;
+    };
+    
+    CICClientSession.prototype.intOnUnit = function(packet) {
+        switch (packet.Command) {
+
+            case CIC_COMMAND_UNIT:
+                switch (packet.Operation) {
+                    case CIC_OPERATION_INSERT:
+                    case CIC_OPERATION_UPDATE:
+                    case CIC_OPERATION_LIST:
+                    case CIC_OPERATION_MCP:
+                        var unit = this.UnitList[packet.UnitID];
+                        unit.UnitID = packet.UnitID;
+                        unit.Name = packet.Name;
+                        unit.Phone = packet.Phone;
+                        unit.isGlobal = packet.isGlobal;
+                        unit.isRestrictive = packet.isRestrictive;
+                        unit.isSupport = packet.isSupport;
+                        unit.LastChange = packet.LastChange;
+                        this.UnitList[unit.UnitID] = unit;
+                        if ((unit.LastChange !== undefined) && (unit.LastChange > localStorage.getItem('LastUpdate'))) {
+                            localStorage.setItem('LastUpdate', unit.LastChange);
+                        }
+                        this.onUnit(unit);
+                        break;
+                    case CIC_OPERATION_DELETE:
+                        var unit = this.UnitList[packet.UnitID];
+                        delete this.UnitList[unit.UnitID];
+                        this.onUnitDeleted(unit);
+                        break;
+                }
+                break;
+                
+            case CIC_COMMAND_UNIT_COUNT:
+                this.onUnitCount(packet.PacketCount);
+                break;
+                
+            default: return true; // indica que NAO foi processado o pacote
+        }
+        return false; // indica que foi processado o pacote
+    };
+    
+    CICClientSession.prototype.onUnitCount = function(count) {
+        // nao faz nada, mas poderia iniciar um gauge
+    };
+    
+    CICClientSession.prototype.onUnit = function(unit) {
+        // nao faz nada, mas poderia atualizar um gauge
+    };
+    
+    CICClientSession.prototype.onUnitDeleted = function(unit) {
+        // nao faz nada
+    };
+    
+    CICClientSession.prototype.intOnUser = function(packet) {
+        switch (packet.Command) {
+
+            case CIC_COMMAND_USER:
+                switch (packet.Operation) {
+                    case CIC_OPERATION_INSERT:
+                    case CIC_OPERATION_UPDATE:
+                    case CIC_OPERATION_LIST:
+                        var user = this.UserList[packet.UserID];
+                        user.UserID = packet.UserID;
+                        user.LastChange = packet.LastChange;
+                        this.UserList[user.UnitID] = user;
+                        if ((user.LastChange !== undefined) && (user.LastChange > localStorage.getItem('LastUpdate'))) {
+                            localStorage.setItem('LastUpdate', user.LastChange);
+                        }
+                        this.onUser(user);
+                        break;
+                    case CIC_OPERATION_MCP:
+                        var user = this.UserList[packet.UserID];
+                        user.UserID = packet.UserID;
+                        user.Alias = packet.Alias;
+                        user.isFavorite = packet.isFavorite;
+                        user.doFavoriteNotification = packet.doFavoriteNotification;
+                        this.UserList[user.UnitID] = user;
+                        this.onUser(user);
+                        break;
+                    case CIC_OPERATION_DELETE:
+                        var user = this.UserList[packet.UserID];
+                        delete this.UserList[user.UnitID];
+                        this.onUserDeleted(user);
+                        break;
+                }
+                break;
+                
+            case CIC_COMMAND_USER_STATUS:
+                var user = this.UnitList[packet.UserID];
+                user.UserID = packet.UserID;
+                user.LastChange = packet.LastChange;
+                this.UserList[user.UnitID] = user;
+                this.onUserStatus(user);
+                break;
+                
+            case CIC_COMMAND_USER_COUNT:
+                this.onUserCount(packet.PacketCount);
+                break;
+                
+            default: return true; // indica que NAO foi processado o pacote
+        }
+        return false; // indica que foi processado o pacote
+    };
+    
+    CICClientSession.prototype.onUserCount = function(count) {
+        // nao faz nada, mas poderia iniciar um gauge
+    };
+    
+    CICClientSession.prototype.onUser = function(user) {
+        // nao faz nada, mas poderia atualizar um gauge
+    };
+    
+    CICClientSession.prototype.onUserDeleted = function(user) {
+        // nao faz nada
+    };
+    
+    CICClientSession.prototype.onUserStatus = function(user) {
+        // nao faz nada
     };
     
 };
