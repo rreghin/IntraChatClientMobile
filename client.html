@@ -23,9 +23,9 @@
                 delete localStorage.LastMessage; // sempre receber todas as mensagens novas quando se conectar
                 delete localStorage.LastImportant; // sempre receber todas as mensagens novas quando se conectar
                 // limpar sempre que for um novo usuario
-                //delete localStorage.LastUpdate;
-                //delete localStorage.UnitList;
-                //delete localStorage.UserList;
+                delete localStorage.LastUpdate;
+                delete localStorage.UnitList;
+                delete localStorage.UserList;
                 
                 connectClient();
             }  
@@ -54,7 +54,7 @@
                 };
                 
                 client.onPacket = function(packet) {
-                    //writeToScreen('<span style="color: orange;">' + JSON.stringify(packet) + '</span>'); 
+                    writeToScreen('<span style="color: orange;">' + JSON.stringify(packet) + '</span>'); 
                 };
                 
                 client.onUserOnLine = function(user) {
@@ -63,6 +63,18 @@
                 
                 client.onUserOffLine = function(user) {
                     writeToScreen('<span style="color: orange;">' + JSON.stringify(user) + '</span>'); 
+                };
+                
+                client.onServerInfo = function(info) {
+                    if (info.LogoData !== undefined) {
+                        writeToScreen('<img src="data:image/png;base64,' + info.LogoData + '">'); 
+                    }
+                };
+                
+                client.onUser = function(user) {
+                    if (user.PictureData !== undefined) {
+                        writeToScreen('<img src="data:image/png;base64,' + user.PictureData + '">'); 
+                    }
                 };
                 
                 if (!AutoConnect) { client.connect(); }
