@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>IntraChat WebSendMessage</title>
+        <title>IntraChat WebMessage</title>
         <meta name="viewport" content="width=device-width">
         <script type="text/javascript" src="CICProtocol2.js"></script>
     </head>
@@ -46,14 +46,14 @@
                 };
                 
                 message.onAuthenticationOk = function() {
-                    writeToScreen('AUTENTICADO: ' + message.ServerName + ':' + message.ServerID + ' (' + message.ServerVersion + ')');
+                    writeToScreen('AUTENTICADO: ' + message.ServerInfo.Name + ':' + message.ServerInfo.ServerID + ' (' + message.ServerInfo.VersionInfo + ')');
                 };
                 
                 message.onAuthenticationFailed = function(errornumber, errormessage) {
                     writeToScreen('<span style="color: red;">FALHA DE AUTENTICAÇÃO:</span> (' + errornumber + ') ' + errormessage); 
                 };
                 
-                message.onTextMessageSent = function(packet) {
+                message.onTextMessageSent = function() {
                     writeToScreen('MENSAGEM ENVIADA. AGUARDANDO RESPOSTA...'); 
                 };
 
@@ -77,7 +77,7 @@
             window.addEventListener("load", init, false);  
         </script>  
 
-        <h2>IntraChat WebSendMessage</h2>  
+        <h2>IntraChat WebMessage</h2>  
         <div id="output"></div>
     </body>
 </html>

@@ -20,9 +20,11 @@
             function init() {
                 output = document.getElementById("output");
                 
-                //delete localStorage['LastUpdate']; // limpar
-                //delete localStorage['UnitList'];
-                //delete localStorage['UserList'];
+                // limpar sempre que for um novo usuario
+                //delete localStorage.LastUpdate;
+                delete localStorage.LastMessage; // sempre receber todas as mensagens novas quando se conectar
+                //delete localStorage.UnitList;
+                //delete localStorage.UserList;
                 
                 connectClient();
             }  
@@ -43,7 +45,7 @@
                 };
                 
                 client.onAuthenticationOk = function() {
-                    writeToScreen('AUTENTICADO: ' + client.ServerName + ':' + client.ServerID + ' (' + client.ServerVersion + ')');
+                    writeToScreen('AUTENTICADO: ' + client.ServerInfo.Name + ':' + client.ServerInfo.ServerID + ' (' + client.ServerInfo.VersionInfo + ')');
                 };
                 
                 client.onAuthenticationFailed = function(errornumber, errormessage) {

@@ -5,10 +5,14 @@
 *
 **/
 
+// =============================================================================
 var CIC_PROTOCOL_VERSION  = '396';
 var CIC_PROTOCOL_REVISION = 'aWS';
 var CIC_PROTOCOL_PLATFORM = 'M';
-
+// =============================================================================
+var CIC_CLIENT_MAGIC_STRING  = '@BOBJDCDLEIDEBNEDDODJDCDODNBJBO\r\n';
+var CIC_MESSAGE_MAGIC_STRING = 'OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n';
+// =============================================================================
 var CIC_OPERATION_INSERT   = '0';
 var CIC_OPERATION_UPDATE   = '1';
 var CIC_OPERATION_DELETE   = '2';
@@ -21,7 +25,15 @@ var CIC_OPERATION_MCP      = '9'; // codigo especial para "Meus Contatos Pessoai
 var CIC_OPERATION_SENT     = '100';
 var CIC_OPERATION_RECEIVED = '101';
 var CIC_OPERATION_ERROR    = '255';
-
+// =============================================================================
+var CIC_MESSAGE_NEW        = '0';
+var CIC_MESSAGE_ARCHIVED   = '1';
+var CIC_MESSAGE_IMPORTANT  = '2';
+var CIC_MESSAGE_SENT       = '8';
+var CIC_MESSAGE_RECEIVED   = '16';
+var CIC_MESSAGE_ORIGINAL   = '32';
+var CIC_MESSAGE_FOLDER     = '128';
+// =============================================================================
 var CIC_COMMAND_AUTHENTICATE    = '1';
 var CIC_COMMAND_AUTHENTICATION  = '101';
 
@@ -39,14 +51,6 @@ var CIC_COMMAND_LIST_ROOMS      = '37';
 var CIC_COMMAND_LIST_FILES      = '38';
 var CIC_COMMAND_LIST_FOLDERS    = '39';
 
-var CIC_COMMAND_UNIT            = '115';
-var CIC_COMMAND_USER            = '103';
-var CIC_COMMAND_MESSAGE         = '10';
-var CIC_COMMAND_ROOM            = '116';
-var CIC_COMMAND_FILE            = '138';
-var CIC_COMMAND_FOLDER          = '235';
-var CIC_COMMAND_USER_STATUS     = '71';
-
 var CIC_COMMAND_UNIT_COUNT      = '42';
 var CIC_COMMAND_USER_COUNT      = '43';
 var CIC_COMMAND_MESSAGE_COUNT   = '44';
@@ -54,8 +58,14 @@ var CIC_COMMAND_ROOM_COUNT      = '45';
 var CIC_COMMAND_FILE_COUNT      = '46';
 var CIC_COMMAND_FOLDER_COUNT    = '47';
 
-var CIC_CLIENT_MAGIC_STRING = '@BOBJDCDLEIDEBNEDDODJDCDODNBJBO\r\n';
-var CIC_MESSAGE_MAGIC_STRING = 'OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n';
+var CIC_COMMAND_UNIT            = '115';
+var CIC_COMMAND_USER            = '103';
+var CIC_COMMAND_MESSAGE         = '10';
+var CIC_COMMAND_ROOM            = '116';
+var CIC_COMMAND_FILE            = '138';
+var CIC_COMMAND_FOLDER          = '235';
+var CIC_COMMAND_USER_STATUS     = '71';
+// =============================================================================
 
 var Base64 = {
 
@@ -221,9 +231,7 @@ function CICBaseProtocol() {
     };
     
     CICBaseProtocol.prototype.reset = function() {
-        this.ServerID = '';
-        this.ServerName = '';
-        this.ServerVersion = '';
+        this.ServerInfo = {};
         this.ServerAddress = '';
         this.ServerPort = '55000';
         this.MagicString = '\r\n';
@@ -257,6 +265,14 @@ function CICBaseProtocol() {
         this.WebSocket.send(JSON.stringify(packet));
     };
     
+    CICBaseProtocol.prototype.sendMessage = function(targets, text) {
+        this.sendPacket({
+            Command: CIC_COMMAND_MESSAGE,
+            ToUserID: targets,
+            TextMessage: Base64.encode(text)
+        });
+    };
+        
     /**
      *  EVENTOS DO WEBSOCKETS (NÃO MEXA NELES!)
      */
@@ -305,9 +321,9 @@ function CICBaseProtocol() {
                 // verifica qual foi o comando enviado pelo servidor
                 if (!this.IsAuthenticated) {
                     if (packet.Command === CIC_COMMAND_AUTHENTICATION) {
-                        this.ServerID = packet.ServerID;
-                        this.ServerName = packet.ServerName;
-                        this.ServerVersion = packet.VersionInfo;
+                        this.ServerInfo.ServerID = packet.ServerID;
+                        this.ServerInfo.Name = packet.ServerName;
+                        this.ServerInfo.VersionInfo = packet.VersionInfo;
                         if (packet.Granted === 'True') {
                             this.IsAuthenticated = true;
                             if (this.intOnAuthenticationOk()) {
@@ -405,18 +421,17 @@ function CICMessageProtocol(ServerAddress, ServerPort, UserID, UserPassword, Tar
      */
     
     CICMessageProtocol.prototype.intOnAuthenticationOk = function() {
-        var MsgPacket = {
-            Command: CIC_COMMAND_TEXTMESSAGE,
-            ToUserID: this.Targets,
-            TextMessage: Base64.encode(this.TextMessage)
-        };
-        this.sendPacket(MsgPacket);
-        this.onTextMessageSent(MsgPacket);
+        // so envia a mensagem depois de ter executado o evento OnAuthenticationOk
+        var self = this;
+        setTimeout(function(){
+            self.sendMessage(self.Targets, self.TextMessage);
+            self.onTextMessageSent();
+        }, 100);
         return this.parent.prototype.intOnAuthenticationOk.call(this);
     };
     
     CICMessageProtocol.prototype.intOnPacket = function(packet) {
-        if (packet.Command === CIC_COMMAND_TEXTMESSAGE) {
+        if (packet.Command === CIC_COMMAND_MESSAGE) {
             var target = packet.ToUserID + (packet.Group===undefined?'':' ('+packet.Group+')');
             if (packet.MessageID !== '0') {
                 this.onTextMessageOk(target, packet.MessageID);
@@ -433,7 +448,7 @@ function CICMessageProtocol(ServerAddress, ServerPort, UserID, UserPassword, Tar
      *  EVENTOS ADICIONAIS DO PROTOCOLO QUE PODEM SER SOBRESCRITOS PELO FRONT-END
      */
     
-    CICMessageProtocol.prototype.onTextMessageSent = function(packet) {
+    CICMessageProtocol.prototype.onTextMessageSent = function() {
         // nao faz nada por padrao
     };
     CICMessageProtocol.prototype.onTextMessageOk = function(target, messageid) {
@@ -506,14 +521,16 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
 
     CICClientSession.prototype.reset = function() {
         this.parent.prototype.reset.call(this);
-        this.UnitList = (localStorage['UnitList']===undefined) ? {} : JSON.parse(localStorage['UnitList']);
-        this.UserList = (localStorage['UserList']===undefined) ? {} : JSON.parse(localStorage['UserList']);
+        this.UnitList = (localStorage.UnitList===undefined) ? {} : JSON.parse(localStorage.UnitList);
+        this.UserList = (localStorage.UserList===undefined) ? {} : JSON.parse(localStorage.UserList);
         this.OnLineUserList = {};
-        this.RoomList = {};          //(localStorage['RoomList']===undefined) ? {} : JSON.parse(localStorage['RoomList']);
-        this.FileFolderList = {};    //(localStorage['FileFolderList']===undefined) ? {} : JSON.parse(localStorage['FileFolderList']);
-        this.FileList = {};          //(localStorage['FileList']===undefined) ? {} : JSON.parse(localStorage['FileList']);
-        this.MessageFolderList = {}; //(localStorage['MessageFolderList']===undefined) ? {} : JSON.parse(localStorage['MessageFolderList']);
-        this.MessageList = {};       //(localStorage['MessageList']===undefined) ? {} : JSON.parse(localStorage['MessageList']);
+        this.RoomList = {};          //(localStorage.RoomList===undefined) ? {} : JSON.parse(localStorage.RoomList);
+        this.FileFolderList = {};    //(localStorage.FileFolderList===undefined) ? {} : JSON.parse(localStorage.FileFolderList);
+        this.FileList = {};          //(localStorage.FileList===undefined) ? {} : JSON.parse(localStorage.FileList);
+        this.ImportantMessageFolderList = {}; //(localStorage.ImportantMessageFolderList===undefined) ? {} : JSON.parse(localStorage.ImportantMessageFolderList);
+        this.ImportanteMessageList = {};       //(localStorage.ImportanteMessageList===undefined) ? {} : JSON.parse(localStorage.ImportanteMessageList);
+        this.NewMessageList = {};       //(localStorage.NewMessageList===undefined) ? {} : JSON.parse(localStorage.NewMessageList);
+        this.OriginalMessageList = {};       //(localStorage.OriginalMessageList===undefined) ? {} : JSON.parse(localStorage.OriginalMessageList);
         //
         //console.log('UNITS->'+JSON.stringify(this.UnitList));
         //console.log('USERS->'+JSON.stringify(this.UserList));
@@ -528,8 +545,12 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         // pede configurações do servidor
         this.sendPacket( { Command: CIC_COMMAND_GET_SERVER_INFO } );
         // pede as listas assim que estiver autenticado
-        console.log('LastUpdate: ' + localStorage['LastUpdate']);
-        this.sendPacket( { Command: CIC_COMMAND_LIST_ALL, LastUpdate: localStorage['LastUpdate'] } );
+        console.log('LastUpdate: ' + localStorage.LastUpdate);
+        console.log('LastMessage: ' + localStorage.LastMessage);
+        this.sendPacket( { Command: CIC_COMMAND_LIST_UNITS, LastUpdate: localStorage.LastUpdate } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_USERS, LastUpdate: localStorage.LastUpdate } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'NEW', LastUpdate: localStorage.LastMessage } );
+        //this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'IMPORTANT' } );
         return this.parent.prototype.intOnAuthenticationOk.call(this);
     };
     
@@ -539,6 +560,24 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         var notProcessed = this.parent.prototype.intOnPacket.call(this, packet);
         if (notProcessed) {
             switch (packet.Command) {
+                
+                case CIC_COMMAND_SERVER_INFO:
+                    //console.log(JSON.stringify(packet));
+                    this.ServerInfo.LevelDelta = packet.LevelDelta;
+                    this.ServerInfo.DefaultAudioCodec = packet.DefaultAudioCodec;
+                    this.ServerInfo.isLevelDeltaInvisible = packet.isLevelDeltaInvisible;
+                    this.ServerInfo.doAutoRoom = packet.doAutoRoom;
+                    this.ServerInfo.doShowEmoticons = packet.doShowEmoticons;
+                    this.ServerInfo.doShowAuditAlert = packet.doShowAuditAlert;
+                    this.ServerInfo.LogoCRC32 = packet.LogoCRC32;
+                    this.ServerInfo.MuralCRC32 = packet.MuralCRC32;
+                    this.ServerInfo.doShowMural = packet.doShowMural;
+                    this.ServerInfo.MuralHeight = packet.MuralHeight;
+                    this.ServerInfo.MuralWidth = packet.MuralWidth;
+                    this.ServerInfo.MuralInterval = packet.MuralInterval;
+                    this.ServerInfo.doClientUpdate = packet.doClientUpdate;
+                    this.onServerInfo(this.ServerInfo);
+                    break;
                 
                 case CIC_COMMAND_UNIT:
                 case CIC_COMMAND_UNIT_COUNT:
@@ -570,10 +609,10 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 case CIC_COMMAND_FOLDER_COUNT:
                     notProcessed = this.intOnFolder(packet);
                     break;
-                    
+                
             }
         }
-        return true;
+        return notProcessed;
     };
     
     /**
@@ -601,9 +640,10 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         unit.isSupport = packet.isSupport;
                         unit.LastChange = packet.LastChange;
                         this.UnitList[unit.UnitID] = unit;
-                        //console.log('unit.LastChange= "'+unit.LastChange+'"  ->  localStorage.LastUpdate= "'+localStorage['LastUpdate']+'"');
-                        if ((unit.LastChange !== undefined) && ((localStorage['LastUpdate'] === undefined) || (unit.LastChange.localeCompare(localStorage['LastUpdate']) > 0))) {
-                            localStorage['LastUpdate'] = unit.LastChange;
+                        //console.log('unit.LastChange= "'+unit.LastChange+'"  ->  localStorage.LastUpdate= "'+localStorage.LastUpdate+'"');
+                        if ((unit.LastChange !== undefined) && ((localStorage.LastUpdate === undefined) || (unit.LastChange.localeCompare(localStorage.LastUpdate) > 0))) {
+                            localStorage.LastUpdate = unit.LastChange;
+                            console.log('NEW LastUpdate: ' + localStorage.LastUpdate);
                         }
                         this.onUnit(unit);
                         break;
@@ -622,7 +662,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
             case CIC_COMMAND_UNIT_COUNT:
                 // se chegou no final da lista, grava lista no storage
                 if (packet.PacketCount === '-1') {
-                    localStorage['UnitList'] = JSON.stringify(this.UnitList);
+                    localStorage.UnitList = JSON.stringify(this.UnitList);
                 }
                 this.onUnitCount(packet.PacketCount);
                 break;
@@ -689,9 +729,10 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         
                         user.LastChange = packet.LastChange;
                         this.UserList[user.UserID] = user;
-                        //console.log('user.LastChange= "'+user.LastChange+'"  ->  localStorage.LastUpdate= "'+localStorage['LastUpdate']+'"');
-                        if ((user.LastChange !== undefined) && ((localStorage['LastUpdate'] === undefined) || (user.LastChange.localeCompare(localStorage['LastUpdate']) > 0))) {
-                            localStorage['LastUpdate'] = user.LastChange;
+                        //console.log('user.LastChange= "'+user.LastChange+'"  ->  localStorage.LastUpdate= "'+localStorage.LastUpdate+'"');
+                        if ((user.LastChange !== undefined) && ((localStorage.LastUpdate === undefined) || (user.LastChange.localeCompare(localStorage.LastUpdate) > 0))) {
+                            localStorage.LastUpdate = user.LastChange;
+                            console.log('NEW LastUpdate: ' + localStorage.LastUpdate);
                         }
                         this.onUser(user);
                         break;
@@ -745,7 +786,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
             case CIC_COMMAND_USER_COUNT:
                 // se chegou no final da lista, grava lista no storage
                 if (packet.PacketCount === '-1') {
-                    localStorage['UserList'] = JSON.stringify(this.UserList);
+                    localStorage.UserList = JSON.stringify(this.UserList);
                 }
                 this.onUserCount(packet.PacketCount);
                 break;
@@ -810,7 +851,64 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
     };
     
     CICClientSession.prototype.intOnMessage = function(packet) {
-        
+        switch (packet.Command) {
+
+            case CIC_COMMAND_MESSAGE:
+                switch (packet.Operation) {
+                    
+                    case CIC_MESSAGE_NEW:
+                    case CIC_MESSAGE_IMPORTANT:
+                    case CIC_MESSAGE_ORIGINAL:
+                        var message;
+                        if (packet.Operation === CIC_MESSAGE_NEW) {
+                            message = this.NewMessageList[packet.MessageID] || {};
+                            this.NewMessageList[packet.MessageID] = message;
+                        }
+                        else if (packet.Operation === CIC_MESSAGE_IMPORTANT) {
+                            message = this.ImportantMessageList[packet.MessageID] || {};
+                            this.ImportantMessageList[packet.MessageID] = message;
+                        }
+                        else if (packet.Operation === CIC_MESSAGE_ORIGINAL) {
+                            message = this.OriginalMessageList[packet.MessageID] || {};
+                            this.OriginalMessageList[packet.MessageID] = message;
+                        }
+                        message.MessageID = packet.MessageID;
+                        message.FromUserID = packet.FromUserID;
+                        message.ToUserID = packet.ToUserID;
+                        message.TextMessage = Base64.decode(packet.TextMessage);
+                        message.TimeStamp = packet.TimeStamp;
+                        message.OriginalMessageID = packet.OriginalMessageID;
+                        message.isReplyAllowed = packet.isReplyAllowed;
+                        message.Status = packet.Operation;  // <-- PRESTE ATENCAO AQUI!! setar o Status aqui pra que o onMessage saiba que tipo de mensagem que �
+                        message.FolderID = packet.FolderID;
+                        if ((message.TimeStamp !== undefined) && ((localStorage.LastMessage === undefined) || (message.TimeStamp.localeCompare(localStorage.LastMessage) > 0))) {
+                            localStorage.LastMessage = message.TimeStamp;
+                            console.log('NEW LastMessage: ' + localStorage.LastMessage);
+                        }
+                        this.onMessage(message);
+                        break;
+                        
+                    case CIC_MESSAGE_ARCHIVED:
+                        var message = this.MessageList[packet.MessageID];
+                        if (message !== undefined) {
+                            delete this.MessageList[message.MessageID];
+                            this.onMessageArchived(message);
+                        }
+                        break;
+                        
+                }
+                break;
+                
+            case CIC_COMMAND_MESSAGE_COUNT:
+                // se chegou no final da lista, grava lista no storage
+                if (packet.PacketCount === '-1') {
+                    //localStorage.ImportantMessageList = JSON.stringify(this.ImportantMessageList);
+                }
+                this.onMessageCount(packet.PacketCount);
+                break;
+                
+        }
+        return false; // indica que foi processado o pacote
     };
     
     CICClientSession.prototype.intOnRoom = function(packet) {
@@ -819,6 +917,16 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
     
     CICClientSession.prototype.intOnFile = function(packet) {
         
+    };
+    
+    /**
+     *  =========================================================================================================================================================================
+     *  EVENTOS REFERENTES AO SERVIDOR
+     *  =========================================================================================================================================================================
+     */
+    
+    CICClientSession.prototype.onServerInfo = function(info) {
+        // nao faz nada
     };
     
     /**
@@ -872,6 +980,22 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         // nao faz nada
     };
     CICClientSession.prototype.onFolderDeleted = function(folder) {
+        // nao faz nada
+    };
+    
+    /**
+     *  =========================================================================================================================================================================
+     *  EVENTOS REFERENTES AS MENSAGENS
+     *  =========================================================================================================================================================================
+     */
+    
+    CICClientSession.prototype.onMessageCount = function(count) {
+        // nao faz nada, mas poderia iniciar um gauge
+    };
+    CICClientSession.prototype.onMessage = function(message) {
+        // nao faz nada, mas poderia atualizar um gauge
+    };
+    CICClientSession.prototype.onMessageArchived = function(message) {
         // nao faz nada
     };
     
