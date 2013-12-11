@@ -547,10 +547,11 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         // pede as listas assim que estiver autenticado
         console.log('LastUpdate: ' + localStorage.LastUpdate);
         console.log('LastMessage: ' + localStorage.LastMessage);
+        console.log('LastImportant: ' + localStorage.LastImportant);
         this.sendPacket( { Command: CIC_COMMAND_LIST_UNITS, LastUpdate: localStorage.LastUpdate } );
         this.sendPacket( { Command: CIC_COMMAND_LIST_USERS, LastUpdate: localStorage.LastUpdate } );
         this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'NEW', LastUpdate: localStorage.LastMessage } );
-        //this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'IMPORTANT' } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'IMPORTANT', LastUpdate: localStorage.LastImportant } );
         return this.parent.prototype.intOnAuthenticationOk.call(this);
     };
     
@@ -860,6 +861,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                     case CIC_MESSAGE_IMPORTANT:
                     case CIC_MESSAGE_ORIGINAL:
                         var message;
+
                         if (packet.Operation === CIC_MESSAGE_NEW) {
                             message = this.NewMessageList[packet.MessageID] || {};
                             this.NewMessageList[packet.MessageID] = message;
@@ -872,6 +874,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                             message = this.OriginalMessageList[packet.MessageID] || {};
                             this.OriginalMessageList[packet.MessageID] = message;
                         }
+                        
                         message.MessageID = packet.MessageID;
                         message.FromUserID = packet.FromUserID;
                         message.ToUserID = packet.ToUserID;
@@ -881,10 +884,20 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         message.isReplyAllowed = packet.isReplyAllowed;
                         message.Status = packet.Operation;  // <-- PRESTE ATENCAO AQUI!! setar o Status aqui pra que o onMessage saiba que tipo de mensagem que é
                         message.FolderID = packet.FolderID;
-                        if ((message.TimeStamp !== undefined) && ((localStorage.LastMessage === undefined) || (message.TimeStamp.localeCompare(localStorage.LastMessage) > 0))) {
-                            localStorage.LastMessage = message.TimeStamp;
-                            console.log('NEW LastMessage: ' + localStorage.LastMessage);
+                        
+                        if (packet.Operation === CIC_MESSAGE_NEW) {
+                            if ((message.TimeStamp !== undefined) && ((localStorage.LastMessage === undefined) || (message.TimeStamp.localeCompare(localStorage.LastMessage) > 0))) {
+                                localStorage.LastMessage = message.TimeStamp;
+                                console.log('NEW LastMessage: ' + localStorage.LastMessage);
+                            }
                         }
+                        else if (packet.Operation === CIC_MESSAGE_IMPORTANT) {
+                            if ((message.TimeStamp !== undefined) && ((localStorage.LastImportant === undefined) || (message.TimeStamp.localeCompare(localStorage.LastImportant) > 0))) {
+                                localStorage.LastImportant = message.TimeStamp;
+                                console.log('NEW LastImportant: ' + localStorage.LastImportant);
+                            }
+                        }
+                        
                         this.onMessage(message);
                         break;
                         
