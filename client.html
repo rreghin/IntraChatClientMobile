@@ -23,9 +23,9 @@
                 delete localStorage.LastMessage; // sempre receber todas as mensagens novas quando se conectar
                 delete localStorage.LastImportant; // sempre receber todas as mensagens novas quando se conectar
                 // limpar sempre que for um novo usuario
-                delete localStorage.LastUpdate;
-                delete localStorage.UnitList;
-                delete localStorage.UserList;
+                //delete localStorage.LastUpdate;
+                //delete localStorage.UnitList;
+                //delete localStorage.UserList;
                 
                 connectClient();
             }  
@@ -58,11 +58,17 @@
                 };
                 
                 client.onUserOnLine = function(user) {
-                    writeToScreen('<span style="color: green;">' + JSON.stringify(user) + '</span>'); 
+                    var local = this.UserList[user.UserID];
+                    if (local !== undefined) {
+                        writeToScreen('<span style="color: green;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') CONECTADO</span>'); 
+                    }
                 };
                 
                 client.onUserOffLine = function(user) {
-                    writeToScreen('<span style="color: orange;">' + JSON.stringify(user) + '</span>'); 
+                    var local = this.UserList[user.UserID];
+                    if (local !== undefined) {
+                        writeToScreen('<span style="color: orange;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') DESCONECTADO</span>'); 
+                    }
                 };
                 
                 client.onServerInfo = function(info) {
@@ -72,8 +78,10 @@
                 };
                 
                 client.onUser = function(user) {
-                    if (user.PictureData !== undefined) {
-                        writeToScreen('<img src="data:image/png;base64,' + user.PictureData + '">'); 
+                    //console.log(JSON.stringify(user));
+                    var picture = this.PictureList[user.UserID];
+                    if (picture !== undefined) {
+                        writeToScreen('<img src="data:image/png;base64,' + picture + '">'); 
                     }
                 };
                 
