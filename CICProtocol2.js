@@ -540,6 +540,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         this.UserList = (localStorage.UserList===undefined) ? {} : JSON.parse(localStorage.UserList);
         this.OnLineUserList = {};
         this.PictureList = {}; // fotos dos usuarios (pra que elas nao fiquem guardadas no UserList, tomando espaco)
+        this.PictureRequestList = {}; // guarda uma lista de imagens que foram pedidas as servidor, para que nao faça um monte de requisicoes repetidas
         
         this.RoomList = {};          //(localStorage.RoomList===undefined) ? {} : JSON.parse(localStorage.RoomList);
         
@@ -599,6 +600,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 case CIC_COMMAND_USER_COUNT:
                 case CIC_COMMAND_USER_STATUS:
                 case CIC_COMMAND_PICTURE:
+                case CIC_COMMAND_PICTURE_CHANGED:
                     notProcessed = this.intOnUser(packet);
                     break;
                     
@@ -656,7 +658,6 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 if (this.ServerInfo.LogoCRC32 !== '0') {
                     this.sendPacket({ Command: CIC_COMMAND_GET_LOGO });
                 }
-                notProcessed = false;
                 break;
 
             case CIC_COMMAND_LOGO:
@@ -668,8 +669,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                     this.ServerInfo.LogoCRC32 = packet.CRC32;
                     this.ServerInfo.LogoData = packet.Base64Data;
                 }
-                this.onServerInfo(this.ServerInfo);
-                notProcessed = false;
+                this.onServerLogo(this.ServerInfo.LogoData);
                 break;
 
             case CIC_COMMAND_LOGO_CHANGED:
@@ -837,11 +837,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                     this.OnLineUserList[user.UserID] = user;
                     this.onUserOnLine(user);
                     // se o usuario tiver uma foto que ainda nao esta em cache, busca a foto agora
-                    if (this.PictureList[user.UserID] === undefined && this.UserList[user.UserID] !== undefined) {
-                        if (this.UserList[user.UserID].PictureCRC32 !== undefined && this.UserList[user.UserID].PictureCRC32 !== '0') {
-                            this.sendPacket({ Command: CIC_COMMAND_GET_PICTURE, UserID: user.UserID });
-                        }
-                    }
+                    this.intRequestUserPicture(user.UserID);
                 }
                 else {
                     var user = this.OnLineUserList[packet.UserID];
@@ -874,13 +870,16 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 else {
                     this.PictureList[user.UserID] = packet.Base64Data;
                 }
+                
+                // remove da lista de requisicoes, caso precise fazer uma nova requisicao no futuro (como quando o usuario altera sua foto)
+                delete this.PictureRequestList[user.UserID];
 
-                this.onUser(user);
+                this.onUserPicture(user.UserID, this.PictureList[user.UserID]);
                 break;
                 
             case CIC_COMMAND_PICTURE_CHANGED:
                 // se a logo do servidor foi alterada, pega a nova logo agora
-                this.sendPacket({ Command: CIC_COMMAND_GET_PICTURE, UserID: packet.UserID });
+                this.intRequestUserPicture(packet.UserID);
                 break;
             
         }
@@ -932,7 +931,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         break;
                         
                 }
-                break;
+            break;
                 
             case CIC_COMMAND_FOLDER_COUNT:
                 this.onFolderCount(packet.PacketCount);
@@ -990,6 +989,10 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         }
                         
                         this.onMessage(message);
+
+                        // se o usuario tiver uma foto que ainda nao esta em cache, busca a foto agora
+                        this.intRequestUserPicture(message.FromUserID);
+                        
                         break;
                         
                     case CIC_MESSAGE_ARCHIVED:
@@ -1062,51 +1065,20 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
     };
     
     CICClientSession.prototype.intOnRoom = function(packet) {
-        switch (packet.Command) {
-
-            case CIC_COMMAND_FILE:
-                switch (packet.Operation) {
-                    
-                    case CIC_OPERATION_INSERT:
-                    case CIC_OPERATION_UPDATE:
-                    case CIC_OPERATION_LIST:
-                        var file = this.FileList[packet.StreamID] || {};
-                        file.StreamID = packet.StreamID;
-                        file.Name = packet.Name;
-                        file.FromUserID = packet.FromUserID;
-                        file.ToUserID = packet.ToUserID;
-                        file.TextMessage = packet.TextMessage;
-                        file.Size = packet.Size;
-                        file.TimeStamp = packet.TimeStamp;
-                        file.FolderID = packet.FolderID;
-                        file.isOffLine = packet.isOffLine;
-                        this.FileList[file.StreamID] = file;
-                        this.onFile(file);
-                        break;
-                        
-                    case CIC_OPERATION_DELETE:
-                        var file = this.FileList[packet.StreamID];
-                        if (file !== undefined) {
-                            delete this.FileList[file.StreamID];
-                            this.onFileDeleted(file);
-                        }
-                        break;
-                        
-                }
-                break;
-                
-            case CIC_COMMAND_FILE_COUNT:
-                // se chegou no final da lista, grava lista no storage
-                if (packet.PacketCount === '-1') {
-                    //localStorage.FileList = JSON.stringify(this.FileList);
-                }
-                this.onFileCount(packet.PacketCount);
-                break;
-                
-        }
         return false; // indica que foi processado o pacote
     };
     
+    CICClientSession.prototype.intRequestUserPicture = function(userid) {
+        if (this.PictureRequestList[userid] === undefined) {
+            if (this.PictureList[userid] === undefined && this.UserList[userid] !== undefined) {
+                if (this.UserList[userid].PictureCRC32 !== undefined && this.UserList[userid].PictureCRC32 !== '0') {
+                    this.sendPacket({ Command: CIC_COMMAND_GET_PICTURE, UserID: userid });
+                    this.PictureRequestList[userid] = true;
+                }
+            }
+        }
+    };
+                    
     /**
      *  =========================================================================================================================================================================
      *  EVENTOS REFERENTES AO SERVIDOR
@@ -1114,6 +1086,9 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
      */
     
     CICClientSession.prototype.onServerInfo = function(info) {
+        // nao faz nada
+    };
+    CICClientSession.prototype.onServerLogo = function(logo) {
         // nao faz nada
     };
     
@@ -1152,6 +1127,9 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         // nao faz nada
     };
     CICClientSession.prototype.onUserOffLine = function(user) {
+        // nao faz nada
+    };
+    CICClientSession.prototype.onUserPicture = function(userid, picture) {
         // nao faz nada
     };
     

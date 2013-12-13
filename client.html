@@ -71,19 +71,24 @@
                     }
                 };
                 
-                client.onServerInfo = function(info) {
-                    if (info.LogoData !== undefined) {
-                        writeToScreen('<img src="data:image/png;base64,' + info.LogoData + '">'); 
+                client.onServerLogo = function(logo) {
+                    if (logo !== undefined) {
+                        writeToScreen('<img src="data:image/png;base64,' + logo + '">'); 
                     }
                 };
                 
-                client.onUser = function(user) {
-                    //console.log(JSON.stringify(user));
-                    var picture = this.PictureList[user.UserID];
+                client.onUserPicture = function(userid, picture) {
                     if (picture !== undefined) {
                         writeToScreen('<img src="data:image/png;base64,' + picture + '">'); 
                     }
                 };
+                
+                client.onMessage = function(message) {
+                    if (message.Status === CIC_MESSAGE_NEW) {
+                        var local = this.UserList[message.FromUserID];
+                        writeToScreen('<span style="color: green;">MENSAGEM DE "' + local.Name + '" (' + local.UserID + '):<BR/>' + message.TextMessage + '</span>'); 
+                    }
+                }
                 
                 if (!AutoConnect) { client.connect(); }
             }  
