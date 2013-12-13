@@ -316,8 +316,10 @@ function CICBaseProtocol() {
     };
     
     CICBaseProtocol.prototype._onWSError = function(error) {
-        if (this.intOnError(error)) {
-            this.onError(error);
+        if (error !== undefined) {
+            if (this.intOnError(error)) {
+                this.onError(error);
+            }
         }
     };
     
@@ -446,7 +448,7 @@ function CICMessageProtocol(ServerAddress, ServerPort, UserID, UserPassword, Tar
     
     CICMessageProtocol.prototype.intOnPacket = function(packet) {
         if (packet.Command === CIC_COMMAND_MESSAGE) {
-            var target = packet.ToUserID + (packet.Group===undefined?'':' ('+packet.Group+')');
+            var target = Base64._utf8_decode(packet.ToUserID) + (packet.Group===undefined?'':' ('+Base64._utf8_decode(packet.Group)+')');
             if (packet.MessageID !== '0') {
                 this.onTextMessageOk(target, packet.MessageID);
             }
