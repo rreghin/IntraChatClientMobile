@@ -646,12 +646,101 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                     
                 case CIC_COMMAND_ROOM:
                 case CIC_COMMAND_ROOM_COUNT:
+                case CIC_COMMAND_ROOM_DATA:
                     notProcessed = this.intOnRoom(packet);
                     break;
                     
             }
         }
         return notProcessed;
+    };
+    
+    /**
+     *  =========================================================================================================================================================================
+     *  HELPERS PARA INFORMACOES DOS USUARIOS
+     *  =========================================================================================================================================================================
+     */
+    
+    CICClientSession.prototype.getUser = function(userid) {
+        return this.UserList[userid];
+    };    
+    CICClientSession.prototype.getUserConfig = function() {
+        var user = this.UserList[this.UserID];
+        if (user !== undefined) {
+            return user.config;
+        }
+    };    
+    CICClientSession.prototype.getUserStatus = function(userid) {
+        return this.OnLineUserList[userid];
+    };    
+    CICClientSession.prototype.getUserName = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            if (user.Alias !== undefined && user.Alias !== '') {
+                return user.Alias;
+            }
+            else {
+                return user.Name;
+            }
+        }
+    };
+    CICClientSession.prototype.getUserUnitID = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            return user.UnitID;
+        }
+    };
+    CICClientSession.prototype.getUserDept = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            return user.Dept;
+        }
+    };
+    CICClientSession.prototype.getUserEmail = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            return user.Email;
+        }
+    };
+    CICClientSession.prototype.getUserPhone = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            return user.Phone;
+        }
+    };
+    CICClientSession.prototype.getUserLevel = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            return user.Level;
+        }
+    };
+    CICClientSession.prototype.getUserBirthDate = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            if (user.BirthDate !== undefined && user.BirthDate !== '' && user.BirthDate !== '0') {
+                return { Day: user.BirthDate.substr(8,2), Month: user.BirthDate.substr(5,2) };
+            }
+        }
+    };
+    CICClientSession.prototype.getUserIsInvisible = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            return (user.isInvisible==='True') ? true : false;
+        }
+    };
+    CICClientSession.prototype.getUserPicture = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            if (user.PictureCRC32 !== undefined && user.PictureCRC32 !== '0') {
+                return { CRC32: user.PictureCRC32, Data: this.PictureList[userid] };
+            }
+        }
+    };
+    CICClientSession.prototype.getUnitName = function(unitid) {
+        var unit = this.UnitList[unitid];
+        if (unit !== undefined) {
+            return unit.Name;
+        }
     };
     
     /**
@@ -777,38 +866,39 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         user.PictureCRC32 = packet.PictureCRC32;
                         
                         if (user.UserID === this.UserID) {
-                            //user.Password = packet.Password;
-                            //user.EmailServer = packet.EmailServer;
-                            //user.EmailAccount = packet.EmailAccount;
-                            //user.EmailPassword = packet.EmailPassword;
-                            user.RoomPermission = packet.RoomPermission;
-                            user.FilePermission = packet.FilePermission;
-                            user.MessagePermission = packet.MessagePermission;
-                            user.VoicePermission = packet.VoicePermission;
-                            user.ControlPermission = packet.ControlPermission;
-                            user.PrivateChatPermission = packet.PrivateChatPermission;
-                            user.ChangePermission = packet.ChangePermission;
-                            user.doEmailPopup = packet.doEmailPopup;
-                            user.EmailPopupInterval = packet.EmailPopupInterval;
-                            user.doSound = packet.doSound;
-                            user.doMessagePopup = packet.doMessagePopup;
-                            user.doAutoChat = packet.doAutoChat;
-                            user.doSpeaker = packet.doSpeaker;
-                            user.doAutoBusy = packet.doAutoBusy;
-                            user.doAutoAway = packet.doAutoAway;
-                            user.doRequirePassword = packet.doRequirePassword;
-                            user.AudioCodec = packet.AudioCodec;
-                            user.doUserListFilter = packet.doUserListFilter;
-                            user.doUserListSort = packet.doUserListSort;
-                            user.DefaultUnit = packet.DefaultUnit;
-                            user.ShowDateTime = packet.ShowDateTime;
-                            user.doShowEmoticons = packet.doShowEmoticons;
-                            user.doAutoVNC = packet.doAutoVNC;
-                            user.DefaultStatus = packet.DefaultStatus;
-                            user.DefaultAvailableMessage = packet.DefaultAvailableMessage;
-                            user.DefaultBusyMessage = packet.DefaultBusyMessage;
-                            user.DefaultAwayMessage = packet.DefaultAwayMessage;
-                            user.DefaultHelloMessage = packet.DefaultHelloMessage;
+                            user.config = user.config || {};
+                            //user.config.Password = packet.Password;
+                            //user.config.EmailServer = packet.EmailServer;
+                            //user.config.EmailAccount = packet.EmailAccount;
+                            //user.config.EmailPassword = packet.EmailPassword;
+                            user.config.RoomPermission = packet.RoomPermission;
+                            user.config.FilePermission = packet.FilePermission;
+                            user.config.MessagePermission = packet.MessagePermission;
+                            user.config.VoicePermission = packet.VoicePermission;
+                            user.config.ControlPermission = packet.ControlPermission;
+                            user.config.PrivateChatPermission = packet.PrivateChatPermission;
+                            user.config.ChangePermission = packet.ChangePermission;
+                            user.config.doEmailPopup = packet.doEmailPopup;
+                            user.config.EmailPopupInterval = packet.EmailPopupInterval;
+                            user.config.doSound = packet.doSound;
+                            user.config.doMessagePopup = packet.doMessagePopup;
+                            user.config.doAutoChat = packet.doAutoChat;
+                            user.config.doSpeaker = packet.doSpeaker;
+                            user.config.doAutoBusy = packet.doAutoBusy;
+                            user.config.doAutoAway = packet.doAutoAway;
+                            user.config.doRequirePassword = packet.doRequirePassword;
+                            user.config.AudioCodec = packet.AudioCodec;
+                            user.config.doUserListFilter = packet.doUserListFilter;
+                            user.config.doUserListSort = packet.doUserListSort;
+                            user.config.DefaultUnit = packet.DefaultUnit;
+                            user.config.ShowDateTime = packet.ShowDateTime;
+                            user.config.doShowEmoticons = packet.doShowEmoticons;
+                            user.config.doAutoVNC = packet.doAutoVNC;
+                            user.config.DefaultStatus = packet.DefaultStatus;
+                            user.config.DefaultAvailableMessage = packet.DefaultAvailableMessage;
+                            user.config.DefaultBusyMessage = packet.DefaultBusyMessage;
+                            user.config.DefaultAwayMessage = packet.DefaultAwayMessage;
+                            user.config.DefaultHelloMessage = packet.DefaultHelloMessage;
                         }
                         
                         user.LastChange = packet.LastChange;
@@ -1147,6 +1237,10 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 this.onRoomCount(packet.PacketCount);
                 break;
                 
+            case CIC_COMMAND_ROOM_DATA:
+                this.onRoomData(data);
+                break;
+                
         }
         return false; // indica que foi processado o pacote
     };
@@ -1287,6 +1381,9 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         // nao faz nada
     };
     CICClientSession.prototype.onRoomChanged = function(room) {
+        // nao faz nada
+    };
+    CICClientSession.prototype.onRoomData = function(data) {
         // nao faz nada
     };
     
