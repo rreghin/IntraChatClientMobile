@@ -34,6 +34,12 @@ var CIC_MESSAGE_RECEIVED   = '16';
 var CIC_MESSAGE_ORIGINAL   = '32';
 var CIC_MESSAGE_FOLDER     = '128';
 // =============================================================================
+var CIC_ROOM_ALL        = '0';
+var CIC_ROOM_LINES      = '1';
+var CIC_ROOM_MINUTES    = '2';
+var CIC_ROOM_TODAY      = '3';
+var CIC_ROOM_TIMESTAMP  = '4';
+// =============================================================================
 var CIC_COMMAND_AUTHENTICATE    = '1';
 var CIC_COMMAND_AUTHENTICATION  = '101';
 
@@ -340,7 +346,7 @@ function CICBaseProtocol() {
     };
     
     CICBaseProtocol.prototype._onWSMessage = function(event) {
-        //console.log(event.data);
+        console.log(event.data);
         var lines = event.data.match(/^.*((\r\n|\n|\r)|$)/gm);
         for(var index in lines) {
             if (lines[index] !== '') {
@@ -842,28 +848,35 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 break;
                 
             case CIC_COMMAND_USER_STATUS:
+                var user = this.OnLineUserList[packet.UserID];
                 if ((packet.isConnected || 'False') === 'True') {
-                    var user = this.OnLineUserList[packet.UserID] || {};
+                    user = user || {};
                     user.UserID = packet.UserID;
-                    user.TimeStamp = packet.TimeStamp;
-                    user.isConnected = packet.isConnected || 'False';
+                    user.isConnected = packet.isConnected;
                     user.ConnectionCount = packet.ConnectionCount;
-                    user.Status = packet.Status;
-                    user.StatusMessage = packet.StatusMessage;
-                    user.VersionInfo = packet.VersionInfo;
-                    user.Language = packet.Language;
+                    if (packet.TimeStamp !== undefined) {
+                        user.TimeStamp = packet.TimeStamp;
+                        user.Status = packet.Status;
+                        user.StatusMessage = packet.StatusMessage;
+                        user.VersionInfo = packet.VersionInfo;
+                        user.Language = packet.Language;
+                    }
                     this.OnLineUserList[user.UserID] = user;
-                    this.onUserOnLine(user);
+                    this.onUserStatus(user);
                     // se o usuario tiver uma foto que ainda nao esta em cache, busca a foto agora
                     this.intRequestUserPicture(user.UserID);
                 }
                 else {
-                    var user = this.OnLineUserList[packet.UserID];
                     if (user !== undefined) {
-                        user.TimeStamp = packet.TimeStamp;
                         user.isConnected = 'False';
+                        user.ConnectionCount = '0';
+                        user.TimeStamp = packet.TimeStamp;
+                        user.Status = packet.Status;
+                        user.StatusMessage = packet.StatusMessage;
+                        user.VersionInfo = '';
+                        user.Language = '';
                         delete this.OnLineUserList[user.UserID];
-                        this.onUserOffLine(user);
+                        this.onUserStatus(user);
                     }
                 }
                 break;
@@ -1139,7 +1152,10 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
     };
 
     CICClientSession.prototype.intRequestRoomText = function(roomid) {
-        this.sendPacket({ Command: });
+        var room = this.RoomList[roomid];
+        if (room !== undefined) {
+            this.sendPacket({ Command: CIC_COMMAND_ROOM_SEARCH, Operation: CIC_ROOM_TIMESTAMP, RoomID: roomid, TimeStamp: room.LastChange });
+        }
     };
     
     CICClientSession.prototype.intRequestUserPicture = function(userid) {

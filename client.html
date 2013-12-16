@@ -58,23 +58,24 @@
                     writeToScreen('<span style="color: orange;">' + JSON.stringify(packet) + '</span>'); 
                 };
                 
-                client.onUserOnLine = function(user) {
-                    var local = this.UserList[user.UserID];
-                    if (local !== undefined) {
-                        writeToScreen('<span style="color: green;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') CONECTADO</span>'); 
-                    }
-                };
-                
-                client.onUserOffLine = function(user) {
-                    var local = this.UserList[user.UserID];
-                    if (local !== undefined) {
-                        writeToScreen('<span style="color: orange;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') DESCONECTADO</span>'); 
-                    }
-                };
-                
                 client.onServerLogo = function(logo) {
                     if (logo !== undefined) {
                         writeToScreen('<img src="data:image/png;base64,' + logo + '">'); 
+                    }
+                };
+                
+                client.onUserStatus = function(user) {
+                    var local = this.UserList[user.UserID];
+                    if (local !== undefined) {
+                        // se tem o TimeStamp é uma conexão ou desconexão (online ou offline)
+                        if (user.TimeStamp !== undefined) {
+                            if (user.isConnected === 'True') {
+                                writeToScreen('<span style="color: green;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') CONECTADO</span>'); 
+                            }
+                            else {
+                                writeToScreen('<span style="color: red;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') DESCONECTADO</span>'); 
+                            }
+                        }
                     }
                 };
                 
