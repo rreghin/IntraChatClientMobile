@@ -79,6 +79,22 @@ var CIC_COMMAND_ROOM            = '116';
 var CIC_COMMAND_FILE            = '138';
 var CIC_COMMAND_FOLDER          = '235';
 var CIC_COMMAND_USER_STATUS     = '71';
+
+var CIC_COMMAND_ROOM_NEW        = '50';
+var CIC_COMMAND_ROOM_CHANGE     = '51';
+var CIC_COMMAND_ROOM_DELETE     = '52';
+var CIC_COMMAND_ROOM_INVITE     = '53';
+var CIC_COMMAND_ROOM_REVOKE     = '54';
+var CIC_COMMAND_ROOM_JOIN       = '55';
+var CIC_COMMAND_ROOM_LEAVE      = '56';
+var CIC_COMMAND_ROOM_DENIED     = '57';
+var CIC_COMMAND_ROOM_GRANTED    = '58';
+var CIC_COMMAND_ROOM_DATA       = '59';
+var CIC_COMMAND_ROOM_ACCEPT     = '60';
+var CIC_COMMAND_ROOM_REJECT     = '61';
+var CIC_COMMAND_ROOM_USERLIST   = '62';
+var CIC_COMMAND_ROOM_WRITING    = '63';
+var CIC_COMMAND_ROOM_SEARCH     = '64';
 // =============================================================================
 
 var Base64 = {
@@ -540,11 +556,12 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
 
         this.UnitList = (localStorage.UnitList===undefined) ? {} : JSON.parse(localStorage.UnitList);
         this.UserList = (localStorage.UserList===undefined) ? {} : JSON.parse(localStorage.UserList);
+        
         this.OnLineUserList = {};
         this.PictureList = {}; // fotos dos usuarios (pra que elas nao fiquem guardadas no UserList, tomando espaco)
         this.PictureRequestList = {}; // guarda uma lista de imagens que foram pedidas as servidor, para que nao faça um monte de requisicoes repetidas
         
-        this.RoomList = {};          //(localStorage.RoomList===undefined) ? {} : JSON.parse(localStorage.RoomList);
+        this.RoomList = (localStorage.RoomList===undefined) ? {} : JSON.parse(localStorage.RoomList);
         
         this.FileFolderList = {};    //(localStorage.FileFolderList===undefined) ? {} : JSON.parse(localStorage.FileFolderList);
         this.FileList = {};          //(localStorage.FileList===undefined) ? {} : JSON.parse(localStorage.FileList);
@@ -576,7 +593,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'NEW', LastUpdate: localStorage.LastMessage } );
         this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'IMPORTANT', LastUpdate: localStorage.LastImportant } );
         this.sendPacket( { Command: CIC_COMMAND_LIST_FILES, LastUpdate: '' } );
-        this.sendPacket( { Command: CIC_COMMAND_LIST_ROOMS, LastUpdate: '' } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_ROOMS, LastUpdate: localStorage.LastRoomChanged } );
         return this.parent.prototype.intOnAuthenticationOk.call(this);
     };
     
@@ -663,12 +680,11 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 break;
 
             case CIC_COMMAND_LOGO:
+                this.ServerInfo.LogoCRC32 = packet.CRC32;
                 if (packet.CRC32 === '0') {
-                    this.ServerInfo.LogoCRC32 = '0';
                     delete this.ServerInfo.LogoData;
                 }
                 else {
-                    this.ServerInfo.LogoCRC32 = packet.CRC32;
                     this.ServerInfo.LogoData = packet.Base64Data;
                 }
                 this.onServerLogo(this.ServerInfo.LogoData);
@@ -705,7 +721,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         //console.log('unit.LastChange= "'+unit.LastChange+'"  ->  localStorage.LastUpdate= "'+localStorage.LastUpdate+'"');
                         if ((unit.LastChange !== undefined) && ((localStorage.LastUpdate === undefined) || (unit.LastChange.localeCompare(localStorage.LastUpdate) > 0))) {
                             localStorage.LastUpdate = unit.LastChange;
-                            console.log('NEW LastUpdate: ' + localStorage.LastUpdate);
+                            console.log('NEW (UNIT) LastUpdate: ' + localStorage.LastUpdate);
                         }
                         this.onUnit(unit);
                         break;
@@ -794,7 +810,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                         //console.log('user.LastChange= "'+user.LastChange+'"  ->  localStorage.LastUpdate= "'+localStorage.LastUpdate+'"');
                         if ((user.LastChange !== undefined) && ((localStorage.LastUpdate === undefined) || (user.LastChange.localeCompare(localStorage.LastUpdate) > 0))) {
                             localStorage.LastUpdate = user.LastChange;
-                            console.log('NEW LastUpdate: ' + localStorage.LastUpdate);
+                            console.log('NEW (USER) LastUpdate: ' + localStorage.LastUpdate);
                         }
                         this.onUser(user);
                         
@@ -1067,7 +1083,63 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
     };
     
     CICClientSession.prototype.intOnRoom = function(packet) {
+        switch (packet.Command) {
+
+            case CIC_COMMAND_ROOM:
+                switch (packet.Operation) {
+                    
+                    case CIC_OPERATION_INSERT:
+                    case CIC_OPERATION_UPDATE:
+                    case CIC_OPERATION_LIST:
+                        var room = this.RoomList[packet.RoomID] || {};
+                        room.RoomID = packet.RoomID;
+                        room.TimeStamp = packet.TimeStamp;
+                        room.Name = packet.Name;
+                        room.FromUserID = packet.FromUserID;
+                        room.ToUserID = packet.ToUserID;
+                        room.Kind = packet.Kind;
+                        room.isAutoRoom = packet.isAutoRoom;
+                        room.isClosed = packet.isClosed;
+                        room.isSupport = packet.isSupport;
+                        room.LastAccess = packet.LastAccess;
+                        room.LastChange = packet.LastChange;
+                        this.RoomList[room.RoomID] = room;
+                        this.onRoom(room);
+                        /*if ((room.LastChange !== undefined) && ((localStorage.LastRoomChanged === undefined) || (room.LastChange.localeCompare(localStorage.LastRoomChanged) > 0))) {
+                            localStorage.LastRoomChanged = room.LastChange;
+                            console.log('NEW LastRoomChanged: ' + localStorage.LastRoomChanged);
+                        }*/
+                        // se a sala foi alterada depois de se ter saido da sala, dispara um evento
+                        if ((room.LastChange !== undefined) && ((room.LastReceivedChange === undefined) || (room.LastChange.localeCompare(room.LastReceivedChange) < 0))) {
+                            this.onRoomChanged(room.RoomID, room.LastReceivedChange);
+                        }
+                        break;
+                        
+                    case CIC_OPERATION_DELETE:
+                        var room = this.RoomList[packet.RoomID];
+                        if (room !== undefined) {
+                            delete this.RoomList[room.RoomID];
+                            this.onRoomDeleted(room);
+                        }
+                        break;
+                        
+                }
+                break;
+                
+            case CIC_COMMAND_ROOM_COUNT:
+                // se chegou no final da lista, grava lista no storage
+                if (packet.PacketCount === '-1') {
+                    localStorage.RoomList = JSON.stringify(this.RoomList);
+                }
+                this.onRoomCount(packet.PacketCount);
+                break;
+                
+        }
         return false; // indica que foi processado o pacote
+    };
+
+    CICClientSession.prototype.intRequestRoomText = function(roomid) {
+        this.sendPacket({ Command: });
     };
     
     CICClientSession.prototype.intRequestUserPicture = function(userid) {
@@ -1180,6 +1252,25 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         // nao faz nada, mas poderia atualizar um gauge
     };
     CICClientSession.prototype.onFileDeleted = function(file) {
+        // nao faz nada
+    };
+    
+    /**
+     *  =========================================================================================================================================================================
+     *  EVENTOS REFERENTES AS SALAS
+     *  =========================================================================================================================================================================
+     */
+    
+    CICClientSession.prototype.onRoomCount = function(count) {
+        // nao faz nada, mas poderia iniciar um gauge
+    };
+    CICClientSession.prototype.onRoom = function(room) {
+        // nao faz nada, mas poderia atualizar um gauge
+    };
+    CICClientSession.prototype.onRoomDeleted = function(room) {
+        // nao faz nada
+    };
+    CICClientSession.prototype.onRoomChanged = function(room) {
         // nao faz nada
     };
     
