@@ -22,7 +22,7 @@
                 
                 //delete localStorage.LastMessage; // sempre receber todas as mensagens novas quando se conectar
                 //delete localStorage.LastImportant; // sempre receber todas as mensagens novas quando se conectar
-                delete localStorage.LastRoomChanged; // sempre receber todas as salas quando se conectar
+                //delete localStorage.LastRoomChanged; // sempre receber todas as salas quando se conectar
                 // limpar sempre que for um novo usuario
                 //delete localStorage.LastUpdate;
                 //delete localStorage.UnitList;
@@ -64,17 +64,27 @@
                     }
                 };
                 
-                client.onUserStatus = function(user) {
-                    var local = this.UserList[user.UserID];
-                    if (local !== undefined) {
+                client.onUserStatus = function(status) {
+                    if (this.getUser(status.UserID) !== undefined) {
                         // se tem o TimeStamp é uma conexão ou desconexão (online ou offline)
-                        if (user.TimeStamp !== undefined) {
-                            if (user.isConnected === 'True') {
-                                writeToScreen('<span style="color: green;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') CONECTADO</span>'); 
+                        if (status.TimeStamp !== undefined) {
+                            if (status.isConnected) {
+                                writeToScreen('<span style="color: green;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ') CONECTADO</span>'); 
                             }
                             else {
-                                writeToScreen('<span style="color: red;">USUÁRIO "' + local.Name + '" (' + local.UserID + ') DESCONECTADO</span>'); 
+                                writeToScreen('<span style="color: red;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ') DESCONECTADO</span>'); 
                             }
+                        }
+                        switch (status.Status) {
+                            case CIC_USER_STATUS_AVAILABLE:
+                                writeToScreen('<span style="color: green;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ')<BR/><I>' + status.StatusMessage + '</I></span>'); 
+                                break;
+                            case CIC_USER_STATUS_BUSY:
+                                writeToScreen('<span style="color: orange;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ')<BR/><I>' + status.StatusMessage + '</I></span>'); 
+                                break;
+                            case CIC_USER_STATUS_AWAY:
+                                writeToScreen('<span style="color: gray;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ')<BR/><I>' + status.StatusMessage + '</I></span>'); 
+                                break;
                         }
                     }
                 };
