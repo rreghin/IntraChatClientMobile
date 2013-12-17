@@ -12,27 +12,29 @@
             
             var Servidor = 'localhost';
             var Porta = 55000;
-            var Usuario = 'administrador';
-            var Senha = 'abc123';
+            var Usuario = '-ROGER-';
+            var Senha = 'teste';
             
             var AutoConnect = false;
 
             function init() {
                 output = document.getElementById("output");
                 
-                //delete localStorage.LastMessage; // sempre receber todas as mensagens novas quando se conectar
-                //delete localStorage.LastImportant; // sempre receber todas as mensagens novas quando se conectar
-                //delete localStorage.LastRoomChanged; // sempre receber todas as salas quando se conectar
-                // limpar sempre que for um novo usuario
-                //delete localStorage.LastUpdate;
-                //delete localStorage.UnitList;
-                //delete localStorage.UserList;
-                
                 connectClient();
-            }  
+            }
+            
+            function reset() {
+                // limpar sempre que for um novo usuario
+                delete localStorage.UnitList;
+                delete localStorage.UserList;
+                delete localStorage.LastMessage; // sempre receber todas as mensagens novas quando se conectar
+                delete localStorage.LastImportant; // sempre receber todas as mensagens novas quando se conectar
+                delete localStorage.LastRoomChanged; // sempre receber todas as salas quando se conectar
+                delete localStorage.LastUpdate;
+            }
 
-            function connectClient() {
-                var client = new CICClientSession(Servidor, Porta, Usuario, Senha, AutoConnect);
+            function connectClient(autoRegister) {
+                var client = new CICClientSession(Servidor, Porta, Usuario, Senha, AutoConnect, autoRegister);
                 
                 client.onConnect = function() {
                     writeToScreen('CONECTADO');
@@ -50,6 +52,15 @@
                     writeToScreen('AUTENTICADO: ' + client.ServerInfo.Name + ':' + client.ServerInfo.ServerID + ' (' + client.ServerInfo.VersionInfo + ')');
                 };
                 
+                client.onAutoRegisterAllowed = function() {
+                    writeToScreen('<span style="color: blue;">O SERVIDOR AGUARDA SEU CADASTRO !</span>'); 
+                    if (autoRegister === undefined) {
+                        // roda de novo, so que agora fazendo o autocadastro
+                        reset();
+                        connectClient(true);
+                    }
+                };
+                
                 client.onAuthenticationFailed = function(errornumber, errormessage) {
                     writeToScreen('<span style="color: red;">FALHA DE AUTENTICAÇÃO:</span> (' + errornumber + ') ' + errormessage); 
                 };
@@ -60,7 +71,7 @@
                 
                 client.onServerLogo = function(logo) {
                     if (logo !== undefined) {
-                        writeToScreen('<img src="data:image/png;base64,' + logo + '">'); 
+                        writeToScreen('<img src="data:image/png;base64,' + logo.Data + '">'); 
                     }
                 };
                 
@@ -91,7 +102,7 @@
                 
                 client.onUserPicture = function(userid, picture) {
                     if (picture !== undefined) {
-                        writeToScreen('<img src="data:image/png;base64,' + picture + '">'); 
+                        writeToScreen('<img src="data:image/png;base64,' + picture.Data + '">'); 
                     }
                 };
                 

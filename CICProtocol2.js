@@ -26,9 +26,11 @@ var CIC_OPERATION_SENT     = 100;
 var CIC_OPERATION_RECEIVED = 101;
 var CIC_OPERATION_ERROR    = 255;
 // =============================================================================
-var CIC_USER_STATUS_AVAILABLE = 0;
-var CIC_USER_STATUS_BUSY      = 1;
-var CIC_USER_STATUS_AWAY      = 2;
+var CIC_USER_STATUS_OFF       = -1;
+var CIC_USER_STATUS_AVAILABLE =  0;
+var CIC_USER_STATUS_BUSY      =  1;
+var CIC_USER_STATUS_AWAY      =  2;
+var CIC_USER_STATUS_HELLO     = 10;
 // =============================================================================
 var CIC_MESSAGE_NEW        =   0;
 var CIC_MESSAGE_ARCHIVED   =   1;
@@ -45,6 +47,7 @@ var CIC_ROOM_TODAY      = 3;
 var CIC_ROOM_TIMESTAMP  = 4;
 // =============================================================================
 var CIC_COMMAND_AUTHENTICATE    =   1;
+var CIC_COMMAND_AUTO_REGISTER   =   3;
 var CIC_COMMAND_AUTHENTICATION  = 101;
 
 var CIC_COMMAND_GET_SERVER_INFO =   4;
@@ -289,6 +292,12 @@ function CICBaseProtocol() {
         this.IsAuthenticated = false;
         this.LastPacketID = 0; // sequencial de pacotes enviados
         this.WebSocket; // = new WebSocket(...);
+        this.doAutoRegister = false;
+        delete this.ServerInfo;
+        delete this.UserName;
+        delete this.UserDept;
+        delete this.UserEmail;
+        delete this.UserPhone;
     };
     
     CICBaseProtocol.prototype.connect = function() {
@@ -307,6 +316,36 @@ function CICBaseProtocol() {
         this.WebSocket.close();
     };
     
+    CICBaseProtocol.prototype.authenticate = function() {
+        this.sendPacket({
+            Command: CIC_COMMAND_AUTHENTICATE,
+            UserID: this.UserID,
+            Password: this.UserPassword,
+            VersionNumber: CIC_PROTOCOL_VERSION,
+            VersionRevision: CIC_PROTOCOL_REVISION,
+            VersionPlatform: CIC_PROTOCOL_PLATFORM,
+            Language: 'PT',
+            SystemInfo: ''
+        });
+    };
+
+    CICBaseProtocol.prototype.register = function() {
+        this.sendPacket({
+            Command: CIC_COMMAND_AUTO_REGISTER,
+            UserID: this.UserID,
+            Password: this.UserPassword,
+            Name: this.UserName||this.UserID,
+            Dept: this.UserDept||'',
+            Email: this.UserEmail||'',
+            Phone: this.UserPhone||'',
+            VersionNumber: CIC_PROTOCOL_VERSION,
+            VersionRevision: CIC_PROTOCOL_REVISION,
+            VersionPlatform: CIC_PROTOCOL_PLATFORM,
+            Language: 'PT',
+            SystemInfo: ''
+        });
+    };
+
     CICBaseProtocol.prototype.sendPacket = function(packet) {
         if (packet.PacketID === undefined) {
             packet.PacketID = ++this.LastPacketID;
@@ -315,11 +354,37 @@ function CICBaseProtocol() {
         //console.log('SENT -> ' + JSON.stringify(packet));
     };
     
+    CICBaseProtocol.prototype.setStatus = function(status, message, isDefaultStatus, isDefaultMessage) {
+        this.sendPacket({ 
+            Command: CIC_COMMAND_USER_STATUS,
+            Status: status||CIC_USER_STATUS_AVAILABLE,
+            StatusMessage: message||'',
+            isDefaultStatus: isDefaultStatus||false,
+            isDefaultStatusMessage: isDefaultMessage||false
+        });
+    };    
+    
     CICBaseProtocol.prototype.sendMessage = function(targets, text) {
         this.sendPacket({
             Command: CIC_COMMAND_MESSAGE,
             ToUserID: targets,
             TextMessage: Base64.encode(text)
+        });
+    };
+        
+    CICBaseProtocol.prototype.setMessageStatus = function(messageid, status) {
+        this.sendPacket({
+            Command: CIC_COMMAND_MESSAGE_STATUS,
+            Operation: status,
+            MessageID: messageid
+        });
+    };
+        
+    CICBaseProtocol.prototype.setMessageFolder = function(messageid, folderid) {
+        this.sendPacket({
+            Command: CIC_COMMAND_MESSAGE_FOLDER,
+            MessageID: messageid,
+            FolderID: folderid
         });
     };
         
@@ -332,16 +397,12 @@ function CICBaseProtocol() {
             this.onConnect();
             this.WebSocket.send(this.MagicString);
             // prepara o objeto JSON a ser enviado com o pedido de autenticacao
-            this.sendPacket({
-                Command: CIC_COMMAND_AUTHENTICATE,
-                UserID: this.UserID,
-                Password: this.UserPassword,
-                VersionNumber: CIC_PROTOCOL_VERSION,
-                VersionRevision: CIC_PROTOCOL_REVISION,
-                VersionPlatform: CIC_PROTOCOL_PLATFORM,
-                Language: 'PT',
-                SystemInfo: ''
-            });
+            if (!this.doAutoRegister) {
+                this.authenticate();
+            }
+            else {
+                this.register();
+            }
         }
     };
     
@@ -368,11 +429,12 @@ function CICBaseProtocol() {
                 try {
                     packet = JSON.parse(lines[index]);
                 } catch (error) {
-                    console.log(lines[index]);
+                    console.log(error.message + ' ==> ' + lines[index]);
                 }
                 // verifica qual foi o comando enviado pelo servidor
                 if (!this.IsAuthenticated) {
                     if (packet.Command === CIC_COMMAND_AUTHENTICATION) {
+                        this.ServerInfo = this.ServerInfo || {};
                         this.ServerInfo.ServerID = packet.ServerID;
                         this.ServerInfo.Name = packet.ServerName;
                         this.ServerInfo.VersionInfo = packet.VersionInfo;
@@ -384,9 +446,16 @@ function CICBaseProtocol() {
                         }
                         else {
                             this.IsAuthenticated = false;
-                            packet.ErrorMessage = Base64.decode(packet.ErrorMessage);
-                            if (this.intOnAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage)) {
-                                this.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
+                            if (packet.doAutoRegister||false) {
+                                if (this.intOnAutoRegisterAllowed()) {
+                                    this.onAutoRegisterAllowed();
+                                }
+                            }
+                            else {
+                                packet.ErrorMessage = Base64.decode(packet.ErrorMessage);
+                                if (this.intOnAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage)) {
+                                    this.onAuthenticationFailed(packet.ErrorNumber, packet.ErrorMessage);
+                                }
                             }
                         }
                     }
@@ -417,6 +486,9 @@ function CICBaseProtocol() {
     CICBaseProtocol.prototype.intOnAuthenticationOk = function() {
         return true;
     };
+    CICBaseProtocol.prototype.intOnAutoRegisterAllowed = function() {
+        return true;
+    };
     CICBaseProtocol.prototype.intOnAuthenticationFailed = function(errornumber, errormessage) {
         return true;
     };
@@ -439,6 +511,9 @@ function CICBaseProtocol() {
     };
     CICBaseProtocol.prototype.onAuthenticationOk = function() {
         //console.log('Authenticated to server "' + this.getServerName() + '"');
+    };
+    CICBaseProtocol.prototype.onAutoRegisterAllowed = function() {
+        //console.log('AutoRegisterAllowed on server "' + this.getServerName() + '"');
     };
     CICBaseProtocol.prototype.onAuthenticationFailed = function(errornumber, errormessage) {
         //console.log('Authentication ERROR: (' + errornumber + ') ' + errormessage);
@@ -547,13 +622,22 @@ function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword, doCo
     
 }
 
-function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doConnect) {
+function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doConnect, doAutoRegister, UserName, UserDept, UserEmail, UserPhone) {
     
     /**
      *  CONSTRUTOR DO OBJETO
      */
 
     this.init(ServerAddress, ServerPort, UserID, UserPassword, CIC_CLIENT_MAGIC_STRING);
+    
+    // se foram passados os parametros para o AutoCadastro, tenta fazer o autocadastro durante a autenticacao
+    if (doAutoRegister||false) {
+        this.doAutoRegister = true;
+        this.UserName = UserName;
+        this.UserDept = UserDept;
+        this.UserEmail = UserEmail;
+        this.UserPhone = UserPhone;
+    }
 
     // ja faz a conexao com o servidor, caso tenha dito que sim, ou nao tenha sido dito nada
     if (doConnect) {
@@ -598,9 +682,15 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
     
     /**
      *  =========================================================================================================================================================================
-     *  HELPERS PARA INFORMACOES DOS USUARIOS
+     *  HELPERS
      *  =========================================================================================================================================================================
      */
+    
+    CICClientSession.prototype.getServerLogo = function() {
+        if (this.ServerInfo !== undefined) {
+            return { CRC32: this.ServerInfo.LogoCRC32, Data: this.ServerInfo.LogoData };
+        }
+    };
     
     CICClientSession.prototype.getUser = function(userid) {
         return this.UserList[userid];
@@ -626,13 +716,6 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
             else {
                 return user.Name;
             }
-        }
-    };
-    
-    CICClientSession.prototype.getUserUnitID = function(userid) {
-        var user = this.UserList[userid];
-        if (user !== undefined) {
-            return user.UnitID;
         }
     };
     
@@ -686,6 +769,13 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
             if (user.PictureCRC32 !== undefined && user.PictureCRC32 !== 0) {
                 return { CRC32: user.PictureCRC32, Data: this.PictureList[userid] };
             }
+        }
+    };
+    
+    CICClientSession.prototype.getUserUnitID = function(userid) {
+        var user = this.UserList[userid];
+        if (user !== undefined) {
+            return user.UnitID;
         }
     };
     
@@ -818,7 +908,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 else {
                     delete this.ServerInfo.LogoData;
                 }
-                this.onServerLogo(this.ServerInfo.LogoData);
+                this.onServerLogo(this.getServerLogo());
                 break;
 
             case CIC_COMMAND_LOGO_CHANGED:
@@ -1034,7 +1124,7 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                 // remove da lista de requisicoes, caso precise fazer uma nova requisicao no futuro (como quando o usuario altera sua foto)
                 delete this.PictureRequestList[user.UserID];
 
-                this.onUserPicture(user.UserID, this.PictureList[user.UserID]);
+                this.onUserPicture(user.UserID, this.getUserPicture(user.UserID));
                 break;
                 
             case CIC_COMMAND_PICTURE_CHANGED:
