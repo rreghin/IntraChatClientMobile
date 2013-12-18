@@ -392,6 +392,49 @@ function CICBaseProtocol() {
         });
     };
         
+    CICBaseProtocol.prototype.setFileFolder = function(streamid, folderid) {
+        this.sendPacket({
+            Command: CIC_COMMAND_FILE_FOLDER,
+            StreamID: streamid,
+            FolderID: folderid
+        });
+    };
+        
+    CICBaseProtocol.prototype.createMessageFolder = function(foldername) {
+        this.sendPacket({
+            Command: CIC_COMMAND_FOLDER,
+            Operation: CIC_OPERATION_INSERT,
+            Name: foldername,
+            Kind: 'M'
+        });
+    };
+        
+    CICBaseProtocol.prototype.createFileFolder = function(foldername) {
+        this.sendPacket({
+            Command: CIC_COMMAND_FOLDER,
+            Operation: CIC_OPERATION_INSERT,
+            Name: foldername,
+            Kind: 'F'
+        });
+    };
+        
+    CICBaseProtocol.prototype.renameFolder = function(folderid, newname) {
+        this.sendPacket({
+            Command: CIC_COMMAND_FOLDER,
+            Operation: CIC_OPERATION_UPDATE,
+            FolderID: folderid,
+            Name: newname
+        });
+    };
+        
+    CICBaseProtocol.prototype.deleteFolder = function(folderid) {
+        this.sendPacket({
+            Command: CIC_COMMAND_FOLDER,
+            Operation: CIC_OPERATION_DELETE,
+            FolderID: folderid
+        });
+    };
+        
     /**
      *  EVENTOS DO WEBSOCKETS (NÃO MEXA NELES!)
      */
