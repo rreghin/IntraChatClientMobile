@@ -5,119 +5,122 @@
 *
 **/
 
-// =============================================================================
-var CIC_PROTOCOL_VERSION  = '396';
-var CIC_PROTOCOL_REVISION = 'aWS';
-var CIC_PROTOCOL_PLATFORM = 'M';
-// =============================================================================
-var CIC_CLIENT_MAGIC_STRING  = '@BOBJDCDLEIDEBNEDDODJDCDODNBJBO\r\n';
-var CIC_MESSAGE_MAGIC_STRING = 'OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n';
-// =============================================================================
-var CIC_OPERATION_INSERT   =   0;
-var CIC_OPERATION_UPDATE   =   1;
-var CIC_OPERATION_DELETE   =   2;
-var CIC_OPERATION_SYNC     =   3;
-var CIC_OPERATION_LIST     =   4;
-var CIC_OPERATION_MODIFY   =   5;
-var CIC_OPERATION_LAG      =   6;
-var CIC_OPERATION_USERUPD  =   7;
-var CIC_OPERATION_MCP      =   9; // codigo especial para "Meus Contatos Pessoais"
-var CIC_OPERATION_SENT     = 100;
-var CIC_OPERATION_RECEIVED = 101;
-var CIC_OPERATION_ERROR    = 255;
-// =============================================================================
-var CIC_USER_STATUS_OFF       = -1;
-var CIC_USER_STATUS_AVAILABLE =  0;
-var CIC_USER_STATUS_BUSY      =  1;
-var CIC_USER_STATUS_AWAY      =  2;
-var CIC_USER_STATUS_HELLO     = 10;
-// =============================================================================
-var CIC_MESSAGE_NEW        =   0;
-var CIC_MESSAGE_ARCHIVED   =   1;
-var CIC_MESSAGE_IMPORTANT  =   2;
-var CIC_MESSAGE_SENT       =   8;
-var CIC_MESSAGE_RECEIVED   =  16;
-var CIC_MESSAGE_ORIGINAL   =  32;
-var CIC_MESSAGE_FOLDER     = 128;
-// =============================================================================
-var CIC_ROOM_ALL        = 0;
-var CIC_ROOM_LINES      = 1;
-var CIC_ROOM_MINUTES    = 2;
-var CIC_ROOM_TODAY      = 3;
-var CIC_ROOM_TIMESTAMP  = 4;
-// =============================================================================
-var CIC_COMMAND_AUTHENTICATE    =   1;
-var CIC_COMMAND_AUTO_REGISTER   =   3;
-var CIC_COMMAND_AUTHENTICATION  = 101;
+// CONSTANTES PRE-DEFINIDAS
+{
+    // =============================================================================
+    var CIC_PROTOCOL_VERSION  = '396';
+    var CIC_PROTOCOL_REVISION = 'aWS';
+    var CIC_PROTOCOL_PLATFORM = 'M';
+    // =============================================================================
+    var CIC_CLIENT_MAGIC_STRING  = '@BOBJDCDLEIDEBNEDDODJDCDODNBJBO\r\n';
+    var CIC_MESSAGE_MAGIC_STRING = 'OBJBCEGDODEDGDADCECEEDMDDDNBEECEJBOB@\r\n';
+    // =============================================================================
+    var CIC_OPERATION_INSERT   =   0;
+    var CIC_OPERATION_UPDATE   =   1;
+    var CIC_OPERATION_DELETE   =   2;
+    var CIC_OPERATION_SYNC     =   3;
+    var CIC_OPERATION_LIST     =   4;
+    var CIC_OPERATION_MODIFY   =   5;
+    var CIC_OPERATION_LAG      =   6;
+    var CIC_OPERATION_USERUPD  =   7;
+    var CIC_OPERATION_MCP      =   9; // codigo especial para "Meus Contatos Pessoais"
+    var CIC_OPERATION_SENT     = 100;
+    var CIC_OPERATION_RECEIVED = 101;
+    var CIC_OPERATION_ERROR    = 255;
+    // =============================================================================
+    var CIC_USER_STATUS_OFF       = -1;
+    var CIC_USER_STATUS_AVAILABLE =  0;
+    var CIC_USER_STATUS_BUSY      =  1;
+    var CIC_USER_STATUS_AWAY      =  2;
+    var CIC_USER_STATUS_HELLO     = 10;
+    // =============================================================================
+    var CIC_MESSAGE_NEW        =   0;
+    var CIC_MESSAGE_ARCHIVED   =   1;
+    var CIC_MESSAGE_IMPORTANT  =   2;
+    var CIC_MESSAGE_SENT       =   8;
+    var CIC_MESSAGE_RECEIVED   =  16;
+    var CIC_MESSAGE_ORIGINAL   =  32;
+    var CIC_MESSAGE_FOLDER     = 128;
+    // =============================================================================
+    var CIC_ROOM_ALL        = 0;
+    var CIC_ROOM_LINES      = 1;
+    var CIC_ROOM_MINUTES    = 2;
+    var CIC_ROOM_TODAY      = 3;
+    var CIC_ROOM_TIMESTAMP  = 4;
+    // =============================================================================
+    var CIC_COMMAND_AUTHENTICATE    =   1;
+    var CIC_COMMAND_AUTO_REGISTER   =   3;
+    var CIC_COMMAND_AUTHENTICATION  = 101;
 
-var CIC_COMMAND_GET_SERVER_INFO =   4;
-var CIC_COMMAND_GET_USER_INFO   =   5;
+    var CIC_COMMAND_GET_SERVER_INFO =   4;
+    var CIC_COMMAND_GET_USER_INFO   =   5;
 
-var CIC_COMMAND_SERVER_INFO     = 214;
-var CIC_COMMAND_USER_INFO       = 218;
+    var CIC_COMMAND_SERVER_INFO     = 214;
+    var CIC_COMMAND_USER_INFO       = 218;
 
-var CIC_COMMAND_KEEPALIVE       = 111;
-var CIC_COMMAND_KEEPALIVE_BACK  =   8;
+    var CIC_COMMAND_KEEPALIVE       = 111;
+    var CIC_COMMAND_KEEPALIVE_BACK  =   8;
 
-var CIC_COMMAND_GET_LOGO        = 195;
-var CIC_COMMAND_GET_PICTURE     = 196;
-var CIC_COMMAND_GET_CONFIG      = 197;
-var CIC_COMMAND_GET_MURAL       = 199;
+    var CIC_COMMAND_GET_LOGO        = 195;
+    var CIC_COMMAND_GET_PICTURE     = 196;
+    var CIC_COMMAND_GET_CONFIG      = 197;
+    var CIC_COMMAND_GET_MURAL       = 199;
 
-var CIC_COMMAND_CONFIG          = 185;
-var CIC_COMMAND_LOGO            = 186;
-var CIC_COMMAND_PICTURE         = 187;
-var CIC_COMMAND_MURAL           = 189;
+    var CIC_COMMAND_CONFIG          = 185;
+    var CIC_COMMAND_LOGO            = 186;
+    var CIC_COMMAND_PICTURE         = 187;
+    var CIC_COMMAND_MURAL           = 189;
 
-var CIC_COMMAND_LOGO_CHANGED    = 190;
-var CIC_COMMAND_PICTURE_CHANGED = 191;
-var CIC_COMMAND_CONFIG_CHANGED  = 192;
-var CIC_COMMAND_MURAL_CHANGED   = 194;
+    var CIC_COMMAND_LOGO_CHANGED    = 190;
+    var CIC_COMMAND_PICTURE_CHANGED = 191;
+    var CIC_COMMAND_CONFIG_CHANGED  = 192;
+    var CIC_COMMAND_MURAL_CHANGED   = 194;
 
-var CIC_COMMAND_LIST_ALL        =  33;
-var CIC_COMMAND_LIST_UNITS      =  34;
-var CIC_COMMAND_LIST_USERS      =  35;
-var CIC_COMMAND_LIST_MESSAGES   =  36;
-var CIC_COMMAND_LIST_ROOMS      =  37;
-var CIC_COMMAND_LIST_FILES      =  38;
-var CIC_COMMAND_LIST_FOLDERS    =  39;
+    var CIC_COMMAND_LIST_ALL        =  33;
+    var CIC_COMMAND_LIST_UNITS      =  34;
+    var CIC_COMMAND_LIST_USERS      =  35;
+    var CIC_COMMAND_LIST_MESSAGES   =  36;
+    var CIC_COMMAND_LIST_ROOMS      =  37;
+    var CIC_COMMAND_LIST_FILES      =  38;
+    var CIC_COMMAND_LIST_FOLDERS    =  39;
 
-var CIC_COMMAND_UNIT            = 115;
-var CIC_COMMAND_UNIT_COUNT      =  42;
+    var CIC_COMMAND_UNIT            = 115;
+    var CIC_COMMAND_UNIT_COUNT      =  42;
 
-var CIC_COMMAND_USER            = 103;
-var CIC_COMMAND_USER_COUNT      =  43;
-var CIC_COMMAND_USER_STATUS     =  71;
+    var CIC_COMMAND_USER            = 103;
+    var CIC_COMMAND_USER_COUNT      =  43;
+    var CIC_COMMAND_USER_STATUS     =  71;
 
-var CIC_COMMAND_FOLDER          = 235;
-var CIC_COMMAND_FOLDER_COUNT    =  47;
+    var CIC_COMMAND_FOLDER          = 235;
+    var CIC_COMMAND_FOLDER_COUNT    =  47;
 
-var CIC_COMMAND_MESSAGE         =  10;
-var CIC_COMMAND_MESSAGE_COUNT   =  44;
-var CIC_COMMAND_MESSAGE_STATUS  =  11;
-var CIC_COMMAND_MESSAGE_FOLDER  = 237;
+    var CIC_COMMAND_MESSAGE         =  10;
+    var CIC_COMMAND_MESSAGE_COUNT   =  44;
+    var CIC_COMMAND_MESSAGE_STATUS  =  11;
+    var CIC_COMMAND_MESSAGE_FOLDER  = 237;
 
-var CIC_COMMAND_ROOM            = 116;
-var CIC_COMMAND_ROOM_COUNT      =  45;
-var CIC_COMMAND_ROOM_NEW        =  50;
-var CIC_COMMAND_ROOM_CHANGE     =  51;
-var CIC_COMMAND_ROOM_DELETE     =  52;
-var CIC_COMMAND_ROOM_INVITE     =  53;
-var CIC_COMMAND_ROOM_REVOKE     =  54;
-var CIC_COMMAND_ROOM_JOIN       =  55;
-var CIC_COMMAND_ROOM_LEAVE      =  56;
-var CIC_COMMAND_ROOM_DENIED     =  57;
-var CIC_COMMAND_ROOM_GRANTED    =  58;
-var CIC_COMMAND_ROOM_DATA       =  59;
-var CIC_COMMAND_ROOM_ACCEPT     =  60;
-var CIC_COMMAND_ROOM_REJECT     =  61;
-var CIC_COMMAND_ROOM_USERLIST   =  62;
-var CIC_COMMAND_ROOM_WRITING    =  63;
-var CIC_COMMAND_ROOM_SEARCH     =  64;
+    var CIC_COMMAND_ROOM            = 116;
+    var CIC_COMMAND_ROOM_COUNT      =  45;
+    var CIC_COMMAND_ROOM_NEW        =  50;
+    var CIC_COMMAND_ROOM_CHANGE     =  51;
+    var CIC_COMMAND_ROOM_DELETE     =  52;
+    var CIC_COMMAND_ROOM_INVITE     =  53;
+    var CIC_COMMAND_ROOM_REVOKE     =  54;
+    var CIC_COMMAND_ROOM_JOIN       =  55;
+    var CIC_COMMAND_ROOM_LEAVE      =  56;
+    var CIC_COMMAND_ROOM_DENIED     =  57;
+    var CIC_COMMAND_ROOM_GRANTED    =  58;
+    var CIC_COMMAND_ROOM_DATA       =  59;
+    var CIC_COMMAND_ROOM_ACCEPT     =  60;
+    var CIC_COMMAND_ROOM_REJECT     =  61;
+    var CIC_COMMAND_ROOM_USERLIST   =  62;
+    var CIC_COMMAND_ROOM_WRITING    =  63;
+    var CIC_COMMAND_ROOM_SEARCH     =  64;
 
-var CIC_COMMAND_FILE            = 138;
-var CIC_COMMAND_FILE_COUNT      =  46;
-// =============================================================================
+    var CIC_COMMAND_FILE            = 138;
+    var CIC_COMMAND_FILE_COUNT      =  46;
+    // =============================================================================
+}
 
 var Base64 = {
 
