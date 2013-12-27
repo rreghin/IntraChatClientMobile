@@ -6,7 +6,7 @@ angular.module('webClient.controllers', []).
     controller('main', function($scope, $routeParams, $location) {
         
         // DEBUG (inicializar com alguns valores para testes)
-        $scope.loginServerAddress = 'localhost';
+        $scope.loginServerAddress = '192.168.0.100';
         $scope.loginUserId = 'administrador';
         $scope.loginUserPassword = 'abc123';
         
