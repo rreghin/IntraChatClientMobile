@@ -1,3 +1,5 @@
+'use strict';
+
 /**
 *
 *  Protocolos do CIC/Comunicador IntraChat
@@ -280,6 +282,7 @@ function CICBaseProtocol() {
         this.reset();
         this.ServerAddress = ServerAddress;
         this.ServerPort = ServerPort;
+        this.ServerSecure = true;
         this.MagicString = MagicString;
         this.UserID = UserID;
         this.UserPassword = UserPassword;
@@ -310,7 +313,7 @@ function CICBaseProtocol() {
         // para que o usuario tenha a chance de aceitar o certificado
         // auto-assinado do servidor intrachat
         var self = this;
-        this.WebSocket = new WebSocket('wss://'+this.ServerAddress+':'+this.ServerPort+'/', ['intrachat']);
+        this.WebSocket = new WebSocket((this.ServerSecure?'wss':'ws')+'://'+this.ServerAddress+':'+this.ServerPort+'/', ['intrachat']);
         this.WebSocket.onopen = function() { self._onWSOpen.call(self); };
         this.WebSocket.onclose = function() { self._onWSClose.call(self); };
         this.WebSocket.onerror = function(error) { self._onWSError.call(self, error); };
