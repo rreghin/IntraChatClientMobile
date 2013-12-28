@@ -6,6 +6,13 @@ C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\andr
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\br\com\intrachat\webclient\R$xml.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\br\com\intrachat\webclient\R.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\br\com\intrachat\webclient\WebClient.class \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\com\ququplay\websocket\CordovaClient.class \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\com\ququplay\websocket\InsecureX509TrustManager.class \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\com\ququplay\websocket\Utils.class \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\com\ququplay\websocket\WebSocket$1.class \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\com\ququplay\websocket\WebSocket$2.class \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\com\ququplay\websocket\WebSocket$3.class \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\com\ququplay\websocket\WebSocket.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\batterystatus\BatteryListener$1.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\batterystatus\BatteryListener.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\camera\CameraLauncher.class \
@@ -96,12 +103,6 @@ C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\andr
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\globalization\Globalization$1.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\globalization\Globalization.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\globalization\GlobalizationError.class \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\media\AudioHandler.class \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\media\AudioPlayer$1.class \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\media\AudioPlayer$MODE.class \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\media\AudioPlayer$STATE.class \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\media\AudioPlayer.class \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\media\FileHelper.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\mediacapture\Capture$1.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\mediacapture\Capture$2.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\mediacapture\Capture.class \
@@ -111,3 +112,4 @@ C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\andr
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\splashscreen\SplashScreen.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\classes\org\apache\cordova\vibration\Vibration.class \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\dexedLibs\classes-ccc6e66f66a82ea2e9086587dd20ab29.jar \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\bin\dexedLibs\java_websocket-3dc615419ec0500d386d41920e5efef6.jar \

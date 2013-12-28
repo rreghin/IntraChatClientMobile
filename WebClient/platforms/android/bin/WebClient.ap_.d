@@ -23,6 +23,9 @@ C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\andr
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\partials \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\css\app.css \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\img\icone.svg \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\img\IconeLiso2.png \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\img\intrachat-252x470.png \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\js\app.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\js\controllers.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\js\directives.js \
@@ -32,6 +35,7 @@ C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\andr
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\lib\bootstrap-3.0.3 \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\lib\intrachat-3.0.1.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\lib\jquery-2.0.3.min.js \
+C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\lib\phonegap-websocket.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\lib\angular\angular-animate.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\lib\angular\angular-animate.min.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\lib\angular\angular-animate.min.js.map \
@@ -332,7 +336,6 @@ C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\andr
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.geolocation \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.globalization \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media-capture \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.splashscreen \
@@ -395,9 +398,6 @@ C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\andr
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.globalization\www \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.globalization\www\globalization.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.globalization\www\GlobalizationError.js \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media\www \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media\www\Media.js \
-C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media\www\MediaError.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media-capture\www \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media-capture\www\capture.js \
 C:\Users\Easynet\Documents\GitHub\IntraChatClientMobile\WebClient\platforms\android\assets\www\plugins\org.apache.cordova.media-capture\www\CaptureAudioOptions.js \

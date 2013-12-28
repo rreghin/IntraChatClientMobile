@@ -6,4 +6,5 @@
     <access origin="*"/>
     <preference name="fullscreen" value="false"/>
     <preference name="webviewbounce" value="true"/>
+    <plugin name="WebSocket" value="com.ququplay.websocket.WebSocket" />
 </widget>

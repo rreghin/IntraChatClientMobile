@@ -17,6 +17,7 @@
         <script src="lib/angular/angular.js"></script>
         <script src="lib/angular/angular-route.js"></script>
         <script src="lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+        <script src="lib/phonegap-websocket.js"></script>
         <script src="lib/intrachat-3.0.1.js"></script>
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
@@ -26,5 +27,12 @@
     </head>
     <body>
         <div ng-view></div>
+<!--        <script>
+            $(document).ready(function() {
+                if( typeof(WebSocket) !== 'function' ) {
+                    $('body').html("<h1>Error</h1><p>Your browser does not support HTML5 Web Sockets. Try Google Chrome instead.</p>");
+                }
+            });
+        </script>-->
     </body>
 </html>

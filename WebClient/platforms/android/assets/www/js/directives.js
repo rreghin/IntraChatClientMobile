@@ -7,4 +7,9 @@ angular.module('webClient.directives', []).
     return function(scope, elm, attrs) {
       elm.text(version);
     };
+  }]).
+  directive('appName', ['name', function(name) {
+    return function(scope, elm, attrs) {
+      elm.text(name);
+    };
   }]);

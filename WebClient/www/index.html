@@ -26,5 +26,12 @@
     </head>
     <body>
         <div ng-view></div>
+<!--        <script>
+            $(document).ready(function() {
+                if( typeof(WebSocket) !== 'function' ) {
+                    $('body').html("<h1>Error</h1><p>Your browser does not support HTML5 Web Sockets. Try Google Chrome instead.</p>");
+                }
+            });
+        </script>-->
     </body>
 </html>
