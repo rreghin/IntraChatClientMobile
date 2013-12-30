@@ -1,0 +1,998 @@
+TCordovaLib
+v5
+r1
+cCheck dependencies
+cCpHeader Classes/NSDictionary+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h
+cCpHeader Classes/CDVInvokedUrlCommand.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
+cCpHeader Classes/NSData+Base64.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSData+Base64.h
+cCpHeader Classes/CDVPluginResult.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPluginResult.h
+cCpHeader Classes/CDVPlugin.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPlugin.h
+cCpHeader Classes/CDVDebug.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVDebug.h
+cCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h
+cCpHeader Classes/CDVWhitelist.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWhitelist.h
+cCpHeader Classes/CDVURLProtocol.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVURLProtocol.h
+cCpHeader Classes/CDVViewController.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVViewController.h
+cCpHeader Classes/CDVCommandDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegate.h
+cCpHeader Classes/CDV.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDV.h
+cCpHeader Classes/CDVAvailability.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVAvailability.h
+cCpHeader Classes/CDVLocalStorage.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVLocalStorage.h
+cCpHeader Classes/UIDevice+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/UIDevice+Extensions.h
+cCpHeader Classes/NSArray+Comparisons.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSArray+Comparisons.h
+cCpHeader Classes/CDVCommandQueue.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandQueue.h
+cCpHeader Classes/CDVCommandDelegateImpl.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h
+cCpHeader Classes/CDVShared.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVShared.h
+cCpHeader Classes/CDVScreenOrientationDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
+cCpHeader Classes/CDVConfigParser.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVConfigParser.h
+cCpHeader Classes/CDVJSON.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVJSON.h
+cCpHeader Classes/CDVWebViewDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h
+cCpHeader Classes/CDVUserAgentUtil.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
+cCpHeader Classes/CDVTimer.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVTimer.h
+cProcessPCH /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000051CED8590000000000000110
+t1372510297
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c0000000051083EAF00000000000015F7
+t1359494831
+s5623
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDV.h
+c0000000052B334890000000000000516
+t1387476105
+s1302
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVAvailability.h
+c0000000052B334890000000000000CA1
+t1387476105
+s3233
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
+c0000000052B3348900000000000008BA
+t1387476105
+s2234
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
+c0000000052B334890000000000000473
+t1387476105
+s1139
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
+c0000000052B33489000000000000127C
+t1387476105
+s4732
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
+c0000000052B334890000000000000501
+t1387476105
+s1281
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
+c0000000052B3348900000000000017C5
+t1387476105
+s6085
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.h
+c0000000052B3348900000000000004CB
+t1387476105
+s1227
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
+c0000000052B334890000000000000EB2
+t1387476105
+s3762
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVDebug.h
+c0000000052B334890000000000000401
+t1387476105
+s1025
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
+c0000000052B3348900000000000007E6
+t1387476105
+s2022
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
+c0000000052B334890000000000000DDE
+t1387476105
+s3550
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.h
+c0000000052B3348900000000000003DA
+t1387476105
+s986
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.m
+c0000000052B33489000000000000098E
+t1387476105
+s2446
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h
+c0000000052B3348900000000000006CF
+t1387476105
+s1743
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
+c0000000052B334890000000000004C7E
+t1387476105
+s19582
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.h
+c0000000052B334890000000000000892
+t1387476105
+s2194
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.m
+c0000000052B3348900000000000016AE
+t1387476105
+s5806
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
+c0000000052B334890000000000000C13
+t1387476105
+s3091
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.m
+c0000000052B334890000000000001B29
+t1387476105
+s6953
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
+c0000000052B334890000000000000408
+t1387476105
+s1032
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.h
+c0000000052B3348900000000000003E6
+t1387476105
+s998
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.m
+c0000000052B3348900000000000006B6
+t1387476105
+s1718
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.h
+c0000000052B33489000000000000038D
+t1387476105
+s909
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.m
+c0000000052B334890000000000000AA2
+t1387476105
+s2722
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
+c0000000052B33489000000000000041C
+t1387476105
+s1052
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
+c0000000052B334890000000000002514
+t1387476105
+s9492
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h
+c0000000052B334890000000000000421
+t1387476105
+s1057
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
+c0000000052B3348900000000000012A2
+t1387476105
+s4770
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.h
+c0000000052B334890000000000000ACC
+t1387476105
+s2764
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.m
+c0000000052B33489000000000000879D
+t1387476105
+s34717
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h
+c0000000052B3348900000000000005A2
+t1387476105
+s1442
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
+c0000000052B334890000000000003804
+t1387476105
+s14340
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
+c0000000052B3348900000000000004B4
+t1387476105
+s1204
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.m
+c0000000052B3348900000000000027D3
+t1387476105
+s10195
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
+c0000000052B334890000000000000392
+t1387476105
+s914
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
+c0000000052B3348900000000000004D8
+t1387476105
+s1240
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.h
+c0000000052B33489000000000000037D
+t1387476105
+s893
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.m
+c0000000052B3348900000000000022CC
+t1387476105
+s8908
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
+c0000000052B3348900000000000005DA
+t1387476105
+s1498
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
+c0000000052B334890000000000001059
+t1387476105
+s4185
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
+c0000000052B3348900000000000003A0
+t1387476105
+s928
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
+c0000000052B334890000000000000584
+t1387476105
+s1412
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
+c0000000052B334890000000000000476
+t1387476105
+s1142
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
+c0000000052B334890000000000000620
+t1387476105
+s1568
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/CordovaLib_Prefix.pch
+c0000000052B334890000000000000346
+t1387476105
+s838
+i<Foundation/Foundation.h>
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList
+c0000000052B335110000000000000EFB
+t1387476241
+s3835
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDV.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVAvailability.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegate.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandQueue.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVConfigParser.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVDebug.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVJSON.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVLocalStorage.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPlugin.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPluginResult.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVShared.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVTimer.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVURLProtocol.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVViewController.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWhitelist.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSArray+Comparisons.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSData+Base64.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/UIDevice+Extensions.h
+t2
+s0
+
+N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a
+t2
+s0
+
+N/var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.pth
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesfa0b49906c63b841^cb2ea4916c63b841^---0#1#0#--18"Check dependencies36"3E14CF40-7DBB-41D9-8A11-7311DBA74A69-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169045.744782
+e409169046.333297
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m700abf956c63b841^b55155966c63b841^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m0000000000000000^4151"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o36"A154C71A-0C01-4D47-B748-F4CC3E810FA6-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169045.530745
+e409169046.135113
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m7a1a88956c63b841^ff9422966c63b841^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m0000000000000000^4109"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o36"DC55AA3A-5A91-4C5B-B517-AE2D2CF33FAB-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169045.746605
+e409169045.867636
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.md653bf956c63b841^272fde956c63b841^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.m0000000000000000^4109"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o36"7DE6AE14-B645-4572-8DA0-794C62A48847-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.003237
+e409169044.415029
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m360201946c63b841^e23e6a946c63b841^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m0000000000000000^4139"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o36"0B37D5A8-44CE-4AD1-93CB-06625A91ED27-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169045.868982
+e409169045.950433
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.me3a6de956c63b841^0e4ff3956c63b841^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.m0000000000000000^4061"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o36"20EA1DDB-0A65-4616-8108-A9EEA43C554E-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.818225
+e409169045.743876
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m24b4d1946c63b841^f777be956c63b841^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m0000000000000000^4109"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o36"FE8B3175-8207-4A55-9C89-5B7F9A7D726F-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.416451
+e409169045.343553
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.m89ce6a946c63b841^6ff257956c63b841^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.m0000000000000000^4073"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o36"428D5822-CCE9-47EC-A665-3DE4B129EDCB-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.007720
+e409169044.508850
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.m9c3302946c63b841^a69982946c63b841^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.m0000000000000000^4109"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o36"FC29DCDA-A17B-45BF-8874-8AA42F0B1561-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169046.547646
+e409169046.683362
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.m77648c966c63b841^28f0ae966c63b841^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.m0000000000000000^4073"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o36"46683452-FA48-48AE-9373-D6BB561D79D1-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169046.335981
+e409169046.541216
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.m6a3158966c63b841^3bfe8b966c63b841^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.m0000000000000000^4067"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o36"9D0E02AF-CF27-4A87-A6DF-03D4F36C9584-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.511112
+e409169045.443050
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.me01383946c63b841^6f8471956c63b841^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m0000000000000000^4103"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o36"5DC5BBA2-CD18-43D4-8939-FAEE4AF285BF-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169045.952693
+e409169046.569056
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.mb119f4956c63b841^7afd91966c63b841^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m0000000000000000^4115"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o36"A39FB117-A05C-4417-BC61-73E7DE44CAB3-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.599653
+e409169046.972532
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.m2cb699946c63b841^4d10f9966c63b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.m0000000000000000^4121"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o36"5BC5D608-1A94-41E4-9775-432106564052-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169046.136626
+e409169046.781010
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m333723966c63b841^740cc8966c63b841^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m0000000000000000^4127"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o36"162C8388-16FD-4FA8-BD3F-3E1A949BF131-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.456270
+e409169044.815999
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.m0c3a75946c63b841^d95cd1946c63b841^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.m0000000000000000^4091"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o36"9A21FA15-C1E3-4800-9ABC-307FA5FD3373-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169045.444341
+e409169045.529296
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m73f371956c63b841^4a7f87956c63b841^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m0000000000000000^4133"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o36"AD20A232-84E6-4BC3-8C0E-4F230EEEC666-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.007571
+e409169044.453725
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.ma0c102946c63b841^501775946c63b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.m0000000000000000^4097"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o36"21E6F747-C340-4CB8-AF3A-251A6A1AE3BD-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.002880
+e409169044.437869
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m39f200946c63b841^363d70946c63b841^---0#0#0#-19%DVTDocumentLocation2@138"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m0000000000000000^4157"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o36"C308CBAC-544E-456D-B3BC-44728D3E5AF8-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169044.440449
+e409169044.585113
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.madfa70946c63b841^eacf96946c63b841^---0#0#0#-19%DVTDocumentLocation2@144"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m0000000000000000^4193"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o36"814A2F9D-2F97-4B02-827C-F4D3F1293E01-
+
+CCompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169045.345249
+e409169045.743244
+r1
+xCompileC
+xbuild/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.mff9658956c63b841^3048be956c63b841^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m0000000000000000^4133"CompileC build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o36"A23D3E85-0827-4E0B-AD49-D2FAA2330718-
+
+CCpHeader Classes/CDV.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDV.h
+s409169041.827117
+e409169041.834051
+r1
+xCpHeader
+xClasses/CDV.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDV.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDV.h66d9d3916c63b841^0118d7916c63b841^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDV.h000000000080d041^861"CpHeader Classes/CDV.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDV.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDV.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"A49AE3A7-B8DA-4A7D-90C3-084B6B5FE697-
+
+CCpHeader Classes/CDVAvailability.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVAvailability.h
+s409169041.827755
+e409169041.833847
+r1
+xCpHeader
+xClasses/CDVAvailability.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVAvailability.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVAvailability.h0806d4916c63b841^9ca4d5916c63b841^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVAvailability.h000000000080d041^897"CpHeader Classes/CDVAvailability.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVAvailability.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVAvailability.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"9E65E582-5AE6-4895-AD80-5FB01F6647E9-
+
+CCpHeader Classes/CDVCommandDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegate.h
+s409169041.825864
+e409169041.830574
+r1
+xCpHeader
+xClasses/CDVCommandDelegate.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegate.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegate.hf889d3916c63b841^c1acd4916c63b841^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegate.h000000000080d041^906"CpHeader Classes/CDVCommandDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegate.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"426896FF-E430-44C7-809E-7AECF758DB97-
+
+CCpHeader Classes/CDVCommandDelegateImpl.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h
+s409169041.843199
+e409169041.894983
+r1
+xCpHeader
+xClasses/CDVCommandDelegateImpl.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h3f01d8916c63b841^b307e6916c63b841^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h000000000080d041^918"CpHeader Classes/CDVCommandDelegateImpl.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandDelegateImpl.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"10D3E2CE-FCF5-4775-99AC-08AFF413861C-
+
+CCpHeader Classes/CDVCommandQueue.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandQueue.h
+s409169041.835758
+e409169041.847510
+r1
+xCpHeader
+xClasses/CDVCommandQueue.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandQueue.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandQueue.h9819d6916c63b841^ef02d9916c63b841^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandQueue.h000000000080d041^897"CpHeader Classes/CDVCommandQueue.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVCommandQueue.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"C702F66F-4DDE-43A9-814D-D67939276120-
+
+CCpHeader Classes/CDVConfigParser.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVConfigParser.h
+s409169041.848783
+e409169041.911646
+r1
+xCpHeader
+xClasses/CDVConfigParser.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVConfigParser.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVConfigParser.h5a66d9916c63b841^ab09ea916c63b841^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVConfigParser.h000000000080d041^897"CpHeader Classes/CDVConfigParser.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVConfigParser.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVConfigParser.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"E6DECFE5-E5AF-4C62-AF9C-FAFA3E26BF70-
+
+CCpHeader Classes/CDVDebug.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVDebug.h
+s409169041.812718
+e409169041.818623
+r1
+xCpHeader
+xClasses/CDVDebug.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVDebug.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVDebug.hb62fd0916c63b841^77a1d1916c63b841^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVDebug.h000000000080d041^876"CpHeader Classes/CDVDebug.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVDebug.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVDebug.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"CE68E2F9-B362-415C-9393-9BBEAEE86EF5-
+
+CCpHeader Classes/CDVInvokedUrlCommand.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
+s409169041.674217
+e409169041.811571
+r1
+xCpHeader
+xClasses/CDVInvokedUrlCommand.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h4eb7ac916c63b841^ab22d0916c63b841^---0#0#0#-19%DVTDocumentLocation2@138"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h000000000080d041^912"CpHeader Classes/CDVInvokedUrlCommand.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVInvokedUrlCommand.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"C6F5021D-D293-48E6-B3B1-852892FAC98C-
+
+CCpHeader Classes/CDVJSON.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVJSON.h
+s409169041.899260
+e409169041.915126
+r1
+xCpHeader
+xClasses/CDVJSON.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVJSON.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVJSON.h3b55e6916c63b841^cb4bea916c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVJSON.h000000000080d041^873"CpHeader Classes/CDVJSON.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVJSON.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVJSON.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"B0951AF9-02E4-4A51-80A9-45DEC1F4057C-
+
+CCpHeader Classes/CDVLocalStorage.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVLocalStorage.h
+s409169041.828560
+e409169041.840990
+r1
+xCpHeader
+xClasses/CDVLocalStorage.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVLocalStorage.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVLocalStorage.h9b39d4916c63b841^3b35d7916c63b841^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVLocalStorage.h000000000080d041^897"CpHeader Classes/CDVLocalStorage.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVLocalStorage.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"0288DE44-9272-4E49-B639-97AC06B971C6-
+
+CCpHeader Classes/CDVPlugin.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPlugin.h
+s409169041.795749
+e409169041.814697
+r1
+xCpHeader
+xClasses/CDVPlugin.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPlugin.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPlugin.h49d8cb916c63b841^d594d0916c63b841^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPlugin.h000000000080d041^879"CpHeader Classes/CDVPlugin.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPlugin.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPlugin.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"C29184F4-2768-4EF9-8911-0C0706C0F885-
+
+CCpHeader Classes/CDVPluginResult.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPluginResult.h
+s409169041.675529
+e409169041.811876
+r1
+xCpHeader
+xClasses/CDVPluginResult.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPluginResult.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPluginResult.he011ad916c63b841^cf2dd0916c63b841^---0#0#0#-19%DVTDocumentLocation2@133"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPluginResult.h000000000080d041^897"CpHeader Classes/CDVPluginResult.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVPluginResult.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVPluginResult.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"519E0E46-AB70-4F8E-AE09-CF22CD0C290F-
+
+CCpHeader Classes/CDVScreenOrientationDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
+s409169041.847617
+e409169041.911384
+r1
+xCpHeader
+xClasses/CDVScreenOrientationDelegate.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection135"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h5017d9916c63b841^71ffe9916c63b841^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h000000000080d041^936"CpHeader Classes/CDVScreenOrientationDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVScreenOrientationDelegate.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"031D7DA0-C030-46D1-BD27-C5B12A5D605C-
+
+CCpHeader Classes/CDVShared.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVShared.h
+s409169041.847006
+e409169041.900140
+r1
+xCpHeader
+xClasses/CDVShared.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVShared.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVShared.h67f3d8916c63b841^6363e6916c63b841^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVShared.h000000000080d041^879"CpHeader Classes/CDVShared.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVShared.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVShared.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"DA310E2C-62E7-4456-B71E-D1E4C4BD2B99-
+
+CCpHeader Classes/CDVTimer.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVTimer.h
+s409169041.914185
+e409169041.921978
+r1
+xCpHeader
+xClasses/CDVTimer.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVTimer.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVTimer.h8e23ea916c63b841^aa49ec916c63b841^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVTimer.h000000000080d041^876"CpHeader Classes/CDVTimer.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVTimer.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVTimer.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"CF02F480-880E-4289-8791-454F9AA150BB-
+
+CCpHeader Classes/CDVURLProtocol.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVURLProtocol.h
+s409169041.816079
+e409169041.826273
+r1
+xCpHeader
+xClasses/CDVURLProtocol.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVURLProtocol.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVURLProtocol.h6919d1916c63b841^9790d3916c63b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVURLProtocol.h000000000080d041^894"CpHeader Classes/CDVURLProtocol.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVURLProtocol.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"06D52ED1-D571-4ADE-BF4C-9789AB5A3F43-
+
+CCpHeader Classes/CDVUserAgentUtil.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
+s409169041.913517
+e409169041.919947
+r1
+xCpHeader
+xClasses/CDVUserAgentUtil.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h8ffce9916c63b841^b399eb916c63b841^---0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h000000000080d041^900"CpHeader Classes/CDVUserAgentUtil.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVUserAgentUtil.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"88D7EAD0-998E-4D52-8AF0-2414C7AF94A4-
+
+CCpHeader Classes/CDVViewController.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVViewController.h
+s409169041.822052
+e409169041.826763
+r1
+xCpHeader
+xClasses/CDVViewController.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVViewController.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVViewController.h85b0d2916c63b841^42afd3916c63b841^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVViewController.h000000000080d041^903"CpHeader Classes/CDVViewController.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVViewController.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVViewController.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"A2F9156E-CD58-424D-8E93-10DB1537E549-
+
+CCpHeader Classes/CDVWebViewDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h
+s409169041.902951
+e409169041.920001
+r1
+xCpHeader
+xClasses/CDVWebViewDelegate.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h2558e8916c63b841^fda3eb916c63b841^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h000000000080d041^906"CpHeader Classes/CDVWebViewDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWebViewDelegate.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"B97210E4-10F1-4D5C-89BF-A68F656A6720-
+
+CCpHeader Classes/CDVWhitelist.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWhitelist.h
+s409169041.813827
+e409169041.825739
+r1
+xCpHeader
+xClasses/CDVWhitelist.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWhitelist.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWhitelist.h2577d0916c63b841^f772d3916c63b841^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWhitelist.h000000000080d041^888"CpHeader Classes/CDVWhitelist.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/CDVWhitelist.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/CDVWhitelist.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"F41E2B5D-093D-43C4-9CB7-D5BB255825F6-
+
+CCpHeader Classes/NSArray+Comparisons.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSArray+Comparisons.h
+s409169041.835063
+e409169041.846025
+r1
+xCpHeader
+xClasses/NSArray+Comparisons.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSArray+Comparisons.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSArray+Comparisons.h22e3d5916c63b841^5da4d8916c63b841^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSArray+Comparisons.h000000000080d041^909"CpHeader Classes/NSArray+Comparisons.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSArray+Comparisons.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"5D31B25E-1AF9-420E-B580-C8BD364A2FE5-
+
+CCpHeader Classes/NSData+Base64.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSData+Base64.h
+s409169041.674631
+e409169041.811313
+r1
+xCpHeader
+xClasses/NSData+Base64.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSData+Base64.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSData+Base64.h35d4ac916c63b841^8ecccf916c63b841^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSData+Base64.h000000000080d041^891"CpHeader Classes/NSData+Base64.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSData+Base64.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSData+Base64.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"80ED33E9-C7D9-4A1D-AD1C-1FB0BA04D4D2-
+
+CCpHeader Classes/NSDictionary+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h
+s409169041.672280
+e409169041.793845
+r1
+xCpHeader
+xClasses/NSDictionary+Extensions.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSDictionary+Extensions.hd942ac916c63b841^0133cb916c63b841^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h000000e375031042^921"CpHeader Classes/NSDictionary+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSDictionary+Extensions.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"29BDA1A9-DE3A-4DDD-9E8F-7B0C83AF7802-
+
+CCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h
+s409169041.813785
+e409169041.824008
+r1
+xCpHeader
+xClasses/NSMutableArray+QueueAdditions.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h3b6ed0916c63b841^7904d3916c63b841^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h000000000080d041^939"CpHeader Classes/NSMutableArray+QueueAdditions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/NSMutableArray+QueueAdditions.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"15980FBB-0B8F-4FD7-BA57-36822A919AB4-
+
+CCpHeader Classes/UIDevice+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/UIDevice+Extensions.h
+s409169041.832659
+e409169041.845819
+r1
+xCpHeader
+xClasses/UIDevice+Extensions.h
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/UIDevice+Extensions.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Copy /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/UIDevice+Extensions.h7c47d5916c63b841^e59cd8916c63b841^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/UIDevice+Extensions.h000000000080d041^909"CpHeader Classes/UIDevice+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova/UIDevice+Extensions.h    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include/Cordova36"27278197-E575-41D1-8DF7-BD5DFF052B4D-
+
+CLibtool /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a normal i386
+s409169046.980669
+e409169047.037264
+r1
+xLibtool
+x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Libtool /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a normal i386863bfb966c63b841^4fae09976c63b841^---0#0#0#--1091"Libtool /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a normal i386    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -filelist /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a36"1B0CED94-FB66-4278-AC37-FF45155B4FC6-
+
+CProcessPCH /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s409169041.934447
+e409169043.995321
+r1
+xProcessPCH
+x/var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.pth
+xCordovaLib_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile CordovaLib_Prefix.pch4432f0916c63b841^6ccdfe936c63b841^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/CordovaLib_Prefix.pch0000000000000000^3927"ProcessPCH /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.pth CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/build/CordovaLib.build/Release-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build --serialize-diagnostics /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CordovaLib/CordovaLib_Prefix.pch -o /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CordovaLib_Prefix-bqllxkvnxtwaekdmipmhcuiyokkw/CordovaLib_Prefix.pch.d36"A5D53978-855F-4C5E-AEC2-5746DFDBCACA-
+
