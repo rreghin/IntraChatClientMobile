@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">IntraChat :: Conectar ao servidor</h3>
+    </div>
+    <div class="panel-body" style="background-image: url('img/intrachat-252x470.png'); background-position: right center; background-repeat: no-repeat; background-size: contain; background-color: transparent;">
+        <hr>
+        <label>Servidor:</label><br />
+        <input type="text" ng-model="loginServerAddress" placeholder="endereço[:porta]" ng-value="localhost" required /><br />
+        <hr>
+        <label>ID:</label><br />
+        <input type="text" ng-model="loginUserId" placeholder="Código do usuário" required /><br />
+        <label>Senha:</label><br />
+        <input type="password" ng-model="loginUserPassword" placeholder="Senha do usuário" required /><br />
+        <input type="checkbox" ng-model="loginSavePassword" /> Manter senha <br />
+        <hr>
+        <input type="button" class="btn btn-primary" value="Conectar" ng-click="loginConnect()" />
+    </div>
+</div>
