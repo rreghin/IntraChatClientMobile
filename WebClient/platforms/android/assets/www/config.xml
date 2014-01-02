@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="br.com.intrachat.webclient" version="1.0.0">
-    <name>WebClient</name>
-    <description>IntraChat Web Client</description>
-    <author email="suporte@intrachat.com.br" href="http://www.intrachat.com.br">Easynet</author>
-    <access origin="*"/>
-    <preference name="fullscreen" value="false"/>
-    <preference name="webviewbounce" value="true"/>
-</widget>

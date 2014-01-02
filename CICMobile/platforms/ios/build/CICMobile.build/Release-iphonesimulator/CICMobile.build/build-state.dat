@@ -1,1092 +1,0 @@
-TCICMobile
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Info.plist CICMobile/CICMobile-Info.plist
-cPhaseScriptExecution "Copy www directory" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Script-304B58A110DAC018002A0835.sh
-cCpResource CICMobile/config.xml build/CICMobile.app/config.xml
-cCpResource CICMobile/Resources/icons/icon-76.png build/CICMobile.app/icon-76.png
-cCpResource CICMobile/Resources/icons/icon-40@2x.png build/CICMobile.app/icon-40@2x.png
-cCpResource CICMobile/Resources/icons/icon-72.png build/CICMobile.app/icon-72.png
-cCpResource CICMobile/Resources/icons/icon.png build/CICMobile.app/icon.png
-cCpResource CICMobile/Resources/icons/icon@2x.png build/CICMobile.app/icon@2x.png
-cCopyStringsFile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/en.lproj/Localizable.strings CICMobile/Resources/en.lproj/Localizable.strings
-cCompileXIB /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.xib
-cCpResource CICMobile/Resources/icons/icon-50.png build/CICMobile.app/icon-50.png
-cCpResource CICMobile/Resources/icons/icon-60@2x.png build/CICMobile.app/icon-60@2x.png
-cCopyStringsFile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/de.lproj/Localizable.strings CICMobile/Resources/de.lproj/Localizable.strings
-cCpResource CICMobile/Resources/icons/icon-small.png build/CICMobile.app/icon-small.png
-cCpResource CICMobile/Resources/splash/Default-Landscape@2x~ipad.png build/CICMobile.app/Default-Landscape@2x~ipad.png
-cCpResource CICMobile/Resources/splash/Default-Landscape~ipad.png build/CICMobile.app/Default-Landscape~ipad.png
-cCpResource CICMobile/Resources/splash/Default-Portrait@2x~ipad.png build/CICMobile.app/Default-Portrait@2x~ipad.png
-cCpResource CICMobile/Resources/icons/icon-small@2x.png build/CICMobile.app/icon-small@2x.png
-cCpResource CICMobile/Resources/splash/Default-Portrait~ipad.png build/CICMobile.app/Default-Portrait~ipad.png
-cCpResource CICMobile/Resources/icons/icon-40.png build/CICMobile.app/icon-40.png
-cCpResource CICMobile/Resources/splash/Default@2x~iphone.png build/CICMobile.app/Default@2x~iphone.png
-cCpResource CICMobile/Resources/icons/icon-60.png build/CICMobile.app/icon-60.png
-cCpResource CICMobile/Resources/splash/Default~iphone.png build/CICMobile.app/Default~iphone.png
-cCpResource CICMobile/Resources/splash/Default-568h@2x~iphone.png build/CICMobile.app/Default-568h@2x~iphone.png
-cCpResource CICMobile/Resources/icons/icon-50@2x.png build/CICMobile.app/icon-50@2x.png
-cCpResource CICMobile/Resources/icons/icon-76@2x.png build/CICMobile.app/icon-76@2x.png
-cCpResource CICMobile/Resources/icons/icon-72@2x.png build/CICMobile.app/icon-72@2x.png
-cCpResource CICMobile/Resources/CDVCapture.bundle build/CICMobile.app/CDVCapture.bundle
-cCpResource CICMobile/Resources/CDVNotification.bundle build/CICMobile.app/CDVNotification.bundle
-cProcessPCH /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.pth CICMobile/CICMobile-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device/CDVDevice.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file/CDVFile.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
-c0000000051CED8590000000000000110
-t1372510297
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
-c0000000051083EAE00000000000C1030
-t1359494830
-s790576
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
-c0000000051083EAE0000000000193640
-t1359494830
-s1652288
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-c0000000051083EAE00000000000226E0
-t1359494830
-s141024
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c0000000051083EAE00000000003D4DF0
-t1359494830
-s4017648
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c0000000051083EAF0000000000228FE0
-t1359494831
-s2265056
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c0000000051083EAE000000000009C590
-t1359494830
-s640400
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
-c0000000051083EAF00000000000FB1E0
-t1359494831
-s1028576
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c0000000051083EAF00000000000015F7
-t1359494831
-s5623
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
-c0000000051083EB100000000002CFBE0
-t1359494833
-s2948064
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c0000000051083EB200000000000BCC20
-t1359494834
-s773152
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
-c0000000051083EB3000000000006CC50
-t1359494835
-s445520
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c0000000051083EB30000000000000E8D
-t1359494835
-s3725
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/CICMobile-Prefix.pch
-c0000000052B3348900000000000003C3
-t1387476105
-s963
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/AppDelegate.m
-c0000000052B3348900000000000013A9
-t1387476105
-s5033
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.m
-c0000000052B33489000000000000126A
-t1387476105
-s4714
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.xib
-c0000000052B334890000000000001759
-t1387476105
-s5977
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.battery-status/CDVBattery.m
-c0000000052B334D1000000000000163B
-t1387476177
-s5691
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m
-c0000000052B334A70000000000007B75
-t1387476135
-s31605
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.m
-c0000000052B334A7000000000000672A
-t1387476135
-s26410
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.console/CDVLogger.m
-c0000000052B334CC0000000000000490
-t1387476172
-s1168
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.contacts/CDVContact.m
-c0000000052B334D700000000000137C5
-t1387476183
-s79813
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.contacts/CDVContacts.m
-c0000000052B334D7000000000000699B
-t1387476183
-s27035
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device-motion/CDVAccelerometer.m
-c0000000052B334EF00000000000012E0
-t1387476207
-s4832
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device-orientation/CDVCompass.m
-c0000000052B334FC0000000000002CC7
-t1387476220
-s11463
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device/CDVDevice.m
-c0000000052B334940000000000000C22
-t1387476116
-s3106
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.dialogs/CDVNotification.m
-c0000000052B334F50000000000001626
-t1387476213
-s5670
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m
-c0000000052B334C60000000000007E40
-t1387476166
-s32320
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file/CDVFile.m
-c0000000052B334B9000000000000FA52
-t1387476153
-s64082
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.geolocation/CDVLocation.m
-c0000000052B334DD00000000000033EB
-t1387476189
-s13291
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.globalization/CDVGlobalization.m
-c0000000052B334E90000000000008F34
-t1387476201
-s36660
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m
-c0000000052B334BB00000000000097BD
-t1387476155
-s38845
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media/CDVSound.m
-c0000000052B335020000000000007C6C
-t1387476226
-s31852
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.network-information/CDVConnection.m
-c0000000052B334E30000000000000FC5
-t1387476195
-s4037
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.network-information/CDVReachability.m
-c0000000052B334E300000000000026F6
-t1387476195
-s9974
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m
-c0000000052B334A10000000000002136
-t1387476129
-s8502
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.m
-c0000000052B3349C00000000000003B2
-t1387476124
-s946
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/CDVCapture.bundle
-c0000000052B334BB000000000000030E
-t1387476155
-s782
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/CDVNotification.bundle
-c0000000052B334F50000000000000066
-t1387476213
-s102
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/de.lproj/Localizable.strings
-c0000000052B3348900000000000004BF
-t1387476105
-s1215
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/en.lproj/Localizable.strings
-c0000000052B3348900000000000004AA
-t1387476105
-s1194
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-40.png
-c0000000052B334890000000000000FF2
-t1387476105
-s4082
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-40@2x.png
-c0000000052B334890000000000001CF3
-t1387476105
-s7411
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-50.png
-c0000000052B33489000000000000130A
-t1387476105
-s4874
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-50@2x.png
-c0000000052B33489000000000000258B
-t1387476105
-s9611
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-60.png
-c0000000052B3348900000000000016B3
-t1387476105
-s5811
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-60@2x.png
-c0000000052B334890000000000002E94
-t1387476105
-s11924
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-72.png
-c0000000052B334890000000000001350
-t1387476105
-s4944
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-72@2x.png
-c0000000052B334890000000000002DBA
-t1387476105
-s11706
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-76.png
-c0000000052B334890000000000001B71
-t1387476105
-s7025
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-76@2x.png
-c0000000052B334890000000000003B9E
-t1387476105
-s15262
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-small.png
-c0000000052B334890000000000000CDE
-t1387476105
-s3294
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-small@2x.png
-c0000000052B3348900000000000015E8
-t1387476105
-s5608
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon.png
-c0000000052B334890000000000000F3E
-t1387476105
-s3902
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon@2x.png
-c0000000052B334890000000000001EBD
-t1387476105
-s7869
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-568h@2x~iphone.png
-c0000000052B3348900000000000085B1
-t1387476105
-s34225
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Landscape@2x~ipad.png
-c0000000052B334890000000000012DF4
-t1387476105
-s77300
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Landscape~ipad.png
-c0000000052B334890000000000008877
-t1387476105
-s34935
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Portrait@2x~ipad.png
-c0000000052B334890000000000012B02
-t1387476105
-s76546
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Portrait~ipad.png
-c0000000052B3348900000000000085E6
-t1387476105
-s34278
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default@2x~iphone.png
-c0000000052B334890000000000007323
-t1387476105
-s29475
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default~iphone.png
-c0000000052B33489000000000000289A
-t1387476105
-s10394
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/config.xml
-c0000000052B3350B0000000000000CF7
-t1387476235
-s3319
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/main.m
-c0000000052B33489000000000000045B
-t1387476105
-s1115
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app.dSYM
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/CDVCapture.bundle
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/CDVNotification.bundle
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/CICMobile
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-568h@2x~iphone.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Landscape@2x~ipad.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Landscape~ipad.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Portrait@2x~ipad.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Portrait~ipad.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default@2x~iphone.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default~iphone.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Info.plist
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/MainViewController.nib
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/PkgInfo
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/config.xml
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/de.lproj/Localizable.strings
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/en.lproj/Localizable.strings
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-40.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-40@2x.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-50.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-50@2x.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-60.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-60@2x.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-72.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-72@2x.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-76.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-76@2x.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-small.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-small@2x.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon@2x.png
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVAccelerometer.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVBattery.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCompass.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVConnection.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVContact.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVContacts.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVGlobalization.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVLocation.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVLogger.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVNotification.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVReachability.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSound.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CICMobile.LinkFileList
-c0000000052B335170000000000000FB6
-t1387476247
-s4022
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.o
-t2
-s0
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Script-304B58A110DAC018002A0835.sh
-c0000000052B33517000000000000002D
-t1387476247
-s45
-
-N/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a
-c0000000052B335170000000000101958
-t1387476247
-s1055064
-
-N/var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.pth
-t2
-s0
-
-NCICMobile/CICMobile-Info.plist
-c0000000052B3350B00000000000009DC
-t1387476235
-s2524
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies378e10976c63b841^cd3e13976c63b841^---0#1#0#--18"Check dependencies36"BDD5FF46-E31F-4F91-9A80-7F1A1AF9D6FD-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169058.973401
-e409169059.174910
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/AppDelegate.m2d5df9a26c63b841^d1052da36c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/AppDelegate.m0000000000000000^4019"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.o CICMobile/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/AppDelegate.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/AppDelegate.o36"636D037A-0F79-4D45-BEA8-619AEE19947C-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVAccelerometer.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device-motion/CDVAccelerometer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVBattery.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.battery-status/CDVBattery.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169059.177119
-e409169059.969966
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m5b982da36c63b841^7a50f8a36c63b841^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m0000000000000000^4059"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.o CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVCamera.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCamera.o36"9D8D71F9-926C-4A35-99A4-3E22DF9BD9DE-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169059.464055
-e409169059.868645
-r0
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-o/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m:606:32: warning: undeclared selector 'edgesForExtendedLayout' [-Wundeclared-selector]
-o        if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
-o                                      ^
-o/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m:607:14: error: property 'edgesForExtendedLayout' not found on object of type 'CDVAudioRecorderViewController *'
-o        self.edgesForExtendedLayout = UIRectEdgeNone;
-o             ^
-o/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m:607:39: error: use of undeclared identifier 'UIRectEdgeNone'
-o        self.edgesForExtendedLayout = UIRectEdgeNone;
-o                                      ^
-o1 warning and 2 errors generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection149"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m1efe76a36c63b841^c87edea36c63b841^-997"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m:606:32: warning: undeclared selector 'edgesForExtendedLayout' [-Wundeclared-selector]        if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {                                      ^/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m:607:14: error: property 'edgesForExtendedLayout' not found on object of type 'CDVAudioRecorderViewController *'        self.edgesForExtendedLayout = UIRectEdgeNone;             ^/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m:607:39: error: use of undeclared identifier 'UIRectEdgeNone'        self.edgesForExtendedLayout = UIRectEdgeNone;                                      ^1 warning and 2 errors generated.3(36%IDEClangDiagnosticActivityLogMessage2@44"Undeclared selector 'edgesForExtendedLayout'-409169059#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@157"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m0000000000000000^605#31#605#31#25726#0#14"Semantic Issue--2@96"Property 'edgesForExtendedLayout' not found on object of type 'CDVAudioRecorderViewController *'-409169059#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@157"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m0000000000000000^606#13#606#13#25776#0#14"Semantic Issue--2@45"Use of undeclared identifier 'UIRectEdgeNone'-409169059#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@157"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m0000000000000000^606#38#606#38#25801#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@157"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m0000000000000000^4079"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.o CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media-capture/CDVCapture.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCapture.o36"DE07CFE3-BABF-4CF6-A229-B954440426D8-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVCompass.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device-orientation/CDVCompass.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVConnection.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.network-information/CDVConnection.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVContact.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.contacts/CDVContact.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVContacts.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.contacts/CDVContacts.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device/CDVDevice.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169058.973389
-e409169059.364736
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device/CDVDevice.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device/CDVDevice.mf162f9a26c63b841^056e5da36c63b841^---0#0#0#-19%DVTDocumentLocation2@149"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device/CDVDevice.m0000000000000000^4059"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.o CICMobile/Plugins/org.apache.cordova.device/CDVDevice.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.device/CDVDevice.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVDevice.o36"8E42C343-5065-4C37-B07E-618334456A08-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file/CDVFile.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169059.366086
-e409169060.175697
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file/CDVFile.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection137"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file/CDVFile.m4aed5da36c63b841^33fb2ca46c63b841^---0#0#0#-19%DVTDocumentLocation2@145"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file/CDVFile.m0000000000000000^4043"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.o CICMobile/Plugins/org.apache.cordova.file/CDVFile.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file/CDVFile.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFile.o36"64D392BE-8972-4466-816F-651664BFDBEF-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169059.553195
-e409169060.170369
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection154"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m9fe58da36c63b841^72a82ba46c63b841^---0#0#0#-19%DVTDocumentLocation2@162"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m0000000000000000^4109"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.o CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.file-transfer/CDVFileTransfer.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVFileTransfer.o36"98677073-0A59-41CF-9056-651359A9CDC0-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVGlobalization.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.globalization/CDVGlobalization.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169059.211252
-e409169059.551248
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection151"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.mb64836a36c63b841^933a8da36c63b841^---0#0#0#-19%DVTDocumentLocation2@159"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.m0000000000000000^4119"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.o CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.camera/CDVJpegHeaderWriter.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVJpegHeaderWriter.o36"7534EFA5-1F69-419B-A05D-D884CA34C2DD-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVLocation.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.geolocation/CDVLocation.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVLogger.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.console/CDVLogger.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVNotification.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.dialogs/CDVNotification.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVReachability.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.network-information/CDVReachability.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSound.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.media/CDVSound.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-r0
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169059.167246
-e409169059.461510
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection153"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m793a2ba36c63b841^886676a36c63b841^---0#0#0#-19%DVTDocumentLocation2@161"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m0000000000000000^4107"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.o CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.splashscreen/CDVSplashScreen.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVSplashScreen.o36"33453F40-8D4B-4C77-8E28-C040D7A69926-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169059.042563
-e409169059.209916
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.md7340ba36c63b841^c0ce35a36c63b841^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.m0000000000000000^4083"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.o CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Plugins/org.apache.cordova.vibration/CDVVibration.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CDVVibration.o36"B3A73DCF-A947-4ADE-A129-72A9B6AE7D9C-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169058.973376
-e409169059.165919
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.m7159f9a26c63b841^588c2aa36c63b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.m0000000000000000^4061"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.o CICMobile/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/MainViewController.o36"BA670F40-90DC-4886-8F83-1152ED77CFE8-
-
-CCompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169058.973160
-e409169059.034496
-r1
-xCompileC
-xbuild/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.o
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/main.m7e52f9a26c63b841^41f008a36c63b841^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/main.m0000000000000000^3961"CompileC build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.o CICMobile/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -include /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch -MMD -MT dependencies -MF /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/main.m -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/main.o36"B405BD1C-1E8C-4733-A0FB-DB573BAFCA8C-
-
-CCompileXIB /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.xib
-s409169047.905966
-e409169058.490760
-r1
-xCompileXIB
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.xib
-o2013-12-19 16:04:17.448 Interface Builder Cocoa Touch Tool[17635:14603] CFPreferences: user home directory at file://localhost/Users/rreghin/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Compiling /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.xib2d09e8976c63b841^fc197ea26c63b841^-242"2013-12-19 16:04:17.448 Interface Builder Cocoa Touch Tool[17635:14603] CFPreferences: user home directory at file://localhost/Users/rreghin/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#0#-19%DVTDocumentLocation2@134"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.xib0000000000000000^1016"CompileXIB CICMobile/Classes/MainViewController.xib    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 5.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/MainViewController.nib /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Classes/MainViewController.xib --sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk36"0436098B-48D8-417F-9293-A83EA62024F1-
-
-CCopyStringsFile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/de.lproj/Localizable.strings CICMobile/Resources/de.lproj/Localizable.strings
-s409169047.911790
-e409169048.050527
-r1
-xCopyStringsFile
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/de.lproj/Localizable.strings
-xCICMobile/Resources/de.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy CICMobile/Resources/de.lproj/Localizable.strings5d88e9976c63b841^6ef90c986c63b841^---0#0#0#-19%DVTDocumentLocation2@142"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/de.lproj/Localizable.strings0000000000000000^643"CopyStringsFile build/CICMobile.app/de.lproj/Localizable.strings CICMobile/Resources/de.lproj/Localizable.strings    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/de.lproj -- CICMobile/Resources/de.lproj/Localizable.strings36"3D5F0A64-367F-4221-9D75-E2EC1622C05E-
-
-CCopyStringsFile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/en.lproj/Localizable.strings CICMobile/Resources/en.lproj/Localizable.strings
-s409169047.904217
-e409169048.050276
-r1
-xCopyStringsFile
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/en.lproj/Localizable.strings
-xCICMobile/Resources/en.lproj/Localizable.strings
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy CICMobile/Resources/en.lproj/Localizable.stringsf3ade7976c63b841^b1de0c986c63b841^---0#0#0#-19%DVTDocumentLocation2@142"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/en.lproj/Localizable.strings0000000000000000^643"CopyStringsFile build/CICMobile.app/en.lproj/Localizable.strings CICMobile/Resources/en.lproj/Localizable.strings    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/en.lproj -- CICMobile/Resources/en.lproj/Localizable.strings36"2EEB13A6-9DC9-447E-9409-B36245B1E6FA-
-
-CCpResource CICMobile/Resources/CDVCapture.bundle build/CICMobile.app/CDVCapture.bundle
-s409169047.988349
-e409169047.997211
-r1
-xCpResource
-xCICMobile/Resources/CDVCapture.bundle
-xbuild/CICMobile.app/CDVCapture.bundle
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/CICMobile.app/CDVCapture.bundleb118fd976c63b841^ae49ff976c63b841^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/CDVCapture.bundle000000000080d041^819"CpResource CICMobile/Resources/CDVCapture.bundle build/CICMobile.app/CDVCapture.bundle    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/CDVCapture.bundle /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"17CC537C-88F6-436D-B520-93D456E2D195-
-
-CCpResource CICMobile/Resources/CDVNotification.bundle build/CICMobile.app/CDVNotification.bundle
-s409169047.998682
-e409169048.001758
-r1
-xCpResource
-xCICMobile/Resources/CDVNotification.bundle
-xbuild/CICMobile.app/CDVNotification.bundle
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Copy build/CICMobile.app/CDVNotification.bundleb9c6ff976c63b841^547400986c63b841^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/CDVNotification.bundle000000000080d041^834"CpResource CICMobile/Resources/CDVNotification.bundle build/CICMobile.app/CDVNotification.bundle    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/CDVNotification.bundle /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"ACCAEDB9-B5AB-43BC-B584-DFEA521F8521-
-
-CCpResource CICMobile/Resources/icons/icon-40.png build/CICMobile.app/icon-40.png
-s409169047.950946
-e409169047.954087
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-40.png
-xbuild/CICMobile.app/icon-40.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/CICMobile.app/icon-40.pngda90f3976c63b841^fb3ef4976c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-40.png000000000080d041^813"CpResource CICMobile/Resources/icons/icon-40.png build/CICMobile.app/icon-40.png    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-40.png /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"A18BF72E-14E6-495F-9BCF-08E06C9869AE-
-
-CCpResource CICMobile/Resources/icons/icon-40@2x.png build/CICMobile.app/icon-40@2x.png
-s409169047.899801
-e409169047.902920
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-40@2x.png
-xbuild/CICMobile.app/icon-40@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/CICMobile.app/icon-40@2x.pnga27fe6976c63b841^c231e7976c63b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-40@2x.png000000000080d041^828"CpResource "CICMobile/Resources/icons/icon-40@2x.png" "build/CICMobile.app/icon-40@2x.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-40@2x.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"E32EEB7A-4FFD-4648-A44D-89FE19AAAA65-
-
-CCpResource CICMobile/Resources/icons/icon-50.png build/CICMobile.app/icon-50.png
-s409169047.907064
-e409169047.910506
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-50.png
-xbuild/CICMobile.app/icon-50.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/CICMobile.app/icon-50.png5858e8976c63b841^fd16e9976c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-50.png000000000080d041^813"CpResource CICMobile/Resources/icons/icon-50.png build/CICMobile.app/icon-50.png    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-50.png /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"33671160-CCC8-4246-BCA1-D07A1817A5BA-
-
-CCpResource CICMobile/Resources/icons/icon-50@2x.png build/CICMobile.app/icon-50@2x.png
-s409169047.974324
-e409169047.977743
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-50@2x.png
-xbuild/CICMobile.app/icon-50@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/CICMobile.app/icon-50@2x.png5699f9976c63b841^f44dfa976c63b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-50@2x.png000000000080d041^828"CpResource "CICMobile/Resources/icons/icon-50@2x.png" "build/CICMobile.app/icon-50@2x.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-50@2x.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"F86B508F-4A25-4F09-96B2-8CECDA6F57D3-
-
-CCpResource CICMobile/Resources/icons/icon-60.png build/CICMobile.app/icon-60.png
-s409169047.960920
-e409169047.964252
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-60.png
-xbuild/CICMobile.app/icon-60.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/CICMobile.app/icon-60.png5c1bf6976c63b841^cfd9f6976c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-60.png000000000080d041^813"CpResource CICMobile/Resources/icons/icon-60.png build/CICMobile.app/icon-60.png    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-60.png /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"346E8ADE-E0E8-4EF3-B26F-6992574BDB3E-
-
-CCpResource CICMobile/Resources/icons/icon-60@2x.png build/CICMobile.app/icon-60@2x.png
-s409169047.908482
-e409169047.912097
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-60@2x.png
-xbuild/CICMobile.app/icon-60@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/CICMobile.app/icon-60@2x.pngb0ace8976c63b841^1781e9976c63b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-60@2x.png000000000080d041^828"CpResource "CICMobile/Resources/icons/icon-60@2x.png" "build/CICMobile.app/icon-60@2x.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-60@2x.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"7BDC90E1-76C7-4626-84CF-5817EA791B0C-
-
-CCpResource CICMobile/Resources/icons/icon-72.png build/CICMobile.app/icon-72.png
-s409169047.900109
-e409169047.903498
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-72.png
-xbuild/CICMobile.app/icon-72.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/CICMobile.app/icon-72.pngf38fe6976c63b841^4d4ce7976c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-72.png000000000080d041^813"CpResource CICMobile/Resources/icons/icon-72.png build/CICMobile.app/icon-72.png    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-72.png /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"F9D77BB6-B069-4C65-A9B9-F829B3DB4F0E-
-
-CCpResource CICMobile/Resources/icons/icon-72@2x.png build/CICMobile.app/icon-72@2x.png
-s409169047.984282
-e409169047.987041
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-72@2x.png
-xbuild/CICMobile.app/icon-72@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/CICMobile.app/icon-72@2x.png170efc976c63b841^b3b3fc976c63b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-72@2x.png000000000080d041^828"CpResource "CICMobile/Resources/icons/icon-72@2x.png" "build/CICMobile.app/icon-72@2x.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-72@2x.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"BA7EC8AE-2A1B-4203-A3DF-FB4FA5093B96-
-
-CCpResource CICMobile/Resources/icons/icon-76.png build/CICMobile.app/icon-76.png
-s409169047.899498
-e409169047.904684
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-76.png
-xbuild/CICMobile.app/icon-76.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/CICMobile.app/icon-76.png499fe6976c63b841^51a0e7976c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-76.png000000000080d041^813"CpResource CICMobile/Resources/icons/icon-76.png build/CICMobile.app/icon-76.png    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-76.png /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"C1E18D1F-ADCF-4338-8E76-0594596990DA-
-
-CCpResource CICMobile/Resources/icons/icon-76@2x.png build/CICMobile.app/icon-76@2x.png
-s409169047.979654
-e409169047.982930
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-76@2x.png
-xbuild/CICMobile.app/icon-76@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/CICMobile.app/icon-76@2x.pngf2ecfa976c63b841^e4a1fb976c63b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-76@2x.png000000000080d041^828"CpResource "CICMobile/Resources/icons/icon-76@2x.png" "build/CICMobile.app/icon-76@2x.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-76@2x.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"376D2FB2-F58B-46BF-8499-5F0D892DE5DE-
-
-CCpResource CICMobile/Resources/icons/icon-small.png build/CICMobile.app/icon-small.png
-s409169047.913745
-e409169047.917734
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-small.png
-xbuild/CICMobile.app/icon-small.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy build/CICMobile.app/icon-small.png0309ea976c63b841^f1f0ea976c63b841^---0#0#0#-19%DVTDocumentLocation2@128"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-small.png000000000080d041^822"CpResource CICMobile/Resources/icons/icon-small.png build/CICMobile.app/icon-small.png    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-small.png /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"F0322BB0-ACE2-4212-B987-97996F740891-
-
-CCpResource CICMobile/Resources/icons/icon-small@2x.png build/CICMobile.app/icon-small@2x.png
-s409169047.942215
-e409169047.944984
-r1
-xCpResource
-xCICMobile/Resources/icons/icon-small@2x.png
-xbuild/CICMobile.app/icon-small@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection42"Copy build/CICMobile.app/icon-small@2x.pngae47f1976c63b841^57eaf1976c63b841^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon-small@2x.png000000000080d041^837"CpResource "CICMobile/Resources/icons/icon-small@2x.png" "build/CICMobile.app/icon-small@2x.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon-small@2x.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"95B7FCBA-E80E-4DAE-BCBE-A7828406912A-
-
-CCpResource CICMobile/Resources/icons/icon.png build/CICMobile.app/icon.png
-s409169047.902455
-e409169047.905864
-r1
-xCpResource
-xCICMobile/Resources/icons/icon.png
-xbuild/CICMobile.app/icon.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection33"Copy build/CICMobile.app/icon.pngc022e7976c63b841^a3e6e7976c63b841^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon.png000000000080d041^804"CpResource CICMobile/Resources/icons/icon.png build/CICMobile.app/icon.png    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon.png /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"96756F52-7019-41F5-99CB-92EBC9BC3849-
-
-CCpResource CICMobile/Resources/icons/icon@2x.png build/CICMobile.app/icon@2x.png
-s409169047.904183
-e409169047.907183
-r1
-xCpResource
-xCICMobile/Resources/icons/icon@2x.png
-xbuild/CICMobile.app/icon@2x.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Copy build/CICMobile.app/icon@2x.png9a97e7976c63b841^ad35e8976c63b841^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/icon@2x.png000000000080d041^819"CpResource "CICMobile/Resources/icons/icon@2x.png" "build/CICMobile.app/icon@2x.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/icons/icon@2x.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"E73883BF-2C2F-4EBB-8601-4E54B8C325AC-
-
-CCpResource CICMobile/Resources/splash/Default-568h@2x~iphone.png build/CICMobile.app/Default-568h@2x~iphone.png
-s409169047.969933
-e409169047.972972
-r1
-xCpResource
-xCICMobile/Resources/splash/Default-568h@2x~iphone.png
-xbuild/CICMobile.app/Default-568h@2x~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/CICMobile.app/Default-568h@2x~iphone.png5265f8976c63b841^5721f9976c63b841^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-568h@2x~iphone.png000000000080d041^866"CpResource "CICMobile/Resources/splash/Default-568h@2x~iphone.png" "build/CICMobile.app/Default-568h@2x~iphone.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-568h@2x~iphone.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"F814E8A9-126B-451F-98C3-8FF0FD0B30A5-
-
-CCpResource CICMobile/Resources/splash/Default-Landscape@2x~ipad.png build/CICMobile.app/Default-Landscape@2x~ipad.png
-s409169047.925373
-e409169047.929060
-r1
-xCpResource
-xCICMobile/Resources/splash/Default-Landscape@2x~ipad.png
-xbuild/CICMobile.app/Default-Landscape@2x~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/CICMobile.app/Default-Landscape@2x~ipad.pngda03ed976c63b841^b1dded976c63b841^---0#0#0#-19%DVTDocumentLocation2@143"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Landscape@2x~ipad.png000000000080d041^875"CpResource "CICMobile/Resources/splash/Default-Landscape@2x~ipad.png" "build/CICMobile.app/Default-Landscape@2x~ipad.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Landscape@2x~ipad.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"4064A243-EB3C-4708-9CD7-E1F571D8CBF2-
-
-CCpResource CICMobile/Resources/splash/Default-Landscape~ipad.png build/CICMobile.app/Default-Landscape~ipad.png
-s409169047.932517
-e409169047.935563
-r1
-xCpResource
-xCICMobile/Resources/splash/Default-Landscape~ipad.png
-xbuild/CICMobile.app/Default-Landscape~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/CICMobile.app/Default-Landscape~ipad.pngb4ccee976c63b841^fe80ef976c63b841^---0#0#0#-19%DVTDocumentLocation2@140"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Landscape~ipad.png000000000080d041^866"CpResource "CICMobile/Resources/splash/Default-Landscape~ipad.png" "build/CICMobile.app/Default-Landscape~ipad.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Landscape~ipad.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"500F8605-9567-431A-BBF7-0D5FD89428B4-
-
-CCpResource CICMobile/Resources/splash/Default-Portrait@2x~ipad.png build/CICMobile.app/Default-Portrait@2x~ipad.png
-s409169047.936873
-e409169047.940922
-r1
-xCpResource
-xCICMobile/Resources/splash/Default-Portrait@2x~ipad.png
-xbuild/CICMobile.app/Default-Portrait@2x~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection53"Copy build/CICMobile.app/Default-Portrait@2x~ipad.png4ef2ef976c63b841^dbdcf0976c63b841^---0#0#0#-19%DVTDocumentLocation2@142"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Portrait@2x~ipad.png000000000080d041^872"CpResource "CICMobile/Resources/splash/Default-Portrait@2x~ipad.png" "build/CICMobile.app/Default-Portrait@2x~ipad.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Portrait@2x~ipad.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"A2711317-C61D-4E52-B928-F96C99F1CA1C-
-
-CCpResource CICMobile/Resources/splash/Default-Portrait~ipad.png build/CICMobile.app/Default-Portrait~ipad.png
-s409169047.946354
-e409169047.949548
-r1
-xCpResource
-xCICMobile/Resources/splash/Default-Portrait~ipad.png
-xbuild/CICMobile.app/Default-Portrait~ipad.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy build/CICMobile.app/Default-Portrait~ipad.png0f63f2976c63b841^c615f3976c63b841^---0#0#0#-19%DVTDocumentLocation2@139"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default-Portrait~ipad.png000000000080d041^863"CpResource "CICMobile/Resources/splash/Default-Portrait~ipad.png" "build/CICMobile.app/Default-Portrait~ipad.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default-Portrait~ipad.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"3C513431-EAAF-4A07-A2B2-BB3863000B39-
-
-CCpResource CICMobile/Resources/splash/Default@2x~iphone.png build/CICMobile.app/Default@2x~iphone.png
-s409169047.955398
-e409169047.958739
-r1
-xCpResource
-xCICMobile/Resources/splash/Default@2x~iphone.png
-xbuild/CICMobile.app/Default@2x~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy build/CICMobile.app/Default@2x~iphone.png5bb4f4976c63b841^67d7f5976c63b841^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default@2x~iphone.png000000000080d041^851"CpResource "CICMobile/Resources/splash/Default@2x~iphone.png" "build/CICMobile.app/Default@2x~iphone.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default@2x~iphone.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"7422DFFB-AE71-4770-AAD1-3E01916298AE-
-
-CCpResource CICMobile/Resources/splash/Default~iphone.png build/CICMobile.app/Default~iphone.png
-s409169047.965626
-e409169047.968615
-r1
-xCpResource
-xCICMobile/Resources/splash/Default~iphone.png
-xbuild/CICMobile.app/Default~iphone.png
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Copy build/CICMobile.app/Default~iphone.png774af7976c63b841^cff7f7976c63b841^---0#0#0#-19%DVTDocumentLocation2@132"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Default~iphone.png000000000080d041^842"CpResource "CICMobile/Resources/splash/Default~iphone.png" "build/CICMobile.app/Default~iphone.png"    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/Resources/splash/Default~iphone.png" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"F66A39D4-9DE6-4346-A19B-E5FA1B3ABB8F-
-
-CCpResource CICMobile/config.xml build/CICMobile.app/config.xml
-s409169047.898277
-e409169047.901210
-r1
-xCpResource
-xCICMobile/config.xml
-xbuild/CICMobile.app/config.xml
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Copy build/CICMobile.app/config.xml6212e6976c63b841^0fb8e6976c63b841^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/config.xml000000000080d041^778"CpResource CICMobile/config.xml build/CICMobile.app/config.xml    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/config.xml /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app36"A15E7CAD-EB8B-4A34-B438-C846F2A26658-
-
-CGenerateDSYMFile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app.dSYM /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/CICMobile
-r0
-
-CLd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/CICMobile normal i386
-r0
-
-CPhaseScriptExecution "Copy www directory" /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Script-304B58A110DAC018002A0835.sh
-s409169047.125512
-e409169047.888791
-r1
-xPhaseScriptExecution
-xCopy www directory
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Script-304B58A110DAC018002A0835.sh
-o
-oreal	0m0.712s
-ouser	0m0.088s
-osys	0m0.208s
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'5a4721976c63b841^b186e3976c63b841^-42"real	0m0.712suser	0m0.088ssys	0m0.208s3(21%IDEActivityLogMessage2@14"real	0m0.712s-409169047#1#14#-0#-----2@14"user	0m0.088s-409169047#15#14#-0#-----2@13"sys	0m0.208s-409169047#29#13#-0#-----0#0#0#--22230"PhaseScriptExecution "Copy www directory" build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Script-304B58A110DAC018002A0835.sh    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv ACTION build    setenv ALTERNATE_GROUP staff    setenv ALTERNATE_MODE u+w,go-w,a+rX    setenv ALTERNATE_OWNER rreghin    setenv ALWAYS_SEARCH_USER_PATHS NO    setenv APPLE_INTERNAL_DEVELOPER_DIR /AppleInternal/Developer    setenv APPLE_INTERNAL_DIR /AppleInternal    setenv APPLE_INTERNAL_DOCUMENTATION_DIR /AppleInternal/Documentation    setenv APPLE_INTERNAL_LIBRARY_DIR /AppleInternal/Library    setenv APPLE_INTERNAL_TOOLS /AppleInternal/Developer/Tools    setenv APPLY_RULES_IN_COPY_FILES NO    setenv ARCHS i386    setenv ARCHS_STANDARD_32_BIT i386    setenv ARCHS_UNIVERSAL_IPHONE_OS i386    setenv AVAILABLE_PLATFORMS "iphonesimulator macosx iphoneos"    setenv BUILD_COMPONENTS "headers build"    setenv BUILD_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv BUILD_ROOT /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv BUILD_STYLE     setenv BUILD_VARIANTS normal    setenv BUILT_PRODUCTS_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv CACHE_ROOT /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501    setenv CCHROOT /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501    setenv CHMOD /bin/chmod    setenv CHOWN /usr/sbin/chown    setenv CLANG_ENABLE_OBJC_ARC YES    setenv CLANG_WARN_BOOL_CONVERSION YES    setenv CLANG_WARN_CONSTANT_CONVERSION YES    setenv CLANG_WARN_EMPTY_BODY YES    setenv CLANG_WARN_ENUM_CONVERSION YES    setenv CLANG_WARN_INT_CONVERSION YES    setenv CLANG_WARN__DUPLICATE_METHOD_MATCH YES    setenv CLASS_FILE_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/JavaClasses    setenv CLEAN_PRECOMPS YES    setenv CLONE_HEADERS NO    setenv CODESIGNING_FOLDER_PATH /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app    setenv COMMAND_MODE legacy    setenv COMPOSITE_SDK_DIRS /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/CompositeSDKs    setenv COMPRESS_PNG_FILES YES    setenv CONFIGURATION Release    setenv CONFIGURATION_BUILD_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv CONFIGURATION_TEMP_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator    setenv CONTENTS_FOLDER_PATH CICMobile.app    setenv COPYING_PRESERVES_HFS_DATA NO    setenv COPY_PHASE_STRIP YES    setenv COPY_RESOURCES_FROM_STATIC_FRAMEWORKS YES    setenv CP /bin/cp    setenv CURRENT_ARCH i386    setenv CURRENT_VARIANT normal    setenv DEAD_CODE_STRIPPING NO    setenv DEBUGGING_SYMBOLS YES    setenv DEBUG_INFORMATION_FORMAT dwarf-with-dsym    setenv DEFAULT_COMPILER com.apple.compilers.llvm.clang.1_0    setenv DEPLOYMENT_LOCATION NO    setenv DEPLOYMENT_POSTPROCESSING NO    setenv DERIVED_FILES_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources    setenv DERIVED_FILE_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources    setenv DERIVED_SOURCES_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources    setenv DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv DEVELOPER_FRAMEWORKS_DIR /Applications/Xcode.app/Contents/Developer/Library/Frameworks    setenv DEVELOPER_FRAMEWORKS_DIR_QUOTED "\"/Applications/Xcode.app/Contents/Developer/Library/Frameworks\""    setenv DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/Developer/Library    setenv DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs    setenv DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Tools    setenv DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv DEVELOPMENT_LANGUAGE English    setenv DOCUMENTATION_FOLDER_PATH CICMobile.app/English.lproj/Documentation    setenv DO_HEADER_SCANNING_IN_JAM NO    setenv DSTROOT /tmp/CICMobile.dst    setenv DT_TOOLCHAIN_DIR /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain    setenv DWARF_DSYM_FILE_NAME CICMobile.app.dSYM    setenv DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT NO    setenv DWARF_DSYM_FOLDER_PATH /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv EFFECTIVE_PLATFORM_NAME -iphonesimulator    setenv ENABLE_HEADER_DEPENDENCIES YES    setenv EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS ".DS_Store .svn .git .hg CVS"    setenv EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES "*.nib *.lproj *.framework *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj"    setenv EXECUTABLES_FOLDER_PATH CICMobile.app/Executables    setenv EXECUTABLE_FOLDER_PATH CICMobile.app    setenv EXECUTABLE_NAME CICMobile    setenv EXECUTABLE_PATH CICMobile.app/CICMobile    setenv FILE_LIST /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects/LinkFileList    setenv FIXED_FILES_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/FixedFiles    setenv FRAMEWORKS_FOLDER_PATH CICMobile.app/Frameworks    setenv FRAMEWORK_FLAG_PREFIX -framework    setenv FRAMEWORK_SEARCH_PATHS "\"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build\" "    setenv FRAMEWORK_VERSION A    setenv FULL_PRODUCT_NAME CICMobile.app    setenv GCC3_VERSION 3.3    setenv GCC_C_LANGUAGE_STANDARD c99    setenv GCC_DYNAMIC_NO_PIC NO    setenv GCC_INLINES_ARE_PRIVATE_EXTERN YES    setenv GCC_OBJC_LEGACY_DISPATCH YES    setenv GCC_PFE_FILE_C_DIALECTS "c objective-c c++ objective-c++"    setenv GCC_PRECOMPILE_PREFIX_HEADER YES    setenv GCC_PREFIX_HEADER CICMobile/CICMobile-Prefix.pch    setenv GCC_SYMBOLS_PRIVATE_EXTERN YES    setenv GCC_THUMB_SUPPORT NO    setenv GCC_TREAT_WARNINGS_AS_ERRORS NO    setenv GCC_VERSION com.apple.compilers.llvm.clang.1_0    setenv GCC_WARN_ABOUT_RETURN_TYPE YES    setenv GCC_WARN_UNDECLARED_SELECTOR YES    setenv GCC_WARN_UNINITIALIZED_AUTOS YES    setenv GCC_WARN_UNUSED_FUNCTION YES    setenv GCC_WARN_UNUSED_VARIABLE YES    setenv GENERATE_MASTER_OBJECT_FILE NO    setenv GENERATE_PKGINFO_FILE YES    setenv GENERATE_PROFILING_CODE NO    setenv GID 20    setenv GROUP staff    setenv HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT YES    setenv HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES YES    setenv HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS YES    setenv HEADERMAP_INCLUDES_PROJECT_HEADERS YES    setenv HEADER_SEARCH_PATHS "\"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include\" \"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include\" \"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include\" \"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build\""    setenv ICONV /usr/bin/iconv    setenv INFOPLIST_EXPAND_BUILD_SETTINGS YES    setenv INFOPLIST_FILE CICMobile/CICMobile-Info.plist    setenv INFOPLIST_OUTPUT_FORMAT binary    setenv INFOPLIST_PATH CICMobile.app/Info.plist    setenv INFOPLIST_PREPROCESS NO    setenv INFOSTRINGS_PATH CICMobile.app/English.lproj/InfoPlist.strings    setenv INSTALL_DIR /tmp/CICMobile.dst/Applications    setenv INSTALL_GROUP staff    setenv INSTALL_MODE_FLAG u+w,go-w,a+rX    setenv INSTALL_OWNER rreghin    setenv INSTALL_PATH /Applications    setenv INSTALL_ROOT /tmp/CICMobile.dst    setenv IPHONEOS_DEPLOYMENT_TARGET 5.0    setenv JAVAC_DEFAULT_FLAGS "-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"    setenv JAVA_APP_STUB /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub    setenv JAVA_ARCHIVE_CLASSES YES    setenv JAVA_ARCHIVE_TYPE JAR    setenv JAVA_COMPILER /usr/bin/javac    setenv JAVA_FOLDER_PATH CICMobile.app/Java    setenv JAVA_FRAMEWORK_RESOURCES_DIRS Resources    setenv JAVA_JAR_FLAGS cv    setenv JAVA_SOURCE_SUBDIR .    setenv JAVA_USE_DEPENDENCIES YES    setenv JAVA_ZIP_FLAGS -urg    setenv JIKES_DEFAULT_FLAGS "+E +OLDCSO"    setenv KEEP_PRIVATE_EXTERNS NO    setenv LD_GENERATE_MAP_FILE NO    setenv LD_MAP_FILE_PATH /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-LinkMap-normal-i386.txt    setenv LD_NO_PIE NO    setenv LEGACY_DEVELOPER_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer    setenv LEX lex    setenv LIBRARY_FLAG_NOSPACE YES    setenv LIBRARY_FLAG_PREFIX -l    setenv LIBRARY_SEARCH_PATHS "\"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build\" "    setenv LINKER_DISPLAYS_MANGLED_NAMES NO    setenv LINK_FILE_LIST_normal_i386 /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal/i386/CICMobile.LinkFileList    setenv LINK_WITH_STANDARD_LIBRARIES YES    setenv LOCALIZED_RESOURCES_FOLDER_PATH CICMobile.app/English.lproj    setenv LOCAL_ADMIN_APPS_DIR /Applications/Utilities    setenv LOCAL_APPS_DIR /Applications    setenv LOCAL_DEVELOPER_DIR /Library/Developer    setenv LOCAL_LIBRARY_DIR /Library    setenv MACH_O_TYPE mh_execute    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv MAC_OS_X_PRODUCT_BUILD_VERSION 11G63    setenv MAC_OS_X_VERSION_ACTUAL 1075    setenv MAC_OS_X_VERSION_MAJOR 1070    setenv MAC_OS_X_VERSION_MINOR 0705    setenv NATIVE_ARCH i386    setenv NATIVE_ARCH_32_BIT i386    setenv NATIVE_ARCH_64_BIT x86_64    setenv NATIVE_ARCH_ACTUAL x86_64    setenv NO_COMMON YES    setenv OBJC_ABI_VERSION 2    setenv OBJECT_FILE_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects    setenv OBJECT_FILE_DIR_normal /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Objects-normal    setenv OBJROOT /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv ONLY_ACTIVE_ARCH NO    setenv OPTIMIZATION_LEVEL 0    setenv OS MACOS    setenv OSAC /usr/bin/osacompile    setenv OTHER_LDFLAGS "-weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load \"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/libCordova.a\" -ObjC"    setenv PACKAGE_TYPE com.apple.package-type.wrapper.application    setenv PASCAL_STRINGS YES    setenv PATH "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Tools:/usr/bin:/bin:/usr/sbin:/sbin"    setenv PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES "/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"    setenv PBDEVELOPMENTPLIST_PATH CICMobile.app/pbdevelopment.plist    setenv PFE_FILE_C_DIALECTS objective-c    setenv PKGINFO_FILE_PATH /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/PkgInfo    setenv PKGINFO_PATH CICMobile.app/PkgInfo    setenv PLATFORM_DEVELOPER_APPLICATIONS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications    setenv PLATFORM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin    setenv PLATFORM_DEVELOPER_LIBRARY_DIR /Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library    setenv PLATFORM_DEVELOPER_SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs    setenv PLATFORM_DEVELOPER_TOOLS_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools    setenv PLATFORM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr    setenv PLATFORM_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform    setenv PLATFORM_NAME iphonesimulator    setenv PLATFORM_PREFERRED_ARCH i386    setenv PLATFORM_PRODUCT_BUILD_VERSION 10B141    setenv PLATFORM_VERSION_AVAILABILITY_H_FORMAT 60100    setenv PLIST_FILE_OUTPUT_FORMAT binary    setenv PLUGINS_FOLDER_PATH CICMobile.app/PlugIns    setenv PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR YES    setenv PRECOMP_DESTINATION_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/PrefixHeaders    setenv PRESERVE_DEAD_CODE_INITS_AND_TERMS NO    setenv PRIVATE_HEADERS_FOLDER_PATH CICMobile.app/PrivateHeaders    setenv PRODUCT_NAME CICMobile    setenv PRODUCT_SETTINGS_PATH /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/CICMobile-Info.plist    setenv PRODUCT_TYPE com.apple.product-type.application    setenv PROFILING_CODE NO    setenv PROJECT CICMobile    setenv PROJECT_DERIVED_FILE_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/DerivedSources    setenv PROJECT_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PROJECT_FILE_PATH /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile.xcodeproj    setenv PROJECT_NAME CICMobile    setenv PROJECT_TEMP_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build    setenv PROJECT_TEMP_ROOT /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv PUBLIC_HEADERS_FOLDER_PATH CICMobile.app/Headers    setenv RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS YES    setenv REMOVE_CVS_FROM_RESOURCES YES    setenv REMOVE_GIT_FROM_RESOURCES YES    setenv REMOVE_HG_FROM_RESOURCES YES    setenv REMOVE_SVN_FROM_RESOURCES YES    setenv REZ_COLLECTOR_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/ResourceManagerResources    setenv REZ_OBJECTS_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/ResourceManagerResources/Objects    setenv REZ_SEARCH_PATHS "\"/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build\" "    setenv RUN_CLANG_STATIC_ANALYZER NO    setenv SCAN_ALL_SOURCE_FILES_FOR_INCLUDES NO    setenv SCRIPTS_FOLDER_PATH CICMobile.app/Scripts    setenv SCRIPT_INPUT_FILE_COUNT 0    setenv SCRIPT_OUTPUT_FILE_COUNT 0    setenv SDKROOT /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_DIR /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk    setenv SDK_NAME iphonesimulator6.1    setenv SDK_PRODUCT_BUILD_VERSION 10B141    setenv SED /usr/bin/sed    setenv SEPARATE_STRIP NO    setenv SEPARATE_SYMBOL_EDIT NO    setenv SET_DIR_MODE_OWNER_GROUP YES    setenv SET_FILE_MODE_OWNER_GROUP NO    setenv SHALLOW_BUNDLE YES    setenv SHARED_DERIVED_FILE_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/DerivedSources    setenv SHARED_FRAMEWORKS_FOLDER_PATH CICMobile.app/SharedFrameworks    setenv SHARED_PRECOMPS_DIR /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders    setenv SHARED_SUPPORT_FOLDER_PATH CICMobile.app/SharedSupport    setenv SKIP_INSTALL NO    setenv SOURCE_ROOT /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv SRCROOT /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv STRINGS_FILE_OUTPUT_ENCODING binary    setenv STRIP_INSTALLED_PRODUCT YES    setenv STRIP_STYLE all    setenv SUPPORTED_DEVICE_FAMILIES "1 2"    setenv SUPPORTED_PLATFORMS "iphonesimulator iphoneos"    setenv SYMROOT /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv SYSTEM_ADMIN_APPS_DIR /Applications/Utilities    setenv SYSTEM_APPS_DIR /Applications    setenv SYSTEM_CORE_SERVICES_DIR /System/Library/CoreServices    setenv SYSTEM_DEMOS_DIR /Applications/Extras    setenv SYSTEM_DEVELOPER_APPS_DIR /Applications/Xcode.app/Contents/Developer/Applications    setenv SYSTEM_DEVELOPER_BIN_DIR /Applications/Xcode.app/Contents/Developer/usr/bin    setenv SYSTEM_DEVELOPER_DEMOS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"    setenv SYSTEM_DEVELOPER_DIR /Applications/Xcode.app/Contents/Developer    setenv SYSTEM_DEVELOPER_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library"    setenv SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"    setenv SYSTEM_DEVELOPER_JAVA_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"    setenv SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR "/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"    setenv SYSTEM_DEVELOPER_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"    setenv SYSTEM_DEVELOPER_TOOLS /Applications/Xcode.app/Contents/Developer/Tools    setenv SYSTEM_DEVELOPER_TOOLS_DOC_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"    setenv SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR "/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"    setenv SYSTEM_DEVELOPER_USR_DIR /Applications/Xcode.app/Contents/Developer/usr    setenv SYSTEM_DEVELOPER_UTILITIES_DIR /Applications/Xcode.app/Contents/Developer/Applications/Utilities    setenv SYSTEM_DOCUMENTATION_DIR /Library/Documentation    setenv SYSTEM_LIBRARY_DIR /System/Library    setenv TARGETED_DEVICE_FAMILY 1,2    setenv TARGETNAME CICMobile    setenv TARGET_BUILD_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv TARGET_NAME CICMobile    setenv TARGET_TEMP_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build    setenv TEMP_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build    setenv TEMP_FILES_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build    setenv TEMP_FILE_DIR /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build    setenv TEMP_ROOT /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build    setenv TEST_AFTER_BUILD NO    setenv TOOLCHAINS com.apple.dt.toolchain.XcodeDefault    setenv UID 501    setenv UNLOCALIZED_RESOURCES_FOLDER_PATH CICMobile.app    setenv UNSTRIPPED_PRODUCT NO    setenv USER rreghin    setenv USER_APPS_DIR /Users/rreghin/Applications    setenv USER_LIBRARY_DIR /Users/rreghin/Library    setenv USE_DYNAMIC_NO_PIC YES    setenv USE_HEADERMAP YES    setenv USE_HEADER_SYMLINKS NO    setenv VALIDATE_PRODUCT NO    setenv VALID_ARCHS i386    setenv VERBOSE_PBXCP NO    setenv VERSIONPLIST_PATH CICMobile.app/version.plist    setenv VERSION_INFO_BUILDER rreghin    setenv VERSION_INFO_FILE CICMobile_vers.c    setenv VERSION_INFO_STRING "\"@(#)PROGRAM:CICMobile  PROJECT:CICMobile-\""    setenv WRAPPER_EXTENSION app    setenv WRAPPER_NAME CICMobile.app    setenv WRAPPER_SUFFIX .app    setenv XCODE_APP_SUPPORT_DIR /Applications/Xcode.app/Contents/Developer/Library/Xcode    setenv XCODE_PRODUCT_BUILD_VERSION 4H1503    setenv XCODE_VERSION_ACTUAL 0463    setenv XCODE_VERSION_MAJOR 0400    setenv XCODE_VERSION_MINOR 0460    setenv YACC yacc    /bin/sh -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/Script-304B58A110DAC018002A0835.sh36"D230E641-D0D5-40D1-8FCD-6925EFCF4F9A-
-
-CProcessInfoPlistFile /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Info.plist CICMobile/CICMobile-Info.plist
-s409169047.104652
-e409169047.116962
-r1
-xProcessInfoPlistFile
-x/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Info.plist
-xCICMobile/CICMobile-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process CICMobile/CICMobile-Info.plistc1911c976c63b841^53061e976c63b841^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/CICMobile-Info.plist0000000000000000^715"ProcessInfoPlistFile build/CICMobile.app/Info.plist CICMobile/CICMobile-Info.plist    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility CICMobile/CICMobile-Info.plist -genpkginfo /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app/Info.plist36"56018B18-3E26-49C0-B220-9E682449AC35-
-
-CProcessPCH /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.pth CICMobile/CICMobile-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s409169058.498985
-e409169058.966529
-r1
-xProcessPCH
-x/var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.pth
-xCICMobile/CICMobile-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile CICMobile/CICMobile-Prefix.pch85ed7fa26c63b841^a06ff7a26c63b841^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/CICMobile-Prefix.pch0000000000000000^3894"ProcessPCH /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.pth CICMobile/CICMobile-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-generated-files.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-own-target-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-all-target-headers.hmap -iquote /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/CICMobile-project-headers.hmap -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/usr/local/lib/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/UninstalledProducts/include -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources/i386 -I/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.build/Release-iphonesimulator/CICMobile.build/DerivedSources -F/Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build --serialize-diagnostics /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.dia -c /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/CICMobile/CICMobile-Prefix.pch -o /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/dz/3h6kqdx91d53_mqwmyn2flj80000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/CICMobile-Prefix-bwikmrzeqyvucrfnxbxzcvbhcemm/CICMobile-Prefix.pch.d36"321B183C-F109-423E-8A64-3891CB5664E9-
-
-CTouch /Users/rreghin/Documents/GITHUB/IntraChatClientMobile/CICMobile/platforms/ios/build/CICMobile.app
-r0
-
