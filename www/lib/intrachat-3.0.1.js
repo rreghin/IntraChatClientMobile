@@ -278,10 +278,9 @@ function CICBaseProtocol() {
      *  METODOS PARA FUNÇÕES B�?SICAS DO PROTOCOLO
      */
     
-    CICBaseProtocol.prototype.init = function(ServerAddress, ServerPort, UserID, UserPassword, MagicString) {
+    CICBaseProtocol.prototype.init = function(ServerAddress, UserID, UserPassword, MagicString) {
         this.reset();
         this.ServerAddress = ServerAddress;
-        this.ServerPort = ServerPort;
         this.ServerSecure = true;
         this.MagicString = MagicString;
         this.UserID = UserID;
@@ -291,7 +290,6 @@ function CICBaseProtocol() {
     CICBaseProtocol.prototype.reset = function() {
         this.ServerInfo = {};
         this.ServerAddress = '';
-        this.ServerPort = '55000';
         this.MagicString = '\r\n';
         this.UserID = '';
         this.UserPassword = '';
@@ -313,7 +311,13 @@ function CICBaseProtocol() {
         // para que o usuario tenha a chance de aceitar o certificado
         // auto-assinado do servidor intrachat
         var self = this;
-        this.WebSocket = new WebSocket((this.ServerSecure?'wss':'ws')+'://'+this.ServerAddress+':'+this.ServerPort+'/', ['intrachat']);
+
+        var partes = this.ServerAddress.split(':');
+        var endereco = partes[0] || 'localhost';
+        var porta = partes[1] || 55000;
+            
+        this.WebSocket = new WebSocket((this.ServerSecure?'wss':'ws')+'://'+endereco+':'+porta+'/', ['intrachat']);
+        
         this.WebSocket.onopen = function() { self._onWSOpen.call(self); };
         this.WebSocket.onclose = function() { self._onWSClose.call(self); };
         this.WebSocket.onerror = function(error) { self._onWSError.call(self, error); };
@@ -333,7 +337,7 @@ function CICBaseProtocol() {
             VersionRevision: CIC_PROTOCOL_REVISION,
             VersionPlatform: CIC_PROTOCOL_PLATFORM,
             Language: 'PT',
-            SystemInfo: ''
+            SystemInfo: navigator.userAgent
         });
     };
 
@@ -577,13 +581,13 @@ function CICBaseProtocol() {
     
 }
 
-function CICMessageProtocol(ServerAddress, ServerPort, UserID, UserPassword, Targets, TextMessage) {
+function CICMessageProtocol(ServerAddress, UserID, UserPassword, Targets, TextMessage) {
         
     /**
      *  CONSTRUTOR DO OBJETO
      */
 
-    this.init(ServerAddress, ServerPort, UserID, UserPassword, CIC_MESSAGE_MAGIC_STRING);
+    this.init(ServerAddress, UserID, UserPassword, CIC_MESSAGE_MAGIC_STRING);
 
     this.Targets = Targets;
     this.TextMessage = TextMessage;
@@ -640,13 +644,13 @@ function CICMessageProtocol(ServerAddress, ServerPort, UserID, UserPassword, Tar
     
 }    
 
-function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword, doConnect) {
+function CICClientProtocol(ServerAddress, UserID, UserPassword, doConnect) {
     
     /**
      *  CONSTRUTOR DO OBJETO
      */
 
-    this.init(ServerAddress, ServerPort, UserID, UserPassword, CIC_CLIENT_MAGIC_STRING);
+    this.init(ServerAddress, UserID, UserPassword, CIC_CLIENT_MAGIC_STRING);
 
     // ja faz a conexao com o servidor, caso tenha dito que sim, ou nao tenha sido dito nada
     if (doConnect) {
@@ -675,13 +679,13 @@ function CICClientProtocol(ServerAddress, ServerPort, UserID, UserPassword, doCo
     
 }
 
-function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doConnect, doAutoRegister, UserName, UserDept, UserEmail, UserPhone, UserBirthDate, UserBase64Picture) {
+function CICClientSession(ServerAddress, UserID, UserPassword, doConnect, doAutoRegister, UserName, UserDept, UserEmail, UserPhone, UserBirthDate, UserBase64Picture) {
     
     /**
      *  CONSTRUTOR DO OBJETO
      */
 
-    this.init(ServerAddress, ServerPort, UserID, UserPassword, CIC_CLIENT_MAGIC_STRING);
+    this.init(ServerAddress, UserID, UserPassword, CIC_CLIENT_MAGIC_STRING);
     
     // se foram passados os parametros para o AutoCadastro, tenta fazer o autocadastro durante a autenticacao
     if (doAutoRegister||false) {
@@ -729,9 +733,8 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         
         this.NewMessageList = {};       //(localStorage.NewMessageList===undefined) ? {} : JSON.parse(localStorage.NewMessageList);
         this.OriginalMessageList = {};  //(localStorage.OriginalMessageList===undefined) ? {} : JSON.parse(localStorage.OriginalMessageList);
-
-        this.ImportantMessageFolderList = {}; //(localStorage.ImportantMessageFolderList===undefined) ? {} : JSON.parse(localStorage.ImportantMessageFolderList);
         this.ImportantMessageList = {};       //(localStorage.ImportantMessageList===undefined) ? {} : JSON.parse(localStorage.ImportantMessageList);
+        this.ImportantMessageFolderList = {}; //(localStorage.ImportantMessageFolderList===undefined) ? {} : JSON.parse(localStorage.ImportantMessageFolderList);
 
         //console.log('UNITS->'+JSON.stringify(this.UnitList));
         //console.log('USERS->'+JSON.stringify(this.UserList));
@@ -864,12 +867,12 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
         console.log('LastMessage: ' + localStorage.LastMessage);
         console.log('LastImportant: ' + localStorage.LastImportant);
         console.log('LastRoomChanged: ' + localStorage.LastRoomChanged);
-        //this.sendPacket( { Command: CIC_COMMAND_LIST_UNITS, LastUpdate: localStorage.LastUpdate } );
-        //this.sendPacket( { Command: CIC_COMMAND_LIST_USERS, LastUpdate: localStorage.LastUpdate } );
-        //this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'NEW', LastUpdate: localStorage.LastMessage } );
-        //this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'IMPORTANT', LastUpdate: localStorage.LastImportant } );
-        //this.sendPacket( { Command: CIC_COMMAND_LIST_FILES, LastUpdate: '' } );
-        //this.sendPacket( { Command: CIC_COMMAND_LIST_ROOMS, LastUpdate: localStorage.LastRoomChanged } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_UNITS, LastUpdate: localStorage.LastUpdate } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_USERS, LastUpdate: localStorage.LastUpdate } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'NEW', LastUpdate: localStorage.LastMessage } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_MESSAGES, List: 'IMPORTANT', LastUpdate: localStorage.LastImportant } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_FILES, LastUpdate: '' } );
+        this.sendPacket( { Command: CIC_COMMAND_LIST_ROOMS, LastUpdate: localStorage.LastRoomChanged } );
         return this.parent.prototype.intOnAuthenticationOk.call(this);
     };
     
@@ -1216,12 +1219,12 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                             this.FileFolderList[folder.FolderID] = folder;
                         }
                         if (packet.Kind === 'M') {
-                            folder = this.MessageFolderList[packet.FolderID] || {};
+                            folder = this.ImportantMessageFolderList[packet.FolderID] || {};
                             folder.FolderID = packet.FolderID;
                             folder.UserID = packet.UserID;
                             folder.Name = packet.Name;
                             folder.Kind = packet.Kind;
-                            this.MessageFolderList[folder.FolderID] = folder;
+                            this.ImportantMessageFolderList[folder.FolderID] = folder;
                         }
                         this.onFolder(folder);
                         break;
@@ -1233,9 +1236,9 @@ function CICClientSession(ServerAddress, ServerPort, UserID, UserPassword, doCon
                             this.onFolderDeleted(folder);
                         }
                         else {
-                            folder = this.MessageFolderList[packet.FolderID];
+                            folder = this.ImportantMessageFolderList[packet.FolderID];
                             if (user !== undefined) {
-                                delete this.MessageFolderList[packet.FolderID];
+                                delete this.ImportantMessageFolderList[packet.FolderID];
                                 this.onFolderDeleted(folder);
                             }
                         }
