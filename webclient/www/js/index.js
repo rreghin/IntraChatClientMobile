@@ -34,6 +34,12 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        if( ('WebSocket' in window) && (typeof(WebSocket) === 'function') ) {
+            alert("Success! Your browser DOES support HTML5 Web Sockets.");
+        }
+        else {
+            alert("Error! Your browser does NOT support HTML5 Web Sockets.");
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
