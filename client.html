@@ -10,8 +10,7 @@
         <script type="text/javascript">
             var output;
             
-            var Servidor = 'localhost'; //ps78585.dreamhostps.com';
-            var Porta = 55000;
+            var Servidor = 'localhost:55000'; //ps78585.dreamhostps.com';
             var Usuario = '-ROGER-';
             var Senha = 'teste';
             
@@ -34,7 +33,7 @@
             }
 
             function connectClient(autoRegister) {
-                var client = new CICClientSession(Servidor, Porta, Usuario, Senha, AutoConnect, autoRegister);
+                var client = new CICClientSession(Servidor, Usuario, Senha, AutoConnect, autoRegister);
                 
                 client.onConnect = function() {
                     writeToScreen('CONECTADO');

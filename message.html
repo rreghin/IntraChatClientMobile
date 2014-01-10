@@ -17,8 +17,7 @@
             var Destinos = ['administrador','UN:F08','ST:Administração','tralala'];
             var Texto = 'Enviando uma mensagem para vários destinatários, inclusive uma unidade (F08) e um setor (Administração).\nE também para um usuário inexistente.';
             
-            var Servidor = 'localhost';
-            var Porta = 55000;
+            var Servidor = 'localhost:55000';
             var Usuario = 'administrador';
             var Senha = 'abc123';
             
@@ -30,7 +29,7 @@
             }  
 
             function sendCICMessage() {
-                var message = new CICMessageProtocol(Servidor, Porta, Usuario, Senha, Destinos, Texto);
+                var message = new CICMessageProtocol(Servidor, Usuario, Senha, Destinos, Texto);
                 
                 message.onConnect = function() {
                     writeToScreen('CONECTADO');
