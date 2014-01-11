@@ -337,7 +337,7 @@ function CICBaseProtocol() {
             VersionRevision: CIC_PROTOCOL_REVISION,
             VersionPlatform: CIC_PROTOCOL_PLATFORM,
             Language: 'PT',
-            SystemInfo: navigator.userAgent
+            SystemInfo: '' //navigator.userAgent // NAO pode ter virgulas ou aspas duplas dentro dessa string!!!
         });
     };
 
