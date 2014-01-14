@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IntraChat SIMPLE WebSendMessage</title>
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="CICProtocol.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var output;
+            
+            // não há limite para o número de destinatários da mensagem.
+            // para facilitar, é possível enviar uma mensagem para uma unidade inteira, ou um setor inteiro.
+            // para isso basta adicionar 'UN:' na frente do código da unidade de destino,
+            // ou 'ST:' (ou 'DP:') na frente do nome do setor.
+            var Destinos = ['administrador','UN:F08','ST:Cadastro','tralala'];
+            var Texto = 'Teste de envio de mensagem...';
+            
+            var Servidor = 'localhost';
+            var Porta = 55000;
+            var Usuario = 'administrador';
+            var Senha = 'abc123';
+
+            function init() {
+                output = document.getElementById("output");
+                sendCICMessage();
+            }  
+
+            function sendCICMessage() {
+                new CICMessageProtocol(Servidor, Porta, Usuario, Senha, Destinos, Texto);
+                writeToScreen('MENSAGEM ENVIADA'); 
+            }  
+
+            function writeToScreen(message) { 
+                var pre = document.createElement("p"); 
+                pre.style.wordWrap = "break-word"; 
+                pre.innerHTML = message; 
+                output.appendChild(pre); 
+            }  
+
+            window.addEventListener("load", init, false);  
+        </script>  
+
+        <h2>IntraChat SIMPLE WebSendMessage</h2>  
+        <div id="output"></div>
+    </body>
+</html>

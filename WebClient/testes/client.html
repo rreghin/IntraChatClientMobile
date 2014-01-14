@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IntraChat WebClient</title>
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="intrachat-3.0.1.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var output;
+            
+            var Servidor = 'localhost:55000'; //ps78585.dreamhostps.com';
+            var Usuario = '-ROGER-';
+            var Senha = 'teste';
+            
+            var AutoConnect = false;
+
+            function init() {
+                output = document.getElementById("output");
+                reset();
+                connectClient();
+            }
+            
+            function reset() {
+                // limpar sempre que for um novo usuario
+                delete localStorage.UnitList;
+                delete localStorage.UserList;
+                delete localStorage.LastMessage; // sempre receber todas as mensagens novas quando se conectar
+                delete localStorage.LastImportant; // sempre receber todas as mensagens novas quando se conectar
+                delete localStorage.LastRoomChanged; // sempre receber todas as salas quando se conectar
+                delete localStorage.LastUpdate;
+            }
+
+            function connectClient(autoRegister) {
+                var client = new CICClientSession(Servidor, Usuario, Senha, AutoConnect, autoRegister);
+                
+                client.onConnect = function() {
+                    writeToScreen('CONECTADO');
+                };
+                
+                client.onDisconnect = function() {
+                    writeToScreen('DESCONECTADO');
+                };
+                
+                client.onError = function(error) {
+                    writeToScreen('<span style="color: red;">ERRO:</span> ' + error.data); 
+                };
+                
+                client.onAuthenticationOk = function() {
+                    writeToScreen('AUTENTICADO: ' + client.ServerInfo.Name + ':' + client.ServerInfo.ServerID + ' (' + client.ServerInfo.VersionInfo + ')');
+                };
+                
+                client.onAutoRegisterAllowed = function() {
+                    writeToScreen('<span style="color: blue;">O SERVIDOR AGUARDA SEU CADASTRO !</span>'); 
+                    if (autoRegister === undefined) {
+                        // roda de novo, so que agora fazendo o autocadastro
+                        reset();
+                        connectClient(true);
+                    }
+                };
+                
+                client.onAuthenticationFailed = function(errornumber, errormessage) {
+                    writeToScreen('<span style="color: red;">FALHA DE AUTENTICAÇÃO:</span> (' + errornumber + ') ' + errormessage); 
+                };
+                
+                client.onPacket = function(packet) {
+                    writeToScreen('<span style="color: orange;">' + JSON.stringify(packet) + '</span>'); 
+                };
+                
+                client.onServerLogo = function(logo) {
+                    if (logo !== undefined) {
+                        writeToScreen('<img src="data:image/png;base64,' + logo.Data + '">'); 
+                    }
+                };
+                
+                client.onUserStatus = function(status) {
+                    if (this.getUser(status.UserID) !== undefined) {
+                        // se tem o TimeStamp é uma conexão ou desconexão (online ou offline)
+                        if (status.TimeStamp !== undefined) {
+                            if (status.isConnected) {
+                                writeToScreen('<span style="color: green;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ') CONECTADO</span>'); 
+                            }
+                            else {
+                                writeToScreen('<span style="color: red;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ') DESCONECTADO</span>'); 
+                            }
+                        }
+                        if (status.isConnected) {
+                            switch (status.Status) {
+                                case CIC_USER_STATUS_AVAILABLE:
+                                    writeToScreen('<span style="color: green;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ')<BR/><I>' + status.StatusMessage + '</I></span>'); 
+                                    break;
+                                case CIC_USER_STATUS_BUSY:
+                                    writeToScreen('<span style="color: orange;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ')<BR/><I>' + status.StatusMessage + '</I></span>'); 
+                                    break;
+                                case CIC_USER_STATUS_AWAY:
+                                    writeToScreen('<span style="color: gray;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ')<BR/><I>' + status.StatusMessage + '</I></span>'); 
+                                    break;
+                            }
+                            if ((this.getUserStatus(status.UserID).ChatCount||0) > 0) {
+                                writeToScreen('<span style="color: blue;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ') ESTÁ EM CONVERSAÇÃO</span>'); 
+                            }
+                            else {
+                                writeToScreen('<span style="color: lime;">USUÁRIO "' + this.getUserName(status.UserID) + '" (' + status.UserID + ') NÃO ESTÁ CONVERSANDO COM NINGUÉM NO MOMENTO</span>'); 
+                            }
+                        }
+                    }
+                };
+                
+                client.onUserPicture = function(userid, picture) {
+                    if (picture !== undefined) {
+                        writeToScreen('<img src="data:image/png;base64,' + picture.Data + '">'); 
+                    }
+                    else {
+                        writeToScreen('<span style="color: blue;">USUÁRIO "' + this.getUserName(userid) + '" (' + userid + ') NÃO TEM FOTO</span>'); 
+                    }
+                };
+                
+                client.onMessage = function(message) {
+                    if (message.Status === CIC_MESSAGE_NEW) {
+                        var local = this.UserList[message.FromUserID];
+                        writeToScreen('<span style="color: green;">MENSAGEM DE "' + local.Name + '" (' + local.UserID + '):<BR/>' + message.TextMessage + '</span>'); 
+                    }
+                }
+                
+                if (!AutoConnect) { client.connect(); }
+            }  
+
+            function writeToScreen(message) { 
+                var pre = document.createElement("p"); 
+                pre.style.wordWrap = "break-word"; 
+                pre.innerHTML = message; 
+                output.appendChild(pre); 
+            }  
+
+            window.addEventListener("load", init, false);  
+        </script>  
+
+        <h2>IntraChat WebClient</h2>  
+        <div id="output"></div>
+    </body>
+</html>
