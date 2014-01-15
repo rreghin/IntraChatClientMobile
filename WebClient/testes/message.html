@@ -18,11 +18,12 @@
             var Destinos = ['administrador','UN:F08','ST:Administração','tralala'];
             var Texto = 'Enviando uma mensagem para vários destinatários, inclusive uma unidade (F08) e um setor (Administração).\nE também para um usuário inexistente.';
             
-            var Servidor = 'localhost:55555';
+            var Servidor = 'localhost:55000';
             var Usuario = 'administrador';
             var Senha = 'abc123';
             
             var Enviadas = 0;
+            var naoEnviadas = 0;
 
             function init() {
                 output = document.getElementById("output");
@@ -38,6 +39,7 @@
                 
                 message.onDisconnect = function() {
                     writeToScreen(Enviadas + ' MENSAGENS ENVIADAS COM SUCESSO');
+                    writeToScreen(naoEnviadas + ' MENSAGENS COM FALHA NO ENVIO');
                     writeToScreen('DESCONECTADO');
                 };
                 
@@ -63,6 +65,7 @@
                 };
 
                 message.onTextMessageFailed = function(target, errormessage) {
+                    naoEnviadas++;
                     writeToScreen('<span style="color: red;">FALHA: ' + target + ' -&gt; ' + errormessage + '</span>'); 
                 };
             }  
