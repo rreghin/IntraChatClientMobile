@@ -1,0 +1,21 @@
+<div>
+    <table width="100%" class="row">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    <input style="margin:0px;" type="text" placeholder="filtro" ng-model="searchText.name" />
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in AllEntities | filter:searchText | orderBy:'name'" style="border-bottom:1px solid gray" ng-click="addRecipient(user)">
+                <td style="padding:1px;width:36px;" ng-class="getUserStatusClass(user.id)" id="{{ 'tdp_'+user.uid }}">
+                    <img style="width:32px;height:32px;border:1px solid white;" src="{{ user.picture }}" id="{{ 'pic_'+user.uid }}" />
+                </td>                    
+                <td ng-class="getUserStatusClass(user.id)" id="{{ 'tdu_'+user.uid }}">
+                    {{ user.name }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
