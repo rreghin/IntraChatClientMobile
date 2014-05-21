@@ -1,0 +1,19 @@
+<table width="100%" class="row" style="margin:0px;max-width:none !important;">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <input style="margin:0px;" type="text" placeholder="filtro" ng-model="searchText.full" />
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in AllEntities | filter:searchText | filter:isVisible() | orderBy:['order','name']" style="border-bottom:1px solid gray" ng-click="addRecipient(user)">
+            <td style="padding:2px;border:0px;width:40px;height:40px;" ng-class="getUserStatusClass(user.id)" id="{{ 'tdp_'+user.uid }}">
+                <img ng-cloak style="width:34px;height:34px;border:1px solid #cccccc;" ng-src="{{ user.picture }}" id="{{ 'pic_'+user.uid }}" />
+            </td>                    
+            <td style="padding:2px;line-height:1.0rem;" ng-class="getUserStatusClass(user.id)" id="{{ 'tdu_'+user.uid }}">
+                {{ user.name }}<br/>{{ user.dept }}
+            </td>
+        </tr>
+    </tbody>
+</table>

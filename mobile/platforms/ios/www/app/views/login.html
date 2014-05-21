@@ -1,0 +1,57 @@
+<div id="login" class="row" ng-init="hideServerAddress=false" style="display:flex;flex-direction:column;justify-content:center;">
+	<div class="large-6 large-offset-3">
+		<form ng-submit="login()">
+			<fieldset class="radius" style="border:1px solid transparent !important;">
+<!--				<legend>IntraChat::WebClient</legend>-->
+
+				<div class="row">
+					<div class="large-12 columns">
+						<img src="/logo.png" style="float:right;height:64px;border:1px solic #cccccc;margin-left:2px;margin-right:2px;">
+					</div>
+				</div>
+				<br />
+
+				<div class="row" ng-hide="hideServerAddress">
+					<div class="large-12 columns">
+						<input type="text" name="serveraddress" placeholder="endereço do servidor" ng-model="serveraddress" required disabled/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="text" name="username" placeholder="usuário" ng-model="credentials.username" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<input type="password" name="password" placeholder="senha" ng-model="credentials.password" required/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<div id="flash" class="alert-box alert blink" ng-show="flash">
+							{{ flash }}
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<button type="submit" class="button large expand" ng-class="loginButtonStatus">Log In</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<div id="progress" class="alert-box info blink" ng-show="progress">
+							{{ progress }}
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+    
+<script type="text/javascript">
+    vpw = $(window).width();
+    vph = $(window).height();
+    $('#login').height(vph);
+</script>
