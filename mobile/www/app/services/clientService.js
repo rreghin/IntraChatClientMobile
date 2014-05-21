@@ -93,7 +93,7 @@
         
         factory.getUserPicture = function (userid, upic, doRequest) {
             if (!upic) upic = $rootScope.intrachat.getUserPicture(userid, doRequest);
-            return ((upic === undefined || upic.Data === undefined) ? '/img/nopic.png' : 'data:image/png;base64,' + upic.Data);
+            return ((upic === undefined || upic.Data === undefined) ? 'img/nopic.png' : 'data:image/png;base64,' + upic.Data);
         };
         
         factory.setUserPicture = function (userid, picture) {
@@ -244,7 +244,7 @@
                     full: 'TODOS (os usuários)',
                     visible: true,
                     order: 2,
-                    picture: '/img/blank.png'
+                    picture: 'img/blank.png'
                 });
 
                 // adiciona unidades
@@ -259,7 +259,7 @@
                             full: 'Unidade: ' + unit.Name,
                             visible: true,
                             order: 1,
-                            picture: '/img/blank.png'
+                            picture: 'img/blank.png'
                         });
                     }
                 }, $rootScope.intrachat);
@@ -278,7 +278,7 @@
                                 full: 'Setor: ' + dept,
                                 visible: true,
                                 order: 1,
-                                picture: '/img/blank.png'
+                                picture: 'img/blank.png'
                             });
                             depts[dept] = index;
                         }

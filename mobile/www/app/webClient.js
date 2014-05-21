@@ -5,29 +5,29 @@
     angular.module("webClient").config(["$routeProvider", function ($routeProvider) {
         $routeProvider
             .when('/splash', {
-                templateUrl: '/app/views/splash.html',
+                templateUrl: 'app/views/splash.html',
                 controller: 'SplashController'
             })
             .when('/login', {
-                templateUrl: '/app/views/login.html',
+                templateUrl: 'app/views/login.html',
                 controller: 'LoginController'
             })
             .when('/main', {
-                templateUrl: '/app/views/main.html',
+                templateUrl: 'app/views/main.html',
                 controller: 'MainController'
             })
             .when('/users', {
-                templateUrl: '/app/views/users.html',
+                templateUrl: 'app/views/users.html',
                 controller: 'UsersController'
             })
             .when('/messages', {
-                templateUrl: '/app/views/messages.html',
+                templateUrl: 'app/views/messages.html',
                 controller: 'MessagesController'
             })
             .otherwise({ redirectTo: '/splash' });
     }]);
 
-    angular.module("webClient").run(["$rootScope", "$document", function ($rootScope, $document) {
+    angular.module("webClient").run(["$rootScope", function ($rootScope) {
         console.log('webClient.run');
         
         $rootScope.intrachat = null;
@@ -42,7 +42,7 @@
         $.getScript("cordova.js")
             .done(function () {
                 $rootScope.isPhoneGap = true;
-                $document.addEventListener("deviceready", function () {
+                document.addEventListener("deviceready", function () {
                     console.log("Cordova/PhoneGap ready - mobile mode");
                     $rootScope.isPhoneGapLoaded = true;
                 }, false);
